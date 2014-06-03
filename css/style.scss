@@ -1,3 +1,8 @@
+// Base styles
+* {
+	box-sizing: border-box;
+}
+
 // Global
 @import "global/fonts";
 @import "global/mixins";
@@ -8,7 +13,7 @@
 
 // Layout
 /* Layout Sass partials will go here.
-   (header, footer, page specfici styles, etc.)
+   (header, footer, page specific styles, etc.)
 */
 
 // Module
