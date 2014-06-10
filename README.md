@@ -13,3 +13,5 @@ The ideal way to get started with Bare Ninja is to to simply clone the repo. A B
 
 1. CSS
 2. JavaScript
+
+## Compiling

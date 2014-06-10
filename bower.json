@@ -1,7 +1,25 @@
 {
-    "name": "Bare Ninja",
-    "dependencies": {
-        "jquery": "~2.1.1",
-        "modernizr": "2.8.2"
-    }
+	"name": "Bare Ninja",
+	"dependencies": {
+		"jquery": "~2.1.1",
+		"modernizr": "2.8.2"
+	},
+	"version": "0.0.1",
+	"homepage": "https://github.com/a2labs/bare-ninja",
+	"authors": [
+		"Trevan Hetzel <trevan@hetzelcreative.com>"
+	],
+	"description": "Bare Ninja is a front-end project starter",
+	"license": "MIT",
+	"ignore": [
+		".sass-cache"
+		"node_modules",
+		"bower_components",
+		".bowercc",
+		".gitignore",
+		"example.html",
+		"gruntfile.js",
+		"package.json",
+		"css/**/*.scss"
+	]
 }
