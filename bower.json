@@ -4,6 +4,9 @@
 		"jquery": "~2.1.1",
 		"modernizr": "2.8.2"
 	},
+	"devDependencies": {
+		"requirejs": "~2.1.14"
+	},
 	"version": "0.0.1",
 	"homepage": "https://github.com/a2labs/bare-ninja",
 	"authors": [
@@ -20,6 +23,10 @@
 		"example.html",
 		"gruntfile.js",
 		"package.json",
-		"css/**/*.scss"
+		"bower.json",
+		".bowercc",
+		"js/modules",
+		"css/*.scss",
+		"css/**/"
 	]
 }
