@@ -23,10 +23,11 @@
 		"example.html",
 		"gruntfile.js",
 		"package.json",
+		".bower.json",
 		"bower.json",
 		".bowercc",
 		"js/modules",
 		"css/*.scss",
-		"css/**/"
+		"css/*/"
 	]
 }

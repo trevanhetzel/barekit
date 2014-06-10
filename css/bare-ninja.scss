@@ -1,0 +1,28 @@
+// Base styles
+* {
+	box-sizing: border-box;
+}
+
+// Global
+@import "global/fonts";
+@import "global/mixins";
+@import "global/variables";
+
+// Lib
+@import "lib/normalize";
+
+// Layout
+/* Layout Sass partials will go here.
+   (header, footer, page specific styles, etc.)
+*/
+
+// Module
+@import "module/accordion";
+@import "module/carousel";
+@import "module/dropdown";
+@import "module/form";
+@import "module/grid";
+@import "module/modal";
+@import "module/off-canvas";
+@import "module/tabs";
+@import "module/validation";
