@@ -12,7 +12,7 @@
 	"description": "Bare Ninja is a front-end project starter",
 	"license": "MIT",
 	"ignore": [
-		".sass-cache"
+		".sass-cache",
 		"node_modules",
 		"bower_components",
 		".bowercc",
