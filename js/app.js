@@ -17,7 +17,7 @@ define([
 ) {
 
 	var App = function () {
-		// this.initAccordion();
+		this.initAccordion();
 	};
 
 	// Instantiate Accordion

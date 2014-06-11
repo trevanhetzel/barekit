@@ -1,3 +1,9 @@
-.accordion {
-	
+.bn-accordion {
+	dd {
+		display: none;
+	}
+
+	.bn-accordion--open {
+		display: block;
+	}
 }
