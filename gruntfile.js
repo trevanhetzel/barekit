@@ -44,10 +44,10 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: [
-                    'css/style.scss',
-                    'global/_*.scss',
-                    'layout/_*.scss',
-                    'module/_*.scss'
+                    'css/bare-ninja.scss',
+                    'css/global/*.scss',
+                    'css/layout/*.scss',
+                    'css/module/*.scss'
                 ],
                 tasks: [ 'sass:dist', 'autoprefixer' ],
                 options: { nospawn: true }
