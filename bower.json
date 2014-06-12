@@ -22,8 +22,6 @@
 		".bower.json",
 		"bower.json",
 		".bowercc",
-		"js/modules",
-		"css/*.scss",
-		"css/*/"
+		"js/modules"
 	]
 }
