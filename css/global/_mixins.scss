@@ -1,0 +1,17 @@
+// Global breakpoints
+$small: 30em;
+$medium: 50em;
+$large: 64em;
+
+// Media queries
+@mixin breakpoint($size) {
+	@if $size == small {
+		@media (min-width: $small) { @content; }
+	}
+	@else if $size == medium {
+		@media (min-width: $medium) { @content; }
+	}
+	@else if $size == large {
+		@media (min-width: $large) { @content; }
+	}
+}

@@ -15,6 +15,7 @@ jQuery(document).ready (function ($) {
 				$target = $(e.target);
 
 			if ($target.is('a')) {
+				e.preventDefault();
 				var $content = $target.parent().next('dd');
 
 				self.processOptions($target, $content, options);

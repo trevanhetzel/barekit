@@ -42,11 +42,12 @@ module.exports = function (grunt) {
          * Uglify
          */
         uglify: {
-            my_target: {
+            modules: {
                 files: {
                     'js/bare-ninja.min.js': [
                         'js/modules/accordion.js',
-                        'js/modules/carousel.js'
+                        'js/modules/carousel.js',
+                        'js/modules/modal.js'
                     ]
                 }
             }
@@ -64,8 +65,12 @@ module.exports = function (grunt) {
                     'css/layout/*.scss',
                     'css/module/*.scss'
                 ],
-                tasks: [ 'sass:dist', 'autoprefixer' ],
+                tasks: ['sass:dist', 'autoprefixer'],
                 options: { nospawn: true }
+            },
+            uglify: {
+                files: ['js/modules/*.js'],
+                tasks: ['uglify:modules']
             }
         }
     });
