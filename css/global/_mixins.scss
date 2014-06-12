@@ -1,8 +1,3 @@
-// Global breakpoints
-$small: 30em;
-$medium: 50em;
-$large: 64em;
-
 // Media queries
 @mixin breakpoint($size) {
 	@if $size == small {
