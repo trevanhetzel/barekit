@@ -6,8 +6,8 @@ jQuery(document).ready (function ($) {
 
 	Accordion.prototype.init = function () {
 		var self = this,
-			$accordion = $('.bn-accordion'),
-			$trigger = $('.bn-accordion dt a');
+			$accordion = $('.accordion'),
+			$trigger = $('.accordion dt a');
 
 		$accordion.on('click', function (e) {
 			var $this = $(this),
@@ -24,10 +24,10 @@ jQuery(document).ready (function ($) {
 
 	Accordion.prototype.processOptions = function ($target, $content, options) {
 		var self = this,
-			$panel = $('.bn-accordion dd'),
-			$trigger = $('.bn-accordion dt a'),
-			activeTrigger = 'bn-accordion-trigger--open',
-			activePanel = 'bn-accordion-panel--open';
+			$panel = $('.accordion dd'),
+			$trigger = $('.accordion dt a'),
+			activeTrigger = 'accordion-trigger--open',
+			activePanel = 'accordion-panel--open';
 
 		if (options.multiExpand == true) {
 			// Trigger active class

@@ -1,13 +1,13 @@
-.bn-accordion {
+.accordion {
 	dd {
 		display: none;
 	}
 
-	.bn-accordion-trigger--open {
+	.accordion-trigger--open {
 		font-weight: bold;
 	}
 
-	.bn-accordion-panel--open {
+	.accordion-panel--open {
 		display: block;
 	}
 }
