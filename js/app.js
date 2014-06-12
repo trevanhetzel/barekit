@@ -18,11 +18,17 @@ define([
 
 	var App = function () {
 		this.initAccordion();
+		this.initCarousel();
 	};
 
 	// Instantiate Accordion
 	App.prototype.initAccordion = function () {
 		var setupAccordion = new Accordion();
+	};
+
+	// Instantiate Carousel
+	App.prototype.initCarousel = function () {
+		var setupAccordion = new Carousel();
 	};
 
 	return App;

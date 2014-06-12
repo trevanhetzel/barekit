@@ -3,7 +3,11 @@
 		display: none;
 	}
 
-	.bn-accordion--open {
+	.bn-accordion-trigger--open {
+		font-weight: bold;
+	}
+
+	.bn-accordion-panel--open {
 		display: block;
 	}
 }

@@ -39,6 +39,20 @@ module.exports = function (grunt) {
         },
 
         /**
+         * RequireJS
+         */
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: "js",
+                    mainConfigFile: "js/bare-ninja.js",
+                    name: "bare-ninja",
+                    out: "js/bare-ninja.min.js"
+                }
+            }
+        },
+
+        /**
          * Watch
          */
         watch: {
@@ -59,8 +73,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     // Register Tasks
-    grunt.registerTask('default', [ 'sass', 'autoprefixer' ]);
+    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'requirejs' ]);
 
 };
