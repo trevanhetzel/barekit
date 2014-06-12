@@ -1,10 +1,9 @@
-define(["jquery"],
-function ($) {
+jQuery(document).ready (function ($) {
 
 	var Carousel = function () {
 		console.log("CAROUSEL LOADED");
 	};
 
-	return Carousel;
+	new Carousel;
 
 });

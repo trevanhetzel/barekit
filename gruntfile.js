@@ -39,18 +39,19 @@ module.exports = function (grunt) {
         },
 
         /**
-         * RequireJS
+         * Uglify
          */
-        requirejs: {
-            compile: {
-                options: {
-                    baseUrl: "js",
-                    mainConfigFile: "js/bare-ninja.js",
-                    name: "bare-ninja",
-                    out: "js/bare-ninja.min.js"
+        uglify: {
+            my_target: {
+                files: {
+                    'js/bare-ninja.min.js': [
+                        'js/modules/accordion.js',
+                        'js/modules/carousel.js'
+                    ]
                 }
             }
         },
+
 
         /**
          * Watch
@@ -73,9 +74,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Register Tasks
-    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'requirejs' ]);
+    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'uglify' ]);
 
 };

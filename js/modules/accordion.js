@@ -1,5 +1,4 @@
-define(["jquery"],
-function ($) {
+jQuery(document).ready (function ($) {
 
 	var Accordion = function () {
 		this.init();
@@ -50,6 +49,6 @@ function ($) {
 		}
 	};
 
-	return Accordion;
+	new Accordion;
 
 });
