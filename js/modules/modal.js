@@ -5,7 +5,8 @@ jQuery(document).ready (function ($) {
 		$trigger = $('.modal-trigger'),
 		$document = $(document),
 		$body = $('body'),
-		$dest = '';
+		$dest = '',
+		$close = $('.modal-close');
 
 	var Modal = function () {
 		this.init();
@@ -39,6 +40,10 @@ jQuery(document).ready (function ($) {
 			.on('click', '.modal', function (e) {
 				e.stopPropagation();
 			});
+
+		$close.on('click', function () {
+			self.closeModal();
+		});
 	};
 
 	// Open modal
