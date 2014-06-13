@@ -2,9 +2,15 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    // Load in all Grunt tasks
+    require('load-grunt-tasks')(grunt);
+
+    // Display time per task after running Grunt
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-		
+
         /**
          * Sass
          */
@@ -75,13 +81,6 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load NPM Tasks
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
     // Register Tasks
     grunt.registerTask('default', [ 'sass', 'autoprefixer', 'uglify' ]);
-
 };
