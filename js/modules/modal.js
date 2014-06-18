@@ -39,6 +39,12 @@ jQuery(document).ready (function ($) {
 			// ...or the open modal itself
 			.on('click', '.modal', function (e) {
 				e.stopPropagation();
+			})
+			// Close modal by escape key
+			.keyup(function (e){
+				if (e.keyCode === 27) {
+					self.closeModal();
+				}
 			});
 
 		$close.on('click', function () {
