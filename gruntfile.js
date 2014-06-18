@@ -47,7 +47,8 @@ module.exports = function (grunt) {
                     'js/bare-ninja.min.js': [
                         'js/modules/accordion.js',
                         'js/modules/carousel.js',
-                        'js/modules/modal.js'
+                        'js/modules/modal.js',
+                        'js/modules/tabs.js'
                     ]
                 }
             }
