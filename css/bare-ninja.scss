@@ -6,6 +6,7 @@
 // Global
 @import "global/mixins";
 @import "global/variables";
+@import "global/utility";
 
 // Lib
 @import "lib/normalize";
@@ -24,5 +25,4 @@
 @import "module/modal";
 @import "module/off-canvas";
 @import "module/tabs";
-@import "module/utility";
 @import "module/validation";
