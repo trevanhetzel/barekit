@@ -6,39 +6,36 @@ jQuery(document).ready (function ($) {
 
 	Tabs.prototype.init = function () {
 		var self = this,
-			$tabs = $('.tabs'),
-			$trigger = $('.tabs dt a');
+			$trigger = $('.tabs li a');
 
-		$tabs.on('click', function (e) {
-			var $this = $(this)
-				$target = $(e.target);
+		$trigger.on('click', function (e) {
+			var $this = $(this);
 
-			if ($target.is('a')) {
-				e.preventDefault();
-				var $content = $target.parent().next('dd');
-
-				self.doTabs($target, $content);
-			}
+			e.preventDefault();
+			
+			self.doTabs($this, $trigger);
 		});
 	};
 
-	Tabs.prototype.doTabs = function ($target, $content) {
-		var self = this,
-			$panel = $('.tabs dd'),
-			$trigger = $('.tabs dt a'),
+	Tabs.prototype.doTabs = function ($this, $trigger) {
+		var $panelGroup = $this.parent().parent().next('.tabs-panels'),
+			$panel = $panelGroup.children('li'),
+			triggerPos = $this.parent().index(),
+			$matchingPanel = $panel.eq(triggerPos),
 			activeTrigger = 'tab-trigger--open',
 			activePanel = 'tab-panel--open';
 
 		// Remove all trigger active classes
 		$trigger.parent().removeClass(activeTrigger);
+
 		// Trigger active class
-		$target.parent().addClass(activeTrigger);
+		$this.parent().addClass(activeTrigger);
 
 		// Remove all panel active classes
 		$panel.removeClass(activePanel);
-		
+
 		// Panel active class
-		$content.toggleClass(activePanel);
+		$matchingPanel.addClass(activePanel);
 	};
 
 	new Tabs;
