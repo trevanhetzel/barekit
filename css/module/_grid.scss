@@ -152,21 +152,19 @@
 // Box model
 [class|=sm],
 [class|=md],
-[class|=lrg] {
+[class|=lg] {
 	float: left;
 	padding: 0 $gutter / 2;
-
-	.row &:first-child {
-		padding-left: 0;
-	}
-
-	.row &:last-child {
-		padding-right: 0;
-	}
 }
 
 .row {
+	@extend .clearfix;
+
 	.row {
-		background: #efefef;
+		[class|=sm],
+		[class|=md],
+		[class|=lg] {
+			padding: 0;
+		}
 	}
 }
