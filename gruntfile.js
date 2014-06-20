@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                 files: {
                     'js/bare-ninja.min.js': [
                         'js/modules/accordion.js',
-                        'js/modules/carousel.js',
+                        'js/modules/dropdown-nav.js',
                         'js/modules/modal.js',
                         'js/modules/tabs.js'
                     ]
