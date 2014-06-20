@@ -1,0 +1,35 @@
+{
+  "name": "Bare Ninja",
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  },
+  "homepage": "https://github.com/a2labs/bare-ninja",
+  "authors": [
+    "Trevan Hetzel <trevan@hetzelcreative.com>"
+  ],
+  "description": "Bare Ninja is a front-end project starter",
+  "license": "MIT",
+  "ignore": [
+    ".sass-cache",
+    "node_modules",
+    "bower_components",
+    ".bowercc",
+    ".gitignore",
+    "example.html",
+    "gruntfile.js",
+    "package.json",
+    ".bower.json",
+    "bower.json",
+    ".bowercc",
+    "js/modules"
+  ],
+  "_release": "ef1963eb78",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ef1963eb78c0d2c2bde5947f4c90a3852139448e"
+  },
+  "_source": "git://github.com/a2labs/bare-ninja.git",
+  "_target": "*",
+  "_originalSource": "bare-ninja"
+}

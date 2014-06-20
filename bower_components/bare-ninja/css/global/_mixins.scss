@@ -1,0 +1,18 @@
+// Media queries
+@mixin breakpoint($size) {
+	@if $size == small {
+		@media (min-width: $small) { @content; }
+	}
+	@else if $size == medium {
+		@media (min-width: $medium) { @content; }
+	}
+	@else if $size == large {
+		@media (min-width: $large) { @content; }
+	}
+}
+
+// Outline for form :focus states
+%outline {
+	outline: none;
+	box-shadow: 0 0 2px 2px #96c0e6;
+}
