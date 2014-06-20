@@ -1,0 +1,19 @@
+.wrapper {
+	max-width: 62.5em;
+	margin: 0 auto;
+}
+
+.header {
+	background: #282829;
+}
+
+.header-logo {
+	text-align: center;
+	color: white;
+}
+
+@media (min-width: 800px) {
+	.header-logo {
+		text-align: left;
+	}
+}
