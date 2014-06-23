@@ -1,14 +1,15 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
+
+	var $toggleTrigger = $('.toggle-trigger');
 
 	var Toggle = function () {
 		this.init();
 	};
 
 	Toggle.prototype.init = function () {
-		var self = this,
-			$trigger = $('.toggle-trigger');
+		var self = this;
 
-		$trigger.on('click', function (e) {
+		$toggleTrigger.on('click', function (e) {
 			var $this = $(this),
 				options = $this.data('options');
 
@@ -24,6 +25,6 @@ jQuery(document).ready (function ($) {
 		$target.toggleClass('toggle-shown');
 	};
 
-	new Toggle;
+	$toggleTrigger.length ? new Toggle : false;
 
 });

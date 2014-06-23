@@ -1,4 +1,6 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
+
+	var $tabs = $('.tabs');
 
 	var Tabs = function () {
 		this.init();
@@ -38,6 +40,6 @@ jQuery(document).ready (function ($) {
 		$matchingPanel.addClass(activePanel);
 	};
 
-	new Tabs;
+	$tabs.length ? new Tabs : false;
 
 });

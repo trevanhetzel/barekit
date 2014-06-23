@@ -1,4 +1,6 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
+
+	var $accordion = $('.accordion');	
 
 	var Accordion = function () {
 		this.init();
@@ -6,7 +8,6 @@ jQuery(document).ready (function ($) {
 
 	Accordion.prototype.init = function () {
 		var self = this,
-			$accordion = $('.accordion'),
 			$trigger = $('.accordion dt a');
 
 		$accordion.on('click', function (e) {
@@ -50,6 +51,6 @@ jQuery(document).ready (function ($) {
 		}
 	};
 
-	new Accordion;
+	$accordion.length ? new Accordion : false;
 
 });

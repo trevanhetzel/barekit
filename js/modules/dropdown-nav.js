@@ -1,4 +1,6 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
+
+	var $dropdown = $('.dropdown-nav');
 
 	var Dropdown = function () {
 		this.init();
@@ -6,7 +8,6 @@ jQuery(document).ready (function ($) {
 
 	Dropdown.prototype.init = function () {
 		var self = this,
-			$dropdown = $('.dropdown-nav'),
 			options = $dropdown.data('options'),
 			$trigger = $dropdown.find('li:has(ul) > a');
 
@@ -36,7 +37,7 @@ jQuery(document).ready (function ($) {
 		$menu.toggleClass('dropdown--open');
 		$this.parent().addClass('click-setting');
 	};
-
-	new Dropdown;
+	
+	$dropdown.length ? new Dropdown : false;
 
 });

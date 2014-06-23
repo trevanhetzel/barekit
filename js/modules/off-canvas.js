@@ -1,4 +1,6 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
+
+	var $offCanvasContain = $('.off-canvas-contain');
 
 	var offCanvas = function () {
 		this.init();
@@ -31,13 +33,13 @@ jQuery(document).ready (function ($) {
 	};
 
 	offCanvas.prototype.closeOffCanvas = function () {
-		$('.off-canvas-contain').removeClass('off-canvas--open');
+		$offCanvasContain.removeClass('off-canvas--open');
 	};
 
 	offCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
 		$offCanvas.toggleClass('off-canvas--open');
 	};
 
-	new offCanvas;
+	$offCanvasContain.length ? new offCanvas : false;
 
 });

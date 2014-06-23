@@ -1,4 +1,4 @@
-jQuery(document).ready (function ($) {
+jQuery(function ($) {
 
 	// Cache jQuery objects/set variables
 	var $modal = $('.modal'),
@@ -70,6 +70,6 @@ jQuery(document).ready (function ($) {
 	};
 
 	// Create new Modal object
-	new Modal;
+	$modal.length ? new Modal : false;
 
 });
