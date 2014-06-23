@@ -26,9 +26,6 @@ jQuery(function ($) {
 			})
 			.on('click', '.off-canvas', function (e) {
 				e.stopPropagation();
-			})
-			.on('click', '.off-canvas-content', function (e) {
-				e.stopPropagation();
 			});
 	};
 
