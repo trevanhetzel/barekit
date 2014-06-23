@@ -16,12 +16,3 @@
 	outline: none;
 	box-shadow: 0 0 2px 2px #96c0e6;
 }
-
-// Off-Canvas
-@function oc-width() {
-	@if variable-exists(oc-width) {
-		@return $oc-width;
-	} @else {
-		@return 17.5em;
-	}
-}
