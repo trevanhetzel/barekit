@@ -3,7 +3,7 @@
 
 	&.left-align {
 		.off-canvas {
-			left: -$oc-width;
+			left: -(oc-width());
 			transition: left .3s ease;
 		}
 
@@ -18,14 +18,14 @@
 			}
 
 			.off-canvas-content {
-				left: $oc-width;
+				left: oc-width();
 			}
 		}
 	}
 
 	&.right-align {
 		.off-canvas {
-			right: -$oc-width;
+			right: -(oc-width());
 			transition: right .3s ease;
 		}
 
@@ -40,7 +40,7 @@
 			}
 
 			.off-canvas-content {
-				right: $oc-width;
+				right: oc-width();
 			}
 		}
 	}
@@ -49,7 +49,7 @@
 .off-canvas {
 	position: fixed;
 	top: 0;
-	width: $oc-width;
+	width: oc-width();
 	height: 100%;
 	background: white;
 }
