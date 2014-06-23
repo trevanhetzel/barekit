@@ -17,7 +17,7 @@ jQuery(function ($) {
 			})
 			.on('click', trigger, function (e) {
 				var $this = $(this),
-					$offCanvas = $this.parent().parent();
+					$offCanvas = $this.parents('.off-canvas-contain');
 
 				e.stopPropagation();
 				e.preventDefault();
