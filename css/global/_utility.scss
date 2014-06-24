@@ -29,3 +29,19 @@
 	display: table;
 	clear: both;
 }
+
+.show-md {
+	display: none;
+
+	@include breakpoint(medium) {
+		display: block;
+	}
+}
+
+.show-lg {
+	display: none;
+
+	@include breakpoint(large) {
+		display: block;
+	}
+}
