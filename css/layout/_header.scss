@@ -1,12 +1,86 @@
 .header {
-	background: #282829;
+	background: $dark;
+	height: 4em;
+
+	.wrapper {
+		padding: 0 .5em;
+	}
+
+	@include breakpoint(medium) {
+		height: 5.25em;
+
+		.wrapper {
+			padding: 0 1.5em;
+		}
+
+		.button {
+			margin: 1em 0 0 1em;
+		}
+	}
+
+	@include breakpoint(large) {
+		height: 6.5625em;
+
+		.wrapper {
+			padding: 0;
+		}
+
+		.button {
+			margin: 1.625em 0 0 1.25em;
+		}
+	}
 }
 
 .header-logo {
-	text-align: center;
-	color: white;
+	color: $white;
+	margin: 0;
+	font-family: $pacifico;
+	font-weight: normal;
+	font-size: 1.625em;
+	line-height: 2.5em;
 
 	@include breakpoint(medium) {
-		text-align: left;
+		font-size: 2.125em;
+		line-height: 2.5em;
+	}
+
+	@include breakpoint(large) {
+		font-size: 2.5em;
+		line-height: 2.625em;
+	}
+}
+
+.off-canvas-trigger {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 1.875em;
+	height: 1.0625em;
+}
+
+.hamburger-icon {
+	display: block;
+	position: relative;
+	top: 1em;
+	height: .0625em;
+	width: 100%;
+	background: $white;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 1.875em;
+		height: .0625em;
+		background: $white;
+	}
+
+	&::before {
+		top: -.5em;
+	}
+
+	&::after {
+		bottom: -.5em;
 	}
 }

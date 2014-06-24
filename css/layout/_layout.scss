@@ -1,4 +1,13 @@
 .wrapper {
 	max-width: 62.5em;
 	margin: 0 auto;
+	padding: 1.5em;
+
+	@include breakpoint(medium) {
+		padding: 2em;
+	}
+
+	@include breakpoint(large) {
+		padding: 5.125em 0;
+	}
 }

@@ -1,9 +1,24 @@
+// Bare Ninja settings file
+@import "global/settings";
+
 // Import Bare Ninja
 @import "bower_components/bare-ninja/css/bare-ninja";
 
-// Bare Ninja settings file
-@import "global/settings";
+// Variables
+@import "global/variables";
+
+// Base styles
+body {
+	font-family: $roboto;
+	color: $dark;
+}
 
 // Layout files
 @import "layout/layout";
 @import "layout/header";
+@import "layout/hero";
+
+// Module files
+@import "module/off-canvas";
+@import "module/typography";
+@import "module/button";

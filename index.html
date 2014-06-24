@@ -7,22 +7,41 @@
 
         <title>Bare Ninja</title>
 
+        <link href="http://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
-    	<header class="row header">
-    		<div class="row wrapper">
-	    		<div class="sm-12 md-4">
-	    			<h1 class="header-logo">Bare Ninja</h1>
-	    		</div>
+    <body class="off-canvas-contain right-align">
+        <section class="off-canvas">
+            <a href="#" class="button is-white">Download</a>
+            <a href="#" class="button is-yellow">View on GitHub</a>
+        </section>
 
-	    		<div class="sm-12 md-8 right">
-	    			<a href="#" class="button right">Download</a>
-	    			<a href="#" class="button right">View on GitHub</a>
-	    		</div>
-	    	</div>
-    	</header>
+        <section class="off-canvas-content">
+        	<header class="row header">
+        		<div class="wrapper">
+    	    		<div class="sm-12 md-4">
+    	    			<h1 class="header-logo">Bare Ninja</h1>
+
+                        <a href="#" class="off-canvas-trigger right hide-md">
+                            <span class="hamburger-icon"></span>
+                        </a>
+    	    		</div>
+
+    	    		<div class="sm-12 md-8 right show-md">
+    	    			<a href="#" class="button right is-white">Download</a>
+    	    			<a href="#" class="button right is-yellow">View on GitHub</a>
+    	    		</div>
+    	    	</div>
+        	</header>
+
+            <section class="row hero">
+                <div class="wrapper">
+                    <h1 class="text-center">A front-end project starter</h1>
+                    <p class="text-center">Bare Ninja is a front-end project starter meant to be a starting point and structural guide rather than a full framework. It's bare enough to not interfere with your custom styles or scripts, but yet has enough functioning modules to jumpstart a project in no time.</p>
+                </div>
+            </section>
+        </section>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bare-ninja/js/bare-ninja.min.js"></script>

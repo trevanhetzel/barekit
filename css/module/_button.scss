@@ -1,0 +1,21 @@
+.button {
+	display: block;
+	height: 3.25em;
+	line-height: 3.25em;
+	padding: 0 1.375em;
+	font-weight: 400;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+}
+
+.is-yellow {
+	border-color: $yellow;
+	color: $yellow;
+}
+
+.is-white {
+	border-color: $white;
+	color: $white;
+}
