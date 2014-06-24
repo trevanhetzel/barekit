@@ -1,8 +1,8 @@
-// Off-Canvas
-@function oc-width() {
-	@if variable-exists(oc-width) {
-		@return $oc-width;
+// Existing variable check
+@function var($name, $default) {
+	@if $name {
+		@return $name;
 	} @else {
-		@return 17.5em;
+		@return $default;
 	}
 }
