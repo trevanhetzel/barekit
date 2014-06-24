@@ -45,3 +45,15 @@
 		display: block;
 	}
 }
+
+.hide-md {
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.hide-lg {
+	@include breakpoint(large) {
+		display: none;
+	}
+}
