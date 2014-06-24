@@ -154,7 +154,7 @@
 [class|=md],
 [class|=lg] {
 	float: left;
-	padding: 0 $gutter / 2;
+	padding: 0 var($gutter, 20px) / 2;
 }
 
 .row {
