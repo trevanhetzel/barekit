@@ -1,11 +1,33 @@
 .hero {
 	background: $grey;
 
+	.text-center {
+		@include breakpoint(medium) {
+			text-align: left;
+		}
+
+		@include breakpoint(large) {
+			text-align: center;
+		}
+	}
+
 	.wrapper {
 		max-width: 47.8125em;
 	}
 }
 
 .hero-icon {
-	margin: -10.125em 0 3.75em;
+	margin: 0 0 1.5em;
+	width: 100px;
+
+	@include breakpoint(medium) {
+		float: left;
+		margin: 0 2.5em 1.5em;
+	}
+
+	@include breakpoint(large) {
+		float: none;
+		width: auto;
+		margin: -10.125em 0 3.75em;
+	}
 }
