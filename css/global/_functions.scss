@@ -1,6 +1,6 @@
 // Existing variable check
 @function var($name, $default) {
-	@if $name != null {
+	@if $name {
 		@return $name;
 	} @else {
 		@return $default;
