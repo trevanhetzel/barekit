@@ -4,7 +4,7 @@
 	padding: 1.5em;
 
 	@include breakpoint(medium) {
-		padding: 2em;
+		padding: 3em 2em;
 	}
 
 	@include breakpoint(large) {

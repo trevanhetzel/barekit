@@ -13,6 +13,21 @@ h1 {
 	}
 }
 
+h2 {
+	margin: 0 0 .5em;
+	font-weight: 300;
+	line-height: 1em;
+	font-size: 2em;
+
+	@include breakpoint(medium) {
+		font-size: 3em;
+	}
+
+	@include breakpoint(large) {
+		font-size: 4.25em;
+	}
+}
+
 p {
 	font-weight: 300;
 	font-size: 1.125em;
