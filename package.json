@@ -1,12 +1,16 @@
 {
-	"name": "bare-ninja",
-	"version": "0.0.1",
-	"description": "Base node dependencies",
-	"devDependencies": {
-		"grunt": "~0.4.1",
-		"grunt-contrib-sass": "~0.7.3",
-		"grunt-contrib-watch": "~0.5.1",
-		"grunt-autoprefixer": "~0.7.3",
-		"grunt-contrib-uglify": "~0.5.0"
-	}
+  "name": "bare-ninja",
+  "version": "0.0.1",
+  "description": "Base node dependencies",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "~0.7.3",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "gulp": "^3.8.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-connect": "^2.0.5",
+    "gulp-stylus": "^1.0.2"
+  }
 }
