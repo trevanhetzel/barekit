@@ -1,10 +1,13 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     stylus = require('gulp-stylus'),
-    prefix = require('gulp-autoprefixer');
+    prefix = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 var paths = {
     styles: 'css/**/*.styl',
+    scripts: 'js/modules/*.js',
     html: './*.html'
 };
 
@@ -27,10 +30,24 @@ gulp.task('styles', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('scripts', function () {
+    gulp.src(paths.scripts)
+        .pipe(concat('bare-ninja.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./js'))
+        .pipe(connect.reload());
+});
+
 gulp.task('watch', function () {
     gulp.watch(paths.styles, ['styles']);
+    gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.html, ['html']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['styles', 'connect', 'watch']);
+gulp.task('default', [
+    'styles',
+    'scripts',
+    'connect',
+    'watch'
+]);
