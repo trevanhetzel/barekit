@@ -3,7 +3,7 @@ textarea {
 	/*	Use custom :focus %extend for all form elements
 		to keep the :focus style the same for custom ones */
 	&:focus {
-		@extend %outline;
+		@extend $outline;
 	}
 }
 
@@ -29,7 +29,7 @@ textarea {
 		position: absolute;
 
 		&:focus + span:before {
-			@extend %outline;
+			@extend $outline;
 		}
 
 		// Checked style addition
@@ -45,7 +45,7 @@ textarea {
 		position: absolute;
 
 		&:focus + span:before {
-			@extend %outline;
+			@extend $outline;
 		}
 
 		// Checked style addition

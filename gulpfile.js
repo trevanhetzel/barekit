@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer');
 
 var paths = {
-    styles: 'css/**/*.styl',
+    styles: 'css/bare-ninja.styl',
     html: './*.html'
 };
 
@@ -22,7 +22,7 @@ gulp.task('html', function () {
 gulp.task('styles', function () {
     gulp.src(paths.styles)
         .pipe(stylus())
-        .pipe(prefix())
+        .pipe(prefix('last 2 version', 'ie 8', 'ie 9'))
         .pipe(gulp.dest('./css'))
         .pipe(connect.reload());
 });
@@ -33,4 +33,4 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['styles']);
+gulp.task('default', ['styles', 'connect', 'watch']);

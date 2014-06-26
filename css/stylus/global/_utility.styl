@@ -24,16 +24,18 @@
 	padding: 0;
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .show-md {
 	display: none;
 
-	@include breakpoint(medium) {
+	+breakpoint(medium) {
 		display: block;
 	}
 }
@@ -41,19 +43,19 @@
 .show-lg {
 	display: none;
 
-	@include breakpoint(large) {
+	+breakpoint(large) {
 		display: block;
 	}
 }
 
 .hide-md {
-	@include breakpoint(medium) {
+	+breakpoint(medium) {
 		display: none;
 	}
 }
 
 .hide-lg {
-	@include breakpoint(large) {
+	+breakpoint(large) {
 		display: none;
 	}
 }
