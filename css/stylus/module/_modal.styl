@@ -1,0 +1,32 @@
+.modal {
+	display: none;
+}
+
+.modal-open {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	width: 100%;
+	background: $modal-bg;
+
+	+breakpoint(medium) {
+		width: 50%;
+	}
+}
+
+.modal-bg {
+	&:before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $modal-overlay;
+		opacity: $modal-trans;
+	}
+}
