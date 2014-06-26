@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer');
 
 var paths = {
-    styles: 'css/bare-ninja.styl',
+    styles: 'css/**/*.styl',
     html: './*.html'
 };
 
@@ -20,7 +20,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('styles', function () {
-    gulp.src(paths.styles)
+    gulp.src('css/bare-ninja.styl')
         .pipe(stylus())
         .pipe(prefix('last 2 version', 'ie 8', 'ie 9'))
         .pipe(gulp.dest('./css'))
