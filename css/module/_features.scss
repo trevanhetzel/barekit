@@ -1,0 +1,30 @@
+.features {
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+.feature {
+	border: 1px solid $grey;
+	padding: 1em;
+
+	h5 {
+		margin: 0 0 .5em;
+	}
+
+	@include breakpoint(medium) {
+		padding: 2em 1em;
+
+		h5 {
+			margin: 0 0 1em;
+		}
+	}
+}
+
+.feature-text {
+	font-size: .938em;
+
+	@include breakpoint(medium) {
+		font-size: 1em;
+	}
+}

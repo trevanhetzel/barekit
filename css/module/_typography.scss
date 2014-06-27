@@ -17,10 +17,11 @@ h2 {
 	margin: 0 0 .5em;
 	font-weight: 300;
 	line-height: 1em;
-	font-size: 2em;
+	font-size: 2.5em;
+	color: black;
 
 	@include breakpoint(medium) {
-		font-size: 3em;
+		font-size: 3.5em;
 	}
 
 	@include breakpoint(large) {
@@ -35,5 +36,49 @@ p {
 
 	@include breakpoint(medium) {
 		font-size: 1.25em;
+	}
+}
+
+h3 {
+	font-size: 1.75em;
+	font-weight: 300;
+	border-bottom: 1px solid $grey;
+
+	@include breakpoint(medium) {
+		font-size: 3em;
+	}
+}
+
+h4 {
+	font-size: 1.25em;
+	font-weight: 300;
+	font-weight: 400;
+
+	@include breakpoint(medium) {
+		font-size: 1.5em;
+	}
+}
+
+h5 {
+	font-size: 1.125em;
+	font-weight: 300;
+
+	@include breakpoint(medium) {
+		font-size: 1.3125em;
+	}
+}
+
+.tag {
+	position: relative;
+	top: -3px;
+	background: $yellow-dark;
+	color: $white;
+	font-size: .625em;
+	font-weight: 300;
+	display: inline-block;
+	padding: 0 .25em .063em;
+
+	@include breakpoint(medium) {
+		font-size: .563em;
 	}
 }

@@ -1,0 +1,39 @@
+.subnav {
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+	background: white;
+	border-top: 1px solid $dark;
+	border-bottom: 1px solid $dark;
+
+	ul {
+		max-width: 62.5em;
+		margin: 0 auto;
+
+		li {
+			display: inline-block;
+			padding: 1.25em 4em;
+		}
+
+		a {
+			font-size: 1.188em;
+			color: $dark;
+			text-decoration: none;
+		}
+
+		.subnav--active {
+			border-bottom: 2px solid $yellow-dark;
+		}
+	}
+
+	& + .row {
+		padding-top: 67px;
+	}
+}
+
+.subnav--sticky {
+	@include breakpoint(large) {
+		position: fixed;
+		top: 0;
+	}
+}

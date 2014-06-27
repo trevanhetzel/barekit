@@ -13,6 +13,12 @@ body {
 	color: $dark;
 }
 
+#jsScrollStart {
+	background: white;
+	position: relative;
+	z-index: 2;
+}
+
 // Layout files
 @import "layout/layout";
 @import "layout/header";
@@ -23,3 +29,5 @@ body {
 @import "module/off-canvas";
 @import "module/typography";
 @import "module/button";
+@import "module/subnav";
+@import "module/features";

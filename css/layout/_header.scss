@@ -19,7 +19,12 @@
 	}
 
 	@include breakpoint(large) {
+		position: fixed;
 		height: 6.5625em;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
 
 		.wrapper {
 			padding: 0;
@@ -82,5 +87,15 @@
 
 	&::after {
 		bottom: -.5em;
+	}
+}
+
+.sticky {
+	.header {
+		// top: -6.5265em;
+	}
+
+	.hero {
+		// margin-top: 0;
 	}
 }

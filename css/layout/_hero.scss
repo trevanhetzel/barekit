@@ -1,5 +1,11 @@
 .hero {
+	position: relative;
 	background: $grey;
+
+	@include breakpoint(large) {
+		margin-top: 6.5625em;
+		padding-top: 6.5625em;
+	}
 
 	.text-center {
 		@include breakpoint(medium) {
@@ -17,17 +23,31 @@
 }
 
 .hero-icon {
-	margin: 0 0 1.5em;
-	width: 100px;
+	margin: 0 auto 1.5em;
+	z-index: 2;
+	width: 150px;
+	height: 168.5px;
+	background: url(../img/logo-sprite.png) no-repeat;
+	background-size: 100%;
 
 	@include breakpoint(medium) {
 		float: left;
-		margin: 0 2.5em 1.5em;
+		margin: 0 2.5em 4em;
 	}
 
 	@include breakpoint(large) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 		float: none;
 		width: auto;
-		margin: -10.125em 0 3.75em;
+		margin: 1.5em auto 3.75em;
+		width: 210px;
+		height: 236px;
 	}
+}
+
+.neeeeked {
+	background-position: bottom;
 }
