@@ -11,24 +11,26 @@ jQuery(function ($) {
 			options = $dropdown.data('options'),
 			$trigger = $dropdown.find('li:has(ul) > a');
 
-		if (options.click == true) {
-			// Cancel out the CSS hover functionality
-			$trigger
-				.on('mouseover', function () {
-					var $this = $(this);
+		if (options) {
+			if (options.click == true) {
+				// Cancel out the CSS hover functionality
+				$trigger
+					.on('mouseover', function () {
+						var $this = $(this);
 
-					$this.parent().addClass('click-setting');
-				})
-				.on('click', function (e) {
-					var $this = $(this),
-						$menu = $this.siblings('ul');
+						$this.parent().addClass('click-setting');
+					})
+					.on('click', function (e) {
+						var $this = $(this),
+							$menu = $this.siblings('ul');
 
-					e.preventDefault();
+						e.preventDefault();
 
-					$this.parent().removeClass('click-setting');
+						$this.parent().removeClass('click-setting');
 
-					self.doDropdown($this, $trigger, $menu);
-				});
+						self.doDropdown($this, $trigger, $menu);
+					});
+			}
 		}
 	};
 
