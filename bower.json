@@ -2,7 +2,8 @@
 	"name": "Bare Ninja Demo",
 	"dependencies": {
 		"jquery": "~2.1.1",
-		"bare-ninja": ""
+		"bare-ninja": "",
+		"prism": ""
 	},
 	"version": "0.0.1",
 	"homepage": "https://a2labs.github.io/bare-ninja",

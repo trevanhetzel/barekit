@@ -1,0 +1,38 @@
+.usage-tabs {
+	display: none;
+
+	@include breakpoint(medium) {
+		display: block;
+	}
+
+	a {
+		display: inline-block;
+		color: $dark;
+		text-decoration: none;
+		font-size: 1.25em;
+		padding: .75em 0;
+	}
+}
+
+.tab-trigger--open a {
+	color: $yellow-dark;
+}
+
+.usage-panels {
+	margin: 0;
+	padding: 0;
+	
+	li {
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint(medium) {
+			display: none;
+		}
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+}

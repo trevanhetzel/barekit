@@ -68,7 +68,11 @@ h5 {
 	}
 }
 
-.tag {
+strong {
+	font-weight: 400;
+}
+
+.header-tag {
 	position: relative;
 	top: -3px;
 	background: $yellow-dark;
