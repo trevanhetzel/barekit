@@ -158,7 +158,8 @@
                     <h2 class="text-center">Usage</h2>
                     <div class="row">
                         <ul class="tabs no-bullets usage-tabs sm-12 md-4 lg-3 left">
-                            <li class="tab-trigger--open"><a href="#">Grid</a></li>
+                            <li class="tab-trigger--open"><a href="#">Getting started</a></li>
+                            <li><a href="#">Grid</a></li>
                             <li><a href="#">Accordion</a></li>
                             <li><a href="#">Dropdown navigation</a></li>
                             <li><a href="#">Forms</a></li>
@@ -171,22 +172,114 @@
 
                         <ul class="tabs-panels usage-panels sm-12 md-8 lg-9 left">
                             <li class="tab-panel--open">
+                                <h3>Getting started</h3>
+                            </li>
+
+                            <li>
                                 <h3>Grid</h3>
 
-                                <h4>Grid classes</h4>
-                                
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
-
-                                <h4>Basic markup</h4>
+                                <h4>Markup</h4>
 
                                 <p>Marking up the grid requires a <code>.row</code> element to wrap columns. Columns are defined using the <code>.sm-*</code>, <code>.md-*</code> and <code>.lg-*</code> classes.</p>
 
-                                <p><strong>A basic example of a single column layout at the smallest breakpoint</strong></p>
-
 <pre><code data-language="html"><div class="row">
-    <div class="col"></div>
+    <div class="sm-12 md-6 lg-1">1</div>
+    <div class="sm-12 md-6 lg-11">11</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-2">2</div>
+    <div class="sm-12 md-6 lg-10">10</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-3">3</div>
+    <div class="sm-12 md-6 lg-9">9</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-4">4</div>
+    <div class="sm-12 md-6 lg-8">8</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-5">5</div>
+    <div class="sm-12 md-6 lg-7">7</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-6">6</div>
+    <div class="sm-12 md-6 lg-6">6</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-7">7</div>
+    <div class="sm-12 md-6 lg-5">5</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-8">8</div>
+    <div class="sm-12 md-6 lg-4">4</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-9">9</div>
+    <div class="sm-12 md-6 lg-3">3</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-10">10</div>
+    <div class="sm-12 md-6 lg-2">2</div>
+</div>
+<div class="row">
+    <div class="sm-12 md-6 lg-11">11</div>
+    <div class="sm-12 md-6 lg-1">1</div>
 </div>
 </code></pre>
+
+                                <h4>Result</h4>
+
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-1" style="background: #e1e1e1">1</div>
+                                    <div class="sm-12 md-6 lg-11" style="background: #c6c6c6">11</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-2" style="background: #e1e1e1">2</div>
+                                    <div class="sm-12 md-6 lg-10" style="background: #c6c6c6">10</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-3" style="background: #e1e1e1">3</div>
+                                    <div class="sm-12 md-6 lg-9" style="background: #c6c6c6">9</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-4" style="background: #e1e1e1">4</div>
+                                    <div class="sm-12 md-6 lg-8" style="background: #c6c6c6">8</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-5" style="background: #e1e1e1">5</div>
+                                    <div class="sm-12 md-6 lg-7" style="background: #c6c6c6">7</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-6" style="background: #e1e1e1">6</div>
+                                    <div class="sm-12 md-6 lg-6" style="background: #c6c6c6">6</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-7" style="background: #e1e1e1">7</div>
+                                    <div class="sm-12 md-6 lg-5" style="background: #c6c6c6">5</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-8" style="background: #e1e1e1">8</div>
+                                    <div class="sm-12 md-6 lg-4" style="background: #c6c6c6">4</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-9" style="background: #e1e1e1">9</div>
+                                    <div class="sm-12 md-6 lg-3" style="background: #c6c6c6">3</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-10" style="background: #e1e1e1">10</div>
+                                    <div class="sm-12 md-6 lg-2" style="background: #c6c6c6">2</div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="sm-12 md-6 lg-11" style="background: #e1e1e1">11</div>
+                                    <div class="sm-12 md-6 lg-1" style="background: #c6c6c6">1</div>
+                                </div>
+
+                                <h4>Customization</h4>
+
+                                <p>The breakpoints at which the grid classes take affect can be overrode in the settings file. The default breakpoints are:</p>
+
+                                <p><strong>small:</strong> 30em<br><strong>medium:</strong> 50em<br><strong>large:</strong> 64em</p>
                             </li>
                             <li>
                                 <h3>Accordion</h3>
