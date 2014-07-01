@@ -2,6 +2,9 @@ jQuery(function ($) {
 	// Sticky subnav
 	var $window = $(window),
 		$subNav = $('.subnav'),
+		$features = $('.subnav-features'),
+		$setup = $('.subnav-setup'),
+		$usage = $('.subnav-usage'),
 		$header = $('.header'),
 		$icon = $('.hero-icon'),
 		scrollTop = null,
@@ -25,6 +28,27 @@ jQuery(function ($) {
 			$subNav.addClass('subnav--sticky');
 		} else if (scrollTop <= (startPoint + 105)) {
 			$subNav.removeClass('subnav--sticky');
+			$features.removeClass('subnav--active');
+		}
+
+		// Active subnav class for Features
+		if (scrollTop >= $('#jsScrollStart').position().top + 105) {
+			$features.addClass('subnav--active');
+			$usage.removeClass('subnav--active');
+			$setup.removeClass('subnav--active');
+		}
+
+		// Active subnav class for Setup
+		if (scrollTop >= $('#jsSetup').position().top + 105) {
+			$features.removeClass('subnav--active');
+			$usage.removeClass('subnav--active');
+			$setup.addClass('subnav--active');
+		}
+
+		// Active subnav class for Usage
+		if (scrollTop >= $('#jsUsage').position().top + 105) {
+			$setup.removeClass('subnav--active');
+			$usage.addClass('subnav--active');
 		}
 
 		// Scroll up icon

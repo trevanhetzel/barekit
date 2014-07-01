@@ -50,8 +50,14 @@ module.exports = function (grunt) {
                     'css/layout/*.scss',
                     'css/module/*.scss'
                 ],
-                tasks: ['sass:dist', 'autoprefixer'],
+                tasks: ['sass:dist', 'autoprefixer', 'shell:grunt'],
                 options: { nospawn: true }
+            }
+        },
+
+        shell: {
+            grunt: {
+                command: 'afplay ~/Library/Sounds/Grunt.aifc'
             }
         }
     });
@@ -60,6 +66,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-shell');
 
     // Register Tasks
     grunt.registerTask('default', [ 'sass', 'autoprefixer' ]);
