@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'css',
-                    src: ['sass/*.scss'],
+                    src: ['*.scss'],
                     dest: 'css',
                     ext: '.css'
                 }]
@@ -63,10 +63,10 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: [
-                    'css/bare-ninja.scss',
-                    'css/global/*.scss',
-                    'css/layout/*.scss',
-                    'css/module/*.scss'
+                    'css/sass/bare-ninja.scss',
+                    'css/sass/global/*.scss',
+                    'css/sass/layout/*.scss',
+                    'css/sass/module/*.scss'
                 ],
                 tasks: ['sass:dist', 'autoprefixer'],
                 options: { nospawn: true }
