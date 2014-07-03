@@ -141,15 +141,49 @@
 
                     <h4>Bower <span class="header-tag">recommended</span></h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
+                    <p>The best way to get Bare Ninja up and running on a project is to install via Bower. You shouldn't ever touch the source anyway, so with Bower it's easy to get the latest updates.</p>
+
+                    <p>First, make sure you have <a href="http://bower.io">Bower</a> installed. Then you can add this line to a <code>bower.json</code> file <code>"bare-ninja": ""</code> or simply do a <code>bower install bare-ninja</code>.</p>
 
                     <h4>Manually</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
+                    <p>If you don't want to use Bower you can always download the source from <a href="#">GitHub</a>.</p>
 
-                    <h3>Reference</h3>
+                    <p><a href="#" class="button is-dark left">Download Source</a></p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
+                    <div class="clearfix"></div>
+
+                    <h3>Getting started</h3>
+
+                    <h4>JavaScript</h4>
+
+                    <p>Getting up and running with the Bare Ninja JavaScript modules is very simple. You first need to reference the latest <a href="#">jQuery</a> file (also installable via <a href="#">Bower</a>), and then reference the <code>bare-ninja.min.js</code> file at the bottom of your HTML page (before the closing <code>body</code> tag).</p>
+
+                    <p>If you installed jQuery and Bare Ninja using Bower, the paths would look something like this:</p>
+
+<pre><code data-language="html"><script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bare-ninja/js/bare-ninja.min.js"></script>
+</code></pre>
+
+                    <h4>CSS</h4>
+
+                    <p>The Bare Ninja CSS can be used in a few different ways. The core code comes with both a Sass and Stylus version, so the ideal way is to <code>@import</code> the <code>bare-ninja.scss</code> or <code>bare-ninja.styl</code> file from your main Sass or Stylus stylesheet.</p>
+
+                    <p>Again, if you installed via Bower, the <code>@import</code> rule would look something like this:</p>
+<pre><code data-language="css">// Import Bare Ninja
+@import "bower_components/bare-ninja/css/bare-ninja";
+</code></pre>
+
+                    <p>Using Bare Ninja in this way allows you to compile it using your own preferred pre-processor, task runner, compression style, etc.</p>
+
+                    <p>The other way to use the Bare Ninja CSS is, of course, to just reference it directly in your markup.</p>
+<pre><code data-language="html"><link rel="stylesheet" href="bower_components/bare-ninja/css/bare-ninja.css">
+</code></pre>
+
+                    <h4>Customizing settings</h4>
+                    <p>Bare Ninja doesn't come with a ton of things that you'll want to overwrite, since it is very much a bare framework with no presentational styles. However, you can change things like the grid offset, breakpoints, off-canvas width, etc. To do so, you'll need to create a <code>_settings.scss</code> or <code>_settings.styl</code> partial in your CSS directory.</p>
+
+                    <p>A list of all the variables used in the core code can be found <a href="#">here</a>. It's recommmended to just copy that file and simply uncomment and change the variables you need to.</p>
                 </div>
             </section>
 

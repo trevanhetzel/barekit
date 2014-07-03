@@ -12,6 +12,10 @@
 		margin: 0 0 .5em;
 	}
 
+	p {
+		margin: 0;
+	}
+
 	@include breakpoint(medium) {
 		padding: 2em 1em;
 
