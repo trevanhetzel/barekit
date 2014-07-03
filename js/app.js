@@ -39,14 +39,14 @@ jQuery(function ($) {
 		}
 
 		// Active subnav class for Setup
-		if (scrollTop >= $('#jsSetup').position().top + 105) {
+		if (scrollTop >= $('#jsSetup').position().top + 50) {
 			$features.removeClass('subnav--active');
 			$usage.removeClass('subnav--active');
 			$setup.addClass('subnav--active');
 		}
 
 		// Active subnav class for Usage
-		if (scrollTop >= $('#jsUsage').position().top + 105) {
+		if (scrollTop >= $('#jsUsage').position().top) {
 			$setup.removeClass('subnav--active');
 			$usage.addClass('subnav--active');
 		}

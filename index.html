@@ -46,9 +46,9 @@
 
             <section class="row subnav show-md">
                 <ul class="no-bullets text-center">
-                    <li class="subnav-features"><a href="#">Features</a></li>
-                    <li class="subnav-setup"><a href="#">Setup</a></li>
-                    <li class="subnav-usage"><a href="#">Usage</a></li>
+                    <li class="subnav-features"><a href="#jsScrollStart">Features</a></li>
+                    <li class="subnav-setup"><a href="#jsSetup">Setup</a></li>
+                    <li class="subnav-usage"><a href="#jsUsage">Usage</a></li>
                 </ul>
             </section>
 
@@ -59,74 +59,26 @@
                     <ul class="features no-bullets">
                         <li class="sm-12 md-4 lg-3">
                             <div class="row feature text-center">
-                                <h5>Responsive grid</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Accordions</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Dropdown navigation</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Base form elements</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Modals</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Off-canvas</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Tabs</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Toggling</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
+                                <h5>Responsive</h5>
+                                <p class="feature-text">Save time marking up a page with the straightforward mobile-first, responsive grid classes and breakpoint mixins.</p>
                             </div>
                         </li>
                         <li class="sm-12 md-4 lg-3">
                             <div class="row feature text-center">
                                 <h5>Sass &amp; Stylus</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
+                                <p class="feature-text">Bare Ninja comes with both Sass and Stylus stylesheets, so you can use and compile whichever you love.</p>
                             </div>
                         </li>
                         <li class="sm-12 md-4 lg-3">
                             <div class="row feature text-center">
-                                <h5>Compile yourself</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
-                            </div>
-                        </li>
-                        <li class="sm-12 md-4 lg-3">
-                            <div class="row feature text-center">
-                                <h5>Utility classes</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
+                                <h5>Bare as a naked ninja</h5>
+                                <p class="feature-text">There is no design or visual styles to Bare Ninja. It's solely meant to serve as the backbone of your site's structure.</p>
                             </div>
                         </li>
                         <li class="sm-12 md-4 lg-3">
                             <div class="row feature text-center">
                                 <h5>IE8+</h5>
-                                <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium mauris sit amet dui volutpat imperdiet.</p>
+                                <p class="feature-text">Bare Ninja has been tested in all the modern desktop and mobile browsers and gracefully degrades back to IE8.</p>
                             </div>
                         </li>
                     </ul>
@@ -192,8 +144,9 @@
                     <h2 class="text-center">Usage</h2>
                     <div class="row">
                         <ul class="tabs no-bullets usage-tabs sm-12 md-4 lg-3 left">
-                            <li class="tab-trigger--open"><a href="#">Getting started</a></li>
+                            <li class="tab-trigger--open"><a href="#">Styling</a></li>
                             <li><a href="#">Grid</a></li>
+                            <li><a href="#">Media queries</a></li>
                             <li><a href="#">Accordion</a></li>
                             <li><a href="#">Dropdown navigation</a></li>
                             <li><a href="#">Forms</a></li>
@@ -206,7 +159,11 @@
 
                         <ul class="tabs-panels usage-panels sm-12 md-8 lg-9 left">
                             <li class="tab-panel--open">
-                                <h3>Getting started</h3>
+                                <h3>Styling</h3>
+
+                                <p>Bare Ninja comes with no styles, other than base positioning and display properties. This is to keep the framework and structure of your site completely independent from your own custom styles.</p>
+
+                                <p>The best practice for styling elements further is to add your own classes to elements and scope your styling to your custom classes.</p>
                             </li>
 
                             <li>
@@ -214,7 +171,7 @@
 
                                 <h4>Markup</h4>
 
-                                <p>Marking up the grid requires a <code>.row</code> element to wrap columns. Columns are defined using the <code>.sm-*</code>, <code>.md-*</code> and <code>.lg-*</code> classes.</p>
+                                <p>Marking up the grid requires a <code>.row</code> element to wrap columns. Columns are defined using the <code>.sm-*</code>, <code>.md-*</code> and <code>.lg-*</code> classes. The grid is developed mobile-first, so the <code>.sm-*</code> classes get applied by default (from small up), <code>.md-*</code> get applied once the medium breakpoint is reached, and <code>.lg-*</code> get applied in the large breakpoint.</p>
 
 <pre><code data-language="html"><div class="row">
     <div class="sm-12 md-6 lg-1">1</div>
@@ -314,22 +271,370 @@
                                 <p>The breakpoints at which the grid classes take affect can be overrode in the settings file. The default breakpoints are:</p>
 
                                 <p><strong>small:</strong> 30em<br><strong>medium:</strong> 50em<br><strong>large:</strong> 64em</p>
+
+                                <p>As of the current release, Bare Ninja does not support the addition of more breakpoints.</p>
                             </li>
+
+                            <li>
+                                <h3>Media queries</h3>
+
+                                <p>Bare Ninja has a media query mixin that makes referencing mobile-first media queries in your Sass or Stylus a breeze (the mixin is only avaiable if you're referencing the CSS with the Sass or Stylus <code>@import</code> rule).</p>
+
+                                <p><strong>The Sass mixin:</strong></p>
+<pre><code data-language="css">@include breakpoint(medium) {...}
+</code></pre>
+
+                                <p><strong>The Stylus mixin:</strong></p>
+<pre><code date-language="css">+breakpoint(medium) {...}
+</code></pre>
+
+                                <p>The mixin currently only takes <code>medium</code> and <code>large</code> values for the parameter (<code>small</code> is the default). These are directly based off of the breakpoint values in your <code>_settings.scss</code> or <code>_settings.styl</code> file.</p>
+                            </li>
+
                             <li>
                                 <h3>Accordion</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
+                                <p>An accordion must be marked up using a <code>dl</code> list with <code>dt</code>s with anchors for the "triggers" and <code>dd</code>s for the content.</p>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed leo erat. Vivamus lacinia posuere dolor et euismod. Praesent suscipit scelerisque lorem, a convallis arcu suscipit non. Aenean sagittis nisl ac nibh molestie suscipit. In in viverra quam, id luctus diam. Mauris et risus odio. Cras elit risus, commodo vel magna ut, rutrum laoreet lacus.</p>
+                                <p>When a content panel is open, it's associated "trigger" <code>dt</code> gets a class added of <code>.accordion-trigger--open</code>. The open panel itself gets a class of <code>.accordion-panel--open</code>.</p>
+                                
+                                <h4>Markup</h4>
+<pre><code data-language="html"><dl class="accordion">
+    <dt><a href="#">Accordion title 1</a></dt>
+    <dd>Accordion content 1</dd>
+
+    <dt><a href="#">Accordion title 2</a></dt>
+    <dd>Accordion content 2</dd>
+
+    <dt><a href="#">Accordion title 3</a></dt>
+    <dd>Accordion content 3</dd>
+</dl>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <dl class="accordion">
+                                    <dt><a href="#">Accordion title 1</a></dt>
+                                    <dd>Accordion content 1</dd>
+
+                                    <dt><a href="#">Accordion title 2</a></dt>
+                                    <dd>Accordion content 2</dd>
+
+                                    <dt><a href="#">Accordion title 3</a></dt>
+                                    <dd>Accordion content 3</dd>
+                                </dl>
+
+                                <h4>Options</h4>
+
+                                <p>Accordions have one option that can be set to true or false (or left off): <code>multiExpand</code>. This option dictates whether or not multiple content panels can be open at the same time. The option is set with a <code>data-options</code> attribute on the <code>dl</code>:</p>
+
+<pre><code data-language="html"><dl class="accordion" data-options="{ "multiExpand": true }">
+...
+</dl>
+</code></pre>
                             </li>
-                            <li>Dropdown navigation</li>
-                            <li>Forms</li>
-                            <li>Modal</li>
-                            <li>Off-canvas</li>
-                            <li>Tab</li>
-                            <li>Toggle</li>
-                            <li>Utilities</li>
+
+                            <li>
+                                <h3>Dropdown navigation</h3>
+
+                                <p>The dropdown navigation component is an unordered list with support for nested unordered lists that appear on hover or click (an <em>almost</em> CSS only dropdown).</p>
+
+                                <p>An option to trigger the dropdown on click can be set on the parent <code>ul</code> via a <code>data-options</code> attribute. If set to true, the "open" list item gets a class of <code>.dropdown-trigger--open</code> added, otherwise if the option is not set or set to false, the dropdown is all handled with CSS <code>display</code> properties.</p>
+
+                                <h4>Markup</h4>
+
+                                <h5>Hover</h5>
+<pre><code data-language="html"><ul class="dropdown-nav"  data-options='{ "click": false }'>
+    <li>
+        <a href="#">Link 1</a>
+
+        <ul style="background: #e1e1e1; width: 100px">
+            <li><a href="#">Sublink 1</a></li>
+            <li><a href="#">Sublink 2</a></li>
+            <li><a href="#">Sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link 2</a>
+    </li>
+    <li>
+        <a href="#">Link 3</a>
+    </li>
+    <li>
+        <a href="#">Link 4</a>
+    </li>
+</ul>
+</code></pre>
+
+                                <h5>Click</h5>
+<pre><code data-language="html"><ul class="dropdown-nav" data-options='{ "click": true }'>
+    <li>
+        <a href="#">Link 1</a>
+
+        <ul style="background: #e1e1e1; width: 100px">
+            <li><a href="#">Sublink 1</a></li>
+            <li><a href="#">Sublink 2</a></li>
+            <li><a href="#">Sublink 3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link 2</a>
+    </li>
+    <li>
+        <a href="#">Link 3</a>
+    </li>
+    <li>
+        <a href="#">Link 4</a>
+    </li>
+</ul>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <h5>Hover</h5>
+
+                                <ul class="dropdown-nav" data-options='{ "click": false }'>
+                                    <li>
+                                        <a href="#">Link 1</a>
+
+                                        <ul style="background: #e1e1e1; width: 100px">
+                                            <li><a href="#">Sublink 1</a></li>
+                                            <li><a href="#">Sublink 2</a></li>
+                                            <li><a href="#">Sublink 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                </ul>
+
+                                <div class="clearfix"></div>
+
+                                <h5>Click</h5>
+
+                                <ul class="dropdown-nav" data-options='{ "click": true }'>
+                                    <li>
+                                        <a href="#">Link 1</a>
+
+                                        <ul style="background: #e1e1e1; width: 100px">
+                                            <li><a href="#">Sublink 1</a></li>
+                                            <li><a href="#">Sublink 2</a></li>
+                                            <li><a href="#">Sublink 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h3>Forms</h3>
+
+                                <p>Bare Ninja doesn't have much in the way of forms, but it does set up all checkboxes and radios with a base style. It uses a technique of hiding the inputs and using pseudo-elements instead that's applied globally that allows you to get away from the default browser styles.</p>
+
+                                <h4>Markup</h4>
+
+                                <p>To use these bare custom styles, you must wrap your <code>input</code> in a <code>label</code> with a class of <code>.checkbox</code> or <code>.radio</code>, repsectively, and add a <code>span</code> after the <code>input</code> with your actual label text.</p>
+
+<pre><code data-language="html"><label class="checkbox">
+    <input type="checkbox">
+    <span>I'm the label for a checkbox</span>
+</label>
+
+<label class="radio">
+    <input type="radio">
+    <span>I'm the label for a radio</span>
+</label>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>I'm the label for a checkbox</span>
+                                </label>
+
+                                <div class="clearfix"></div>
+
+                                <label class="radio">
+                                    <input type="radio">
+                                    <span>I'm the label for a radio</span>
+                                </label>
+                            </li>
+
+                            <li>
+                                <h3>Modal</h3>
+
+                                <p>The responsive modal is a base popup modal triggered by any element you set. It does not contain any transitions or fades (you can always do that with CSS!).</p>
+
+                                <h4>Markup</h4>
+<pre><code data-language="html"><a href="#" class="modal-trigger" data-options='{ "modalId": "example-modal" }'>Trigger modal</a>
+
+<div class="modal" id="example-modal">
+    <a href="#" class="modal-close right">X</a>
+    <p>This is a modal</p>
+    <p>This is a modal</p>
+    <p>This is a modal</p>
+    <p>This is a modal</p>
+</div>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <a href="#" class="modal-trigger" data-options='{ "modalId": "example-modal" }'>Trigger modal</a>
+
+                                <div class="modal" id="example-modal">
+                                    <a href="#" class="modal-close right">X</a>
+                                    <p>This is a modal</p>
+                                    <p>This is a modal</p>
+                                    <p>This is a modal</p>
+                                    <p>This is a modal</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3>Off-canvas</h3>
+
+                                <p>The off-canvas component in Bare Ninja uses a simple class toggling technique to alter the position of some elements with CSS when the class is active.</p>
+
+                                <h4>Markup</h4>
+
+                                <p>For the off-canvas to work correctly, a <code>.off-canvas-contain</code> element must contain everything, including both the off-canvas and the content that will get pushed over when the off-canvas is open. For a typical mobile off-canvas layout, for example, this element would typically be the <code>body</code>. This containing element also must include a <code>.left-align</code> or <code>.right-align</code> class to specify which direction it should slide out from.</p>
+
+<pre><code data-language="html"><div class="off-canvas-contain right-align">
+    <section class="off-canvas">
+        I am content off-canvas.
+    </section>
+
+    <section class="off-canvas-content">
+        <a href="#" class="off-canvas-trigger">Trigger</a>
+        <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
+    </section>
+</div>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <div class="off-canvas-contain right-align">
+                                    <section class="off-canvas">
+                                        I am content off-canvas.
+                                    </section>
+
+                                    <section class="off-canvas-content">
+                                        <a href="#" class="off-canvas-trigger">Trigger</a>
+                                        <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
+                                    </section>
+                                </div>
+
+                                <h4>Options</h4>
+                            </li>
+
+                            <li>
+                                <h3>Tab</h3>
+
+                                <p>Tabs consist of two unordered lists: one for the "triggers" and one for the actual content that gets hidden/shown. To create a tab component, you just need a <code>ul</code> with a class of <code>.tabs</code> with list items and anchors. Then another <code>ul</code> with a class of <code>.tabs-panels</code> is required with list items that display the content. The active panel is determined by the position in the unordered list. For example, clicking the third tab will display the third content panel.</p>
+
+                                <h4>Markup</h4>
+<pre><code data-language="html"><ul class="tabs">
+    <li class="tab-trigger--open"><a href="#">Tab title 1</a></li>
+    <li><a href="#">Tab title 2</a></li>
+    <li><a href="#">Tab title 3</a></li>
+</ul>
+
+<ul class="tabs-panels">
+    <li class="tab-panel--open">Tab content 1</li>
+    <li>Tab content 2</li>
+    <li>Tab content 3</li>
+</ul>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <ul class="tabs no-bullets">
+                                    <li class="tab-trigger--open"><a href="#">Tab title 1</a></li>
+                                    <li><a href="#">Tab title 2</a></li>
+                                    <li><a href="#">Tab title 3</a></li>
+                                </ul>
+
+                                <ul class="tabs-panels">
+                                    <li class="tab-panel--open">Tab content 1</li>
+                                    <li>Tab content 2</li>
+                                    <li>Tab content 3</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h3>Toggle</h3>
+
+                                <p>The toggle component is a simple way to show/hide items on a page. When clicking on a "trigger", it simply shows/hides the specified element. The element to toggle is specified via a <code>data-options</code> attribute on the "trigger" element.</p>
+
+                                <h4>Markup</h4>
+<pre><code data-language="html"><a href="#" class="toggle-trigger" data-options='{ "toggle": "toggle-example" }'>Toggle</a>
+
+<div class="toggle" id="toggle-example">Hello!</div>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <a href="#" class="toggle-trigger" data-options='{ "toggle": "toggle-example" }'>Toggle</a>
+
+                                <div class="toggle" id="toggle-example">Hello!</div>
+                            </li>
+
+                            <li>
+                                <h3>Utilities</h3>
+
+                                <p>There are several reusable utility classes available in Bare Ninja to make marking up a page faster and more consistent.</p>
+
+                                <h4>Positioning</h4>
+
+                                <ul class="no-bullets">
+                                    <li><code>.left</code></li>
+                                    <li><code>.right</code></li>
+                                </ul>
+
+                                <h4>Text align</h4>
+
+                                <ul class="no-bullets">
+                                    <li><code>.text-left</code></li>
+                                    <li><code>.text-center</code></li>
+                                    <li><code>.text-right</code></li>
+                                </ul>
+
+                                <h4>Lists</h4>
+
+                                <ul class="no-bullets">
+                                    <li><code>.no-bullets</code></li>
+                                </ul>
+
+                                <h4>Clearfix</h4>
+
+                                <ul class="no-bullets">
+                                    <li><code>.clearfix</code></li>
+                                </ul>
+
+                                <h4>Show/hide</h4>
+
+                                <ul class="no-bullets">
+                                    <li><code>.show-md</code></li>
+                                    <li><code>.show-lg</code></li>
+                                    <li><code>.hide-md</code></li>
+                                    <li><code>.hide-lg</code></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
