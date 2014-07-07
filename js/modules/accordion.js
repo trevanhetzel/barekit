@@ -31,7 +31,7 @@ jQuery(function ($) {
 			activeTrigger = 'accordion-trigger--open',
 			activePanel = 'accordion-panel--open';
 
-		if (options.multiExpand == true) {
+		if (options && options.multiExpand == true) {
 			// Trigger active class
 			$target.parent().toggleClass(activeTrigger);
 			// Panel active class
