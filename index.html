@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Bare Ninja</title>
@@ -113,8 +112,8 @@
 
                     <p>If you installed jQuery and Bare Ninja using Bower, the paths would look something like this:</p>
 
-<pre><code data-language="html"><script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bare-ninja/js/bare-ninja.min.js"></script>
+<pre><code data-language="html">&lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;</script>
+&lt;script src="bower_components/bare-ninja/js/bare-ninja.min.js"&gt;</script>
 </code></pre>
 
                     <h4>CSS</h4>
@@ -129,7 +128,7 @@
                     <p>Using Bare Ninja in this way allows you to compile it using your own preferred pre-processor, task runner, compression style, etc.</p>
 
                     <p>The other way to use the Bare Ninja CSS is, of course, to just reference it directly in your markup.</p>
-<pre><code data-language="html"><link rel="stylesheet" href="bower_components/bare-ninja/css/bare-ninja.css">
+<pre><code data-language="html">&lt;link rel="stylesheet" href="bower_components/bare-ninja/css/bare-ninja.css"&gt;
 </code></pre>
 
                     <h4>Customizing settings</h4>
@@ -299,21 +298,11 @@
                                 <p>When a content panel is open, it's associated "trigger" <code>dt</code> gets a class added of <code>.accordion-trigger--open</code>. The open panel itself gets a class of <code>.accordion-panel--open</code>.</p>
                                 
                                 <h4>Markup</h4>
-<pre><code data-language="html"><dl class="accordion">
-    <dt><a href="#">Accordion title 1</a></dt>
-    <dd>Accordion content 1</dd>
 
-    <dt><a href="#">Accordion title 2</a></dt>
-    <dd>Accordion content 2</dd>
-
-    <dt><a href="#">Accordion title 3</a></dt>
-    <dd>Accordion content 3</dd>
-</dl>
-</code></pre>
 
                                 <h4>Result</h4>
 
-                                <dl class="accordion">
+                                <dl class="accordion" data-options='{ "multiExpand": true }'>
                                     <dt><a href="#">Accordion title 1</a></dt>
                                     <dd>Accordion content 1</dd>
 
@@ -328,10 +317,7 @@
 
                                 <p>Accordions have one option that can be set to true or false (or left off): <code>multiExpand</code>. This option dictates whether or not multiple content panels can be open at the same time. The option is set with a <code>data-options</code> attribute on the <code>dl</code>:</p>
 
-<pre><code data-language="html"><dl class="accordion" data-options="{ "multiExpand": true }">
-...
-</dl>
-</code></pre>
+
                             </li>
 
                             <li>
@@ -344,7 +330,7 @@
                                 <h4>Markup</h4>
 
                                 <h5>Hover</h5>
-<pre><code data-language="html"><ul class="dropdown-nav"  data-options='{ "click": false }'>
+<pre><code data-language="html">&lt;ul class="dropdown-nav"  data-options='{ "click": false }'&gt;
     <li>
         <a href="#">Link 1</a>
 
@@ -363,11 +349,11 @@
     <li>
         <a href="#">Link 4</a>
     </li>
-</ul>
+&lt;/ul&gt;
 </code></pre>
 
                                 <h5>Click</h5>
-<pre><code data-language="html"><ul class="dropdown-nav" data-options='{ "click": true }'>
+<pre><code data-language="html">&lt;ul class="dropdown-nav" data-options='{ "click": true }'&gt;
     <li>
         <a href="#">Link 1</a>
 
@@ -386,7 +372,7 @@
     <li>
         <a href="#">Link 4</a>
     </li>
-</ul>
+&lt;/ul&gt;
 </code></pre>
 
                                 <h4>Result</h4>

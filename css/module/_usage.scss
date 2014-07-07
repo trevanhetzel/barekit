@@ -3,6 +3,7 @@
 
 	@include breakpoint(medium) {
 		display: block;
+		position: relative;
 	}
 
 	a {
@@ -19,7 +20,6 @@
 }
 
 .usage-panels {
-	margin: 0;
 	padding: 0;
 	
 	& > li {

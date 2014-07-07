@@ -7,6 +7,7 @@ jQuery(function ($) {
 		$usage = $('.subnav-usage'),
 		$header = $('.header'),
 		$icon = $('.hero-icon'),
+		$usageTabs = $('.usage-tabs'),
 		scrollTop = null,
 		startPoint = null,
 		offset = null;

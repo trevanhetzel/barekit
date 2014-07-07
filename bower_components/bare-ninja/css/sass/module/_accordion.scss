@@ -1,0 +1,9 @@
+.accordion {
+	dd {
+		display: none;
+	}
+
+	.accordion-panel--open {
+		display: block;
+	}
+}
