@@ -7,16 +7,20 @@ jQuery(function ($) {
 	};
 
 	Tabs.prototype.init = function () {
-		var self = this,
-			$trigger = $('.tabs li a');
+		var self = this;
 
-		$trigger.on('click', function (e) {
-			var $this = $(this);
+		$tabs.each(function () {
+			var $trigger = $(this).find('li a');
 
-			e.preventDefault();
-			
-			self.doTabs($this, $trigger);
-		});
+			$trigger.on('click', function (e) {
+				var $this = $(this);
+
+				e.preventDefault();
+				
+				self.doTabs($this, $trigger);
+			});
+		})
+		
 	};
 
 	Tabs.prototype.doTabs = function ($this, $trigger) {
