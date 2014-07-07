@@ -7,31 +7,35 @@ jQuery(function ($) {
 	};
 
 	Dropdown.prototype.init = function () {
-		var self = this,
-			options = $dropdown.data('options'),
-			$trigger = $dropdown.find('li:has(ul) > a');
+		var self = this;
 
-		if (options) {
-			if (options.click == true) {
-				// Cancel out the CSS hover functionality
-				$trigger
-					.on('mouseover', function () {
-						var $this = $(this);
+		$dropdown.each(function () {
+			var $this = $(this),
+				options = $this.data('options'),
+				$trigger = $this.find('li:has(ul) > a');
 
-						$this.parent().addClass('click-setting');
-					})
-					.on('click', function (e) {
-						var $this = $(this),
-							$menu = $this.siblings('ul');
+			if (options) {
+				if (options.click == true) {
+					// Cancel out the CSS hover functionality
+					$trigger
+						.on('mouseover', function () {
+							var $this = $(this);
 
-						e.preventDefault();
+							$this.parent().addClass('click-setting');
+						})
+						.on('click', function (e) {
+							var $this = $(this),
+								$menu = $this.siblings('ul');
 
-						$this.parent().removeClass('click-setting');
+							e.preventDefault();
 
-						self.doDropdown($this, $trigger, $menu);
-					});
+							$this.parent().removeClass('click-setting');
+
+							self.doDropdown($this, $trigger, $menu);
+						});
+				}
 			}
-		}
+		});
 	};
 
 	Dropdown.prototype.doDropdown = function ($this, $trigger, $menu) {
