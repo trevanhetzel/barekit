@@ -13,6 +13,14 @@ body {
 	color: $dark;
 }
 
+.modal-bg:before {
+	z-index: 4;
+}
+
+.modal-open {
+	z-index: 5;
+}
+
 #jsScrollStart {
 	background: white;
 	position: relative;
