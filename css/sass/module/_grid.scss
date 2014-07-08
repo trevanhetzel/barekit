@@ -47,6 +47,55 @@
 	width: $grid-12;
 }
 
+// Offsets
+.sm-offset-1 {
+	margin-left: $grid-1;
+}
+
+.sm-offset-2 {
+	margin-left: $grid-2;
+}
+
+.sm-offset-3 {
+	margin-left: $grid-3;
+}
+
+.sm-offset-4 {
+	margin-left: $grid-4;
+}
+
+.sm-offset-5 {
+	margin-left: $grid-5;
+}
+
+.sm-offset-6 {
+	margin-left: $grid-6;
+}
+
+.sm-offset-7 {
+	margin-left: $grid-7;
+}
+
+.sm-offset-8 {
+	margin-left: $grid-8;
+}
+
+.sm-offset-9 {
+	margin-left: $grid-9;
+}
+
+.sm-offset-10 {
+	margin-left: $grid-10;
+}
+
+.sm-offset-11 {
+	margin-left: $grid-11;
+}
+
+.sm-offset-12 {
+	margin-left: $grid-12;
+}
+
 // Medium widths
 @include breakpoint(medium) {
 	.md-1 {
@@ -95,6 +144,59 @@
 
 	.md-12 {
 		width: $grid-12;
+	}
+
+	// Offsets
+	.md-offset-0 {
+		margin-left: 0;
+	}
+	
+	.md-offset-1 {
+		margin-left: $grid-1;
+	}
+
+	.md-offset-2 {
+		margin-left: $grid-2;
+	}
+
+	.md-offset-3 {
+		margin-left: $grid-3;
+	}
+
+	.md-offset-4 {
+		margin-left: $grid-4;
+	}
+
+	.md-offset-5 {
+		margin-left: $grid-5;
+	}
+
+	.md-offset-6 {
+		margin-left: $grid-6;
+	}
+
+	.md-offset-7 {
+		margin-left: $grid-7;
+	}
+
+	.md-offset-8 {
+		margin-left: $grid-8;
+	}
+
+	.md-offset-9 {
+		margin-left: $grid-9;
+	}
+
+	.md-offset-10 {
+		margin-left: $grid-10;
+	}
+
+	.md-offset-11 {
+		margin-left: $grid-11;
+	}
+
+	.md-offset-12 {
+		margin-left: $grid-12;
 	}
 }
 
@@ -146,6 +248,59 @@
 
 	.lg-12 {
 		width: $grid-12;
+	}
+
+	// Offsets
+	.lg-offset-0 {
+		margin-left: 0;
+	}
+
+	.lg-offset-1 {
+		margin-left: $grid-1;
+	}
+
+	.lg-offset-2 {
+		margin-left: $grid-2;
+	}
+
+	.lg-offset-3 {
+		margin-left: $grid-3;
+	}
+
+	.lg-offset-4 {
+		margin-left: $grid-4;
+	}
+
+	.lg-offset-5 {
+		margin-left: $grid-5;
+	}
+
+	.lg-offset-6 {
+		margin-left: $grid-6;
+	}
+
+	.lg-offset-7 {
+		margin-left: $grid-7;
+	}
+
+	.lg-offset-8 {
+		margin-left: $grid-8;
+	}
+
+	.lg-offset-9 {
+		margin-left: $grid-9;
+	}
+
+	.lg-offset-10 {
+		margin-left: $grid-10;
+	}
+
+	.lg-offset-11 {
+		margin-left: $grid-11;
+	}
+
+	.lg-offset-12 {
+		margin-left: $grid-12;
 	}
 }
 
