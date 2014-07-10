@@ -6,12 +6,11 @@
 
         <title>Bare Ninja</title>
 
-        <link href="http://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body class="off-canvas-contain right-align">
-        <section class="off-canvas">
+        <section class="off-canvas main-off-canvas">
             <a href="#" class="button is-white">Download</a>
             <a href="https://github.com/a2labs/bare-ninja" class="button is-yellow">View on GitHub</a>
         </section>
@@ -29,7 +28,7 @@
 
     	    		<div class="sm-12 md-8 right show-md">
     	    			<a href="#" class="button right is-white">Download</a>
-    	    			<a href="#" class="button right is-yellow">View on GitHub</a>
+    	    			<a href="https://github.com/a2labs/bare-ninja" class="button right is-yellow">View on GitHub</a>
     	    		</div>
     	    	</div>
         	</header>
@@ -307,7 +306,16 @@
                                 <p>When a content panel is open, it's associated "trigger" <code>dt</code> gets a class added of <code>.accordion-trigger--open</code>. The open panel itself gets a class of <code>.accordion-panel--open</code>.</p>
                                 
                                 <h4>Markup</h4>
+<pre><code data-language="html"><dl class="accordion" data-options='{ "multiExpand": true }'>
+    <dt><a href="#">Accordion title 1</a></dt>
+    <dd>Accordion content 1</dd>
 
+    <dt><a href="#">Accordion title 2</a></dt>
+    <dd>Accordion content 2</dd>
+
+    <dt><a href="#">Accordion title 3</a></dt>
+    <dd>Accordion content 3</dd>
+</dl></code></pre>
 
                                 <h4>Result</h4>
 
@@ -326,7 +334,7 @@
 
                                 <p>Accordions have one option that can be set to true or false (or left off): <code>multiExpand</code>. This option dictates whether or not multiple content panels can be open at the same time. The option is set with a <code>data-options</code> attribute on the <code>dl</code>:</p>
 
-
+<pre><code data-language="html"><dl class="accordion" data-options='{ "multiExpand": true }'></pre></code>
                             </li>
 
                             <li>
