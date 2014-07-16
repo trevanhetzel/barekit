@@ -13,7 +13,52 @@ The ideal way to get started with Bare Ninja is to to simply clone the repo. A B
 
 ## Usage
 
-1. CSS
-2. JavaScript
+### CSS
+...
+### JavaScript
+
+#### Accordion
+
+```js
+$('#my-element').bnAccordion({
+    "multiExpand": true
+});
+```
+
+#### Dropdown Nav
+
+```js
+$('#my-element').bnDropdownNav({
+    "click": false
+});
+```
+
+#### Modal
+
+```js
+$('#my-element').bnModal({
+    "modalId": "example-modal"
+});
+```
+
+#### Off-Canvas
+
+```js
+$('#my-element').bnOffCanvas();
+```
+
+#### Tabs
+
+```js
+$('#my-element').bnTabs();
+```
+
+#### Toggle
+
+```js
+$('#my-element').bnToggle({
+    "toggle": "toggle-example"
+});
+```
 
 ## Compiling
