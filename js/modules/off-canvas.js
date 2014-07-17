@@ -1,42 +1,55 @@
 jQuery(function ($) {
 
-	var $offCanvasContain = $('.off-canvas-contain');
+	$.fn.bnOffCanvas = function (options) {
 
-	var offCanvas = function () {
-		this.init();
-	};
-
-	offCanvas.prototype.init = function () {
-		var self = this
+		var $offCanvasContain = $(this),
 			$document = $(document),
-			trigger = '.off-canvas-trigger';
+			trigger = '.off-canvas-trigger',
+			offCanvas = '.off-canvas',
+			openClass= 'off-canvas--open';
 
-		$document
-			.on('click', function () {
-				self.closeOffCanvas();
-			})
-			.on('click', trigger, function (e) {
-				var $this = $(this),
-					$offCanvas = $this.parents('.off-canvas-contain');
+		var offCanvas = function () {
+			this.init();
+		};
 
-				e.stopPropagation();
-				e.preventDefault();
+		offCanvas.prototype.init = function () {
 
-				self.openOffCanvas($this, $offCanvas);
-			})
-			.on('click', '.off-canvas', function (e) {
-				e.stopPropagation();
-			});
+			var self = this;
+
+			$document
+				.on('click', function () {
+					self.closeOffCanvas();
+				});
+
+			$offCanvasContain
+				.on('click', trigger, function (e) {
+					var $this = $(this),
+						$offCanvas = $this.parents('.off-canvas-contain');
+
+					e.stopPropagation();
+					e.preventDefault();
+
+					self.openOffCanvas($this, $offCanvas);
+				});
+
+			$offCanvasContain
+				.on('click', offCanvas, function (e) {
+					e.stopPropagation();
+				});
+		};
+
+		offCanvas.prototype.closeOffCanvas = function () {
+			$offCanvasContain.removeClass(openClass);
+		};
+
+		offCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
+			$offCanvas.addClass(openClass);
+		};
+
+		$offCanvasContain.length ? new offCanvas : false;
+
 	};
 
-	offCanvas.prototype.closeOffCanvas = function () {
-		$offCanvasContain.removeClass('off-canvas--open');
-	};
-
-	offCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
-		$offCanvas.toggleClass('off-canvas--open');
-	};
-
-	$offCanvasContain.length ? new offCanvas : false;
+	$('.off-canvas-contain').bnOffCanvas();
 
 });
