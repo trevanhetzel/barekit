@@ -19,9 +19,7 @@ jQuery(function ($) {
 			$document
 				.on('click', function () {
 					self.closeOffCanvas();
-				});
-
-			$offCanvasContain
+				})
 				.on('click', trigger, function (e) {
 					var $this = $(this),
 						$offCanvas = $this.parents('.off-canvas-contain');
@@ -30,9 +28,7 @@ jQuery(function ($) {
 					e.preventDefault();
 
 					self.openOffCanvas($this, $offCanvas);
-				});
-
-			$offCanvasContain
+				})
 				.on('click', offCanvas, function (e) {
 					e.stopPropagation();
 				});
