@@ -27,12 +27,13 @@ jQuery(function ($) {
 					e.stopPropagation();
 					e.preventDefault();
 
-					self.openOffCanvas($this, $offCanvas);
+					if ($offCanvas.hasClass(openClass)) {
+						self.closeOffCanvas();
+					} else {
+						self.openOffCanvas($this, $offCanvas);
+					}
 				})
 				.on('click', offCanvasContent, function (e) {
-					e.stopPropagation();
-				})
-				.on('click', '.off-canvas--open .off-canvas-trigger', function (e) {
 					e.stopPropagation();
 				});
 		};
