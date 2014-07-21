@@ -5,8 +5,8 @@ jQuery(function ($) {
 		var $offCanvasContain = $(this),
 			$document = $(document),
 			trigger = '.off-canvas-trigger',
-			offCanvas = '.off-canvas',
-			openClass= 'off-canvas--open';
+			offCanvasContent = '.off-canvas',
+			openClass = 'off-canvas--open';
 
 		var offCanvas = function () {
 			this.init();
@@ -29,7 +29,7 @@ jQuery(function ($) {
 
 					self.openOffCanvas($this, $offCanvas);
 				})
-				.on('click', offCanvas, function (e) {
+				.on('click', offCanvasContent, function (e) {
 					e.stopPropagation();
 				});
 		};
