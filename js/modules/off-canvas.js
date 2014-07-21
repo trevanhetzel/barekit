@@ -31,6 +31,9 @@ jQuery(function ($) {
 				})
 				.on('click', offCanvasContent, function (e) {
 					e.stopPropagation();
+				})
+				.on('click', openClass + trigger, function (e) {
+					e.stopPropagation();
 				});
 		};
 
