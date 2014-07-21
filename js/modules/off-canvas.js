@@ -32,7 +32,7 @@ jQuery(function ($) {
 				.on('click', offCanvasContent, function (e) {
 					e.stopPropagation();
 				})
-				.on('click', 'off-canvas--open .off-canvas-trigger', function (e) {
+				.on('click', '.off-canvas--open .off-canvas-trigger', function (e) {
 					e.stopPropagation();
 				});
 		};
