@@ -47,7 +47,7 @@
 }
 
 .off-canvas {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: var($oc-width, 17.5em);;
 	height: 100%;
