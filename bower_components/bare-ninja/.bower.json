@@ -23,11 +23,11 @@
     ".bowercc",
     "js/modules"
   ],
-  "_release": "a5d4b13aa3",
+  "_release": "ec9b0c3414",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "a5d4b13aa3a1b634ceb3c5a678b0de9e749a8067"
+    "commit": "ec9b0c3414ae35ee68a1cbb529753982b769fa11"
   },
   "_source": "git://github.com/a2labs/bare-ninja.git",
   "_target": "*",
