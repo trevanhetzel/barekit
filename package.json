@@ -1,5 +1,5 @@
 {
-	"name": "bare-ninja-demo",
+	"name": "barekit-demo",
 	"version": "0.0.1",
 	"description": "Base node dependencies",
 	"devDependencies": {

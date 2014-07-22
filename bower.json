@@ -1,11 +1,11 @@
 {
-	"name": "Bare Ninja Demo",
+	"name": "BareKit Demo",
 	"dependencies": {
 		"jquery": "~2.1.1",
-		"bare-ninja": ""
+		"barekit": ""
 	},
 	"version": "0.0.1",
-	"homepage": "https://a2labs.github.io/bare-ninja",
+	"homepage": "https://a2labs.github.io/barekit",
 	"authors": [
 		"Trevan Hetzel <trevan@hetzelcreative.com>"
 	]
