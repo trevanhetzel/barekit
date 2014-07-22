@@ -1,14 +1,14 @@
 {
-	"name": "Bare Ninja",
+	"name": "BareKit",
 	"devDependencies": {
 		"jquery": "~2.1.1"
 	},
 	"version": "0.0.1",
-	"homepage": "https://github.com/a2labs/bare-ninja",
+	"homepage": "https://github.com/a2labs/barekit",
 	"authors": [
 		"Trevan Hetzel <trevan@hetzelcreative.com>"
 	],
-	"description": "Bare Ninja is a front-end project starter",
+	"description": "BareKit is a front-end project starter",
 	"license": "MIT",
 	"ignore": [
 		".sass-cache",

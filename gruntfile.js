@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         uglify: {
             modules: {
                 files: {
-                    'js/bare-ninja.min.js': [
+                    'js/barekit.min.js': [
                         'js/modules/accordion.js',
                         'js/modules/dropdown-nav.js',
                         'js/modules/modal.js',
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: [
-                    'css/sass/bare-ninja.scss',
+                    'css/sass/barekit.scss',
                     'css/sass/global/*.scss',
                     'css/sass/layout/*.scss',
                     'css/sass/module/*.scss'
