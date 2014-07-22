@@ -1,0 +1,59 @@
+.off-canvas-contain {
+	position: relative;
+
+	&.left-align {
+		.off-canvas {
+			left: -(var($oc-width, 17.5em));
+			transition: left .3s ease;
+		}
+
+		.off-canvas-content {
+			left: 0;
+			transition: left .3s ease;
+		}
+
+		&.off-canvas--open {
+			.off-canvas {
+				left: 0;
+			}
+
+			.off-canvas-content {
+				left: var($oc-width, 17.5em);
+			}
+		}
+	}
+
+	&.right-align {
+		.off-canvas {
+			right: -(var($oc-width, 17.5em));
+			transition: right .3s ease;
+		}
+
+		.off-canvas-content {
+			right: 0;
+			transition: right .3s ease;
+		}
+
+		&.off-canvas--open {
+			.off-canvas {
+				right: 0;
+			}
+
+			.off-canvas-content {
+				right: var($oc-width, 17.5em);
+			}
+		}
+	}
+}
+
+.off-canvas {
+	position: fixed;
+	top: 0;
+	width: var($oc-width, 17.5em);;
+	height: 100%;
+	transform: translateZ(0);
+}
+
+.off-canvas-content {
+	position: relative;
+}

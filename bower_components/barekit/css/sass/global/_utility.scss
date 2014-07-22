@@ -1,0 +1,87 @@
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+@include breakpoint(medium) {
+	.md-text-left {
+		text-align: left;
+	}
+
+	.md-text-center {
+		text-align: center;
+	}
+
+	.md-text-right {
+		text-align: right;
+	}
+}
+
+@include breakpoint(large) {
+	.lg-text-left {
+		text-align: left;
+	}
+
+	.lg-text-center {
+		text-align: center;
+	}
+
+	.lg-text-right {
+		text-align: right;
+	}
+}
+
+.no-bullets {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.show-md {
+	display: none;
+
+	@include breakpoint(medium) {
+		display: block;
+	}
+}
+
+.show-lg {
+	display: none;
+
+	@include breakpoint(large) {
+		display: block;
+	}
+}
+
+.hide-md {
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.hide-lg {
+	@include breakpoint(large) {
+		display: none;
+	}
+}

@@ -1,0 +1,35 @@
+{
+  "name": "BareKit",
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  },
+  "homepage": "https://github.com/a2labs/barekit",
+  "authors": [
+    "Trevan Hetzel <trevan@hetzelcreative.com>"
+  ],
+  "description": "BareKit is a front-end project starter",
+  "license": "MIT",
+  "ignore": [
+    ".sass-cache",
+    "node_modules",
+    "bower_components",
+    ".bowercc",
+    ".gitignore",
+    "example.html",
+    "gruntfile.js",
+    "package.json",
+    ".bower.json",
+    "bower.json",
+    ".bowercc",
+    "js/modules"
+  ],
+  "_release": "407b3f845a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "407b3f845a51b2cf881e92ce302dad06fb0e5f1a"
+  },
+  "_source": "git://github.com/a2labs/barekit.git",
+  "_target": "*",
+  "_originalSource": "barekit"
+}
