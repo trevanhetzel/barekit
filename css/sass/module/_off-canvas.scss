@@ -47,12 +47,14 @@
 }
 
 .off-canvas {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: var($oc-width, 17.5em);;
 	height: 100%;
+	transform: translateZ(0);
 }
 
 .off-canvas-content {
 	position: relative;
+	transform: translateZ(0);
 }
