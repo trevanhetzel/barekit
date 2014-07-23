@@ -13,9 +13,8 @@ jQuery(function ($) {
 
 			$dropdown.each(function () {
 				var $this = $(this),
+					options = $this.data('options'),
 					$trigger = $this.find('li:has(ul) > a');
-
-				options = $.extend($this.data('options'), options || {});
 
 				if (options) {
 					if (options.click == true) {
