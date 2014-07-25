@@ -23,7 +23,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('styles', function () {
-    gulp.src('css/bare-ninja.styl')
+    gulp.src('css/barekit.styl')
         .pipe(stylus())
         .pipe(prefix('last 2 version', 'ie 8', 'ie 9'))
         .pipe(gulp.dest('./css'))
@@ -32,7 +32,7 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     gulp.src(paths.scripts)
-        .pipe(concat('bare-ninja.min.js'))
+        .pipe(concat('barekit.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./js'))
         .pipe(connect.reload());
