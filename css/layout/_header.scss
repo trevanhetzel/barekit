@@ -39,19 +39,18 @@
 .header-logo {
 	color: $white;
 	margin: 0;
-	font-family: $pacifico;
+	font-family: $satisfy;
 	font-weight: normal;
 	font-size: 1.625em;
-	line-height: 2.5em;
+	line-height: 2.75em;
 
 	@include breakpoint(medium) {
 		font-size: 2.125em;
-		line-height: 2.5em;
 	}
 
 	@include breakpoint(large) {
-		font-size: 2.5em;
-		line-height: 2.625em;
+		font-size: 2.75em;
+		line-height: 2.6em;
 	}
 }
 
