@@ -63,6 +63,10 @@
 		}
 	};
 
+	Accordion.prototype.destroy = function () {
+		this.$el.off( ".accordion" );
+	};
+
 	Bk.Accordion = Accordion;
 
 
