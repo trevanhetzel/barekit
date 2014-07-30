@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect'),
     stylus = require('gulp-stylus'),
     prefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -7,35 +6,29 @@ var gulp = require('gulp'),
 
 var paths = {
     styles: 'css/**/*.styl',
-    scripts: 'js/modules/*.js',
-    html: './*.html'
+    scripts: [
+        'js/modules/core.js',
+        'js/modules/accordion.js',
+        'js/modules/dropdown-nav.js',
+        'js/modules/modal.js',
+        'js/modules/off-canvas.js',
+        'js/modules/tabs.js',
+        'js/modules/toggle.js'
+    ]
 };
-
-gulp.task('connect', function() {
-    connect.server({
-        livereload: true
-    });
-});
-
-gulp.task('html', function () {
-    gulp.src(paths.html)
-        .pipe(connect.reload());
-});
 
 gulp.task('styles', function () {
     gulp.src('css/barekit.styl')
         .pipe(stylus())
         .pipe(prefix('last 2 version', 'ie 8', 'ie 9'))
         .pipe(gulp.dest('./css'))
-        .pipe(connect.reload());
 });
 
 gulp.task('scripts', function () {
     gulp.src(paths.scripts)
         .pipe(concat('barekit.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./js'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('./js'));
 });
 
 gulp.task('watch', function () {
@@ -48,6 +41,5 @@ gulp.task('watch', function () {
 gulp.task('default', [
     'styles',
     'scripts',
-    'connect',
     'watch'
 ]);

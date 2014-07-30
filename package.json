@@ -11,7 +11,6 @@
     "gulp": "^3.8.2",
     "gulp-autoprefixer": "0.0.7",
     "gulp-concat": "^2.2.0",
-    "gulp-connect": "^2.0.5",
     "gulp-stylus": "^1.0.2",
     "gulp-uglify": "^0.3.1"
   }
