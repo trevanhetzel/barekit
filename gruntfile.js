@@ -45,6 +45,7 @@ module.exports = function (grunt) {
             modules: {
                 files: {
                     'js/barekit.min.js': [
+                        'js/modules/core.js',
                         'js/modules/accordion.js',
                         'js/modules/dropdown-nav.js',
                         'js/modules/modal.js',
