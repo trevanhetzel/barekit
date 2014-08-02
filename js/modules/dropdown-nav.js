@@ -5,7 +5,7 @@
 	};
 
 	Dropdown.defaults = {
-		className: "dropdown-nav",
+		className: 'dropdown-nav',
 		click: true,
 		clickClass: 'click-setting',
 		activeTrigger: 'dropdown-trigger--open',
@@ -55,7 +55,7 @@
 	};
 
 	Dropdown.prototype.destroy = function () {
-		this.$el.off("." + Dropdown.defaults.className);
+		this.$el.off('.' + Dropdown.defaults.className);
 	};
 
 	Bk.Dropdown = Dropdown;
@@ -65,8 +65,8 @@
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data("bnDropdown")) {
-				$el.data("bnDropdown", new Dropdown(this, options));
+			if (!$el.data('bnDropdown')) {
+				$el.data('bnDropdown', new Dropdown(this, options));
 			}
 		});
 	};
@@ -76,8 +76,8 @@
 
 	// Auto-initialize if set
 	jQuery(function ($) {
-		if ( Bk.autoInitialize ) {
-			$( "." + Dropdown.defaults.className).bnDropdown();
+		if (Bk.autoInitialize) {
+			$('.' + Dropdown.defaults.className).bnDropdown();
 		}
 	});
 

@@ -5,7 +5,7 @@
 	};
 
 	Accordion.defaults = {
-		className: "accordion",
+		className: 'accordion',
 		multiExpand: false,
 		panelSelector: 'dd',
 		triggerSelector: 'dt a',
@@ -64,7 +64,7 @@
 	};
 
 	Accordion.prototype.destroy = function () {
-		this.$el.off(".accordion");
+		this.$el.off('.accordion');
 	};
 
 	Bk.Accordion = Accordion;
@@ -74,8 +74,8 @@
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data("bnAccordion")) {
-				$el.data("bnAccordion", new Accordion(this, options));
+			if (!$el.data('bnAccordion')) {
+				$el.data('bnAccordion', new Accordion(this, options));
 			}
 		});
 	};
@@ -85,8 +85,8 @@
 
 	// Auto-initialize if set
 	jQuery(function ($) {
-		if ( Bk.autoInitialize ) {
-			$( "." + Accordion.defaults.className ).bnAccordion();
+		if (Bk.autoInitialize) {
+			$('.' + Accordion.defaults.className).bnAccordion();
 		}
 	});
 
