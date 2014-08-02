@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                         'js/modules/core.js',
                         'js/modules/accordion.js',
                         'js/modules/dropdown-nav.js',
-                        'js/modules/modal-new.js',
+                        'js/modules/modal.js',
                         'js/modules/off-canvas.js',
                         'js/modules/tabs.js',
                         'js/modules/toggle.js'
