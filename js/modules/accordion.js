@@ -1,7 +1,7 @@
-(function ( Bk, $ ) {
+(function (Bk, $) {
 
 	var Accordion = function () {
-		this.init.apply( this, arguments );
+		this.init.apply(this, arguments);
 	};
 
 	Accordion.defaults = {
@@ -13,17 +13,17 @@
 		activePanel: 'accordion-panel--open'
 	};
 
-	Accordion.prototype.init = function ( el, options ) {
+	Accordion.prototype.init = function (el, options) {
 		// Store a reference to the jQuery element
-		this.$el = $( el );
+		this.$el = $(el);
 
 		// Set the options
 		this.options = $.extend({}, Accordion.defaults, options, this.$el.data('options'));
 
 		// Add the class
-		this.$el.addClass( this.options.className );
+		this.$el.addClass(this.options.className);
 
-		this.$el.on('click.bk.accordion', $.proxy( this.onClick, this ) );
+		this.$el.on('click.bk.accordion', $.proxy(this.onClick, this));
 	};
 
 	Accordion.prototype.onClick = function (e) {
@@ -38,8 +38,8 @@
 	};
 
 	Accordion.prototype.processOptions = function ($target, $content) {
-		var $panel = this.$el.find( this.options.panelSelector ),
-			$trigger = this.$el.find( this.options.triggerSelector ),
+		var $panel = this.$el.find(this.options.panelSelector),
+			$trigger = this.$el.find(this.options.triggerSelector),
 			activeTrigger = this.options.activeTrigger,
 			activePanel = this.options.activePanel;
 
@@ -64,19 +64,18 @@
 	};
 
 	Accordion.prototype.destroy = function () {
-		this.$el.off( ".accordion" );
+		this.$el.off(".accordion");
 	};
 
 	Bk.Accordion = Accordion;
 
-
 	// Expose as a jQuery Plugin
 	$.fn.bnAccordion = function (options) {
-		return this.each( function () {
+		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if ( !$el.data( "bnAccordion") ) {
-				$el.data( "bnAccordion", new Accordion( this, options ) );
+			if (!$el.data("bnAccordion")) {
+				$el.data("bnAccordion", new Accordion(this, options));
 			}
 		});
 	};
