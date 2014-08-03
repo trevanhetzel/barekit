@@ -40,15 +40,14 @@
 			.on('click.bk.offcanvas', OffCanvas.defaults.offCanvasContent, function (e) {
 				e.stopPropagation();
 			});
+	};
 
-		OffCanvas.prototype.closeOffCanvas = function () {
-			this.$el.removeClass(OffCanvas.defaults.openClass);
-		};
+	OffCanvas.prototype.closeOffCanvas = function () {
+		this.$el.removeClass(OffCanvas.defaults.openClass);
+	};
 
-		OffCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
-			$offCanvas.addClass(OffCanvas.defaults.openClass);
-		};
-
+	OffCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
+		$offCanvas.addClass(OffCanvas.defaults.openClass);
 	};
 
 	OffCanvas.prototype.destroy = function () {

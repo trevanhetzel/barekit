@@ -1,36 +1,66 @@
-jQuery(function ($) {
+(function (Bk, $) {
 
-	$.fn.bnToggle = function (options) {
-
-		var $toggleTrigger = $(this);
-
-		var Toggle = function () {
-			this.init();
-		};
-
-		Toggle.prototype.init = function () {
-			var self = this;
-
-			$toggleTrigger.on('click', function (e) {
-				var $this = $(this);
-
-				options = $.extend($this.data('options'), options || {});
-
-				e.preventDefault();
-				
-				self.doToggle($this, options);
-			});
-		};
-
-		Toggle.prototype.doToggle = function ($this, options) {
-			var $target = $('#' + options.toggle);
-
-			$target.toggleClass('toggle-shown');
-		};
-
-		$toggleTrigger.length ? new Toggle : false;
+	var Toggle = function () {
+		this.init.apply(this, arguments);
 	};
 
-	$('.toggle-trigger').bnToggle();
+	Toggle.defaults = {
+		className: 'toggle-trigger',
+		toggle: '',
+		activeClass: 'toggle-shown'
+	};
 
-});
+	Toggle.prototype.init = function (el, options) {
+		var self = this;
+		
+		// Store a reference to the jQuery element
+		this.$el = $(el);
+
+		// Add the class
+		this.$el.addClass(Toggle.defaults.className);
+
+		this.options = $.extend({}, Toggle.defaults, options, this.$el.data('options'));
+
+		this.$el.on('click.bk.toggle', function (e) {
+			var $this = $(this);
+
+			e.preventDefault();
+			
+			self.doToggle();
+		});
+	};
+
+	Toggle.prototype.doToggle = function () {
+		var $target = $('#' + this.options.toggle);
+
+		$target.toggleClass(this.options.activeClass);
+	};
+
+	Toggle.prototype.destroy = function () {
+		this.$el.off(Toggle.defaults.className);
+	};
+
+	Bk.Toggle = Toggle;
+
+	// Expose as a jQuery Plugin
+	$.fn.bnToggle = function (options) {
+		return this.each(function () {
+			var $el = $(this);
+			// Check if it is already set up
+			if (!$el.data('bnToggle')) {
+				$el.data('bnToggle', new Toggle(this, options));
+			}
+		});
+	};
+
+	// Allow defaults to be accessed via a common jQuery pattern
+	$.fn.bnToggle.defaults = Toggle.defaults;
+
+	// Auto-initialize if set
+	jQuery(function ($) {
+		if (Bk.autoInitialize) {
+			$('.' + Toggle.defaults.className).bnToggle();
+		}
+	});
+
+}( Barekit, jQuery ));
