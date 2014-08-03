@@ -286,6 +286,16 @@
                                     <div class="sm-12 lg-8 lg-offset-1" style="background: #c6c6c6">8 / offset 1</div>
                                 </div>
 
+                                <h4>Half sizes</h4>
+
+                                <p>BareKit also supports "half" sizes for both column widths and offsets.</p>
+
+<pre><code data-language="html"><div class="row">
+    <div class="sm-12 md-5-half"></div>
+    <div class="sm-12 md-6 sm-offset-half"></div>
+</div>
+</code></pre>
+
                                 <h4>Customization</h4>
 
                                 <p>The breakpoints at which the grid classes take affect can be overrode in the settings file. The default breakpoints are:</p>
@@ -319,7 +329,7 @@
                                 <p>When a content panel is open, it's associated "trigger" <code>dt</code> gets a class added of <code>.accordion-trigger--open</code>. The open panel itself gets a class of <code>.accordion-panel--open</code>.</p>
                                 
                                 <h4>Markup</h4>
-<pre><code data-language="html"><dl class="accordion" data-options='{ "multiExpand": true }'>
+<pre><code data-language="html">&lt;dl class="accordion" data-options='{ "multiExpand": true }'&gt;
     <dt><a href="#">Accordion title 1</a></dt>
     <dd>Accordion content 1</dd>
 
@@ -328,7 +338,7 @@
 
     <dt><a href="#">Accordion title 3</a></dt>
     <dd>Accordion content 3</dd>
-</dl></code></pre>
+&lt;/dl&gt;</code></pre>
 
                                 <h4>Result</h4>
 
@@ -347,7 +357,7 @@
 
                                 <p>Accordions have one option that can be set to true or false (or left off): <code>multiExpand</code>. This option dictates whether or not multiple content panels can be open at the same time. The option is set with a <code>data-options</code> attribute on the <code>dl</code>:</p>
 
-<pre><code data-language="html"><dl class="accordion" data-options='{ "multiExpand": true }'></pre></code>
+<pre><code data-language="html">&lt;dl class="accordion" data-options='{ "multiExpand": true }'&gt;</pre></code>
                             </li>
 
                             <li>
@@ -360,7 +370,7 @@
                                 <h4>Markup</h4>
 
                                 <h5>Hover</h5>
-<pre><code data-language="html">&lt;ul class="dropdown-nav"  data-options='{ "click": false }'&gt;
+<pre><code data-language="html">&lt;ul class="dropdown-nav" data-options='{ "click": false }'&gt;
     <li>
         <a href="#">Link 1</a>
 
@@ -497,7 +507,7 @@
                                 <p>The responsive modal is a base popup modal triggered by any element you set. It does not contain any transitions or fades (you can always do that with CSS!).</p>
 
                                 <h4>Markup</h4>
-<pre><code data-language="html"><a href="#" class="modal-trigger" data-options='{ "modalId": "example-modal" }'>Trigger modal</a>
+<pre><code data-language="html">&lt;a href="#" class="modal-trigger" data-options='{ "modalId": "example-modal" }'&gt;Trigger modal&lt;/a&gt;
 
 <div class="modal" id="example-modal">
     <a href="#" class="modal-close right">X</a>
@@ -598,7 +608,7 @@
                                 <p>The toggle component is a simple way to show/hide items on a page. When clicking on a "trigger", it simply shows/hides the specified element. The element to toggle is specified via a <code>data-options</code> attribute on the "trigger" element.</p>
 
                                 <h4>Markup</h4>
-<pre><code data-language="html"><a href="#" class="toggle-trigger" data-options='{ "toggle": "toggle-example" }'>Toggle</a>
+<pre><code data-language="html">&lt;a href="#" class="toggle-trigger" data-options='{ "toggle": "toggle-example" }'&gt;Toggle&lt;/a&gt;
 
 <div class="toggle" id="toggle-example">Hello!</div>
 </code></pre>
