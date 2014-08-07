@@ -581,9 +581,9 @@
 }
 
 // Box model
-[class|=sm],
-[class|=md],
-[class|=lg] {
+[class*=sm],
+[class*=md],
+[class*=lg] {
 	float: left;
 	padding: 0 var($gutter, 20px) / 2;
 }
@@ -592,9 +592,9 @@
 	@extend .clearfix;
 
 	.row {
-		[class|=sm],
-		[class|=md],
-		[class|=lg] {
+		[class*=sm],
+		[class*=md],
+		[class*=lg] {
 			padding: 0;
 		}
 	}
