@@ -50,4 +50,8 @@ For details on using BareKit, visit the website at [a2labs.github.io/barekit](ht
 
 # License
 
-This project is submitted under an MIT license. Please read our [LICENSE](https://github.com/a2labs/barekit/blob/master/LICENSE) file. All source code is copyright appendTo unless noted otherwise.
+Copyright (c) 2014 appendTo LLC.
+
+Dual licensed under the MIT or GPL licenses.
+
+[http://appendto.com/open-source-licenses](http://appendto.com/open-source-licenses)
