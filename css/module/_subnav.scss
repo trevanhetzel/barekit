@@ -26,8 +26,10 @@
 		}
 	}
 
-	& + .row {
-		padding-top: 67px;
+	@include breakpoint(med) {
+		& + .row {
+			padding-top: 67px;
+		}
 	}
 }
 
