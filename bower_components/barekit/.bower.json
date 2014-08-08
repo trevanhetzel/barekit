@@ -3,11 +3,12 @@
   "devDependencies": {
     "jquery": "~2.1.1"
   },
+  "version": "0.5.0",
   "homepage": "https://github.com/a2labs/barekit",
   "authors": [
     "Trevan Hetzel <trevan@hetzelcreative.com>"
   ],
-  "description": "BareKit is a front-end project starter",
+  "description": "A bare minimum responsive framework",
   "license": "MIT",
   "ignore": [
     ".sass-cache",
@@ -23,13 +24,13 @@
     ".bowercc",
     "js/modules"
   ],
-  "_release": "e0186381c7",
+  "_release": "0.5.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "e0186381c77c92ee61a40a0a6c229b4c85033dcc"
+    "type": "version",
+    "tag": "v0.5.0",
+    "commit": "b8bb83256e6da6fdd9752c76405da8de925fd473"
   },
   "_source": "git://github.com/a2labs/barekit.git",
-  "_target": "*",
+  "_target": "~0.5.0",
   "_originalSource": "barekit"
 }
