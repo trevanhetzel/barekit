@@ -21,7 +21,7 @@
 		this.$el.addClass(OffCanvas.defaults.className);
 
 		$(document)
-			.on('click.bk.offcanvas', function () {
+			.on('click.bk.offcanvas', 'body', function () {
 				self.closeOffCanvas();
 			})
 			.on('click.bk.offcanvas', OffCanvas.defaults.trigger, function (e) {
