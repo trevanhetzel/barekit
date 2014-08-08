@@ -205,7 +205,7 @@
                 $('#add-dropdown').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Dropdown Navigation</h3><ul class="dropdown-nav" data-options=\'{ "click": false }\'><li><a href="#">Link 1</a><ul style="background: #e1e1e1; width: 100px"><li><a href="#">Sublink 1</a></li><li><a href="#">Sublink 2</a></li><li><a href="#">Sublink 3</a></li></ul></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li><li><a href="#">Link 4</a></li></ul><ul class="dropdown-nav" data-options=\'{ "click": true }\'><li><a href="#">Link 1</a><ul style="background: #e1e1e1; width: 100px"><li><a href="#">Sublink 1</a></li><li><a href="#">Sublink 2</a></li><li><a href="#">Sublink 3</a></li></ul></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li><li><a href="#">Link 4</a></li></ul><div class="clearfix"></div>');
-                    $('.dropdown-nav').bkDropdownNav();
+                    $('.dropdown-nav').bkDropdown();
                 });
 
                 // Modal
@@ -218,7 +218,7 @@
                 // Off-Canvas
                 $('#add-offcanvas').bind('click', function (e) {
                     e.preventDefault();
-                    $('#lazy-load-example').html('<h3>Off-Canvas</h3><div class="off-canvas-contain right-align"><section class="off-canvas">I am content off-canvas.</section><section class="off-canvas-content"><a href="#" class="off-canvas-trigger">Trigger</a><p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p></section></div>');
+                    $('#lazy-load-example').html('<div class="off-canvas-contain right-align"><section class="off-canvas">I am content off-canvas.</section><section class="off-canvas-content"><a href="#" class="off-canvas-trigger">Trigger</a><p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p></section></div>');
                     $('.off-canvas-contain').bkOffCanvas();
                 });
 
