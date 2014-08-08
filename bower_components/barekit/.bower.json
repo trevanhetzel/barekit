@@ -23,11 +23,11 @@
     ".bowercc",
     "js/modules"
   ],
-  "_release": "13d0c9e52a",
+  "_release": "74c1e9862d",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "13d0c9e52a723c36703445d26278e1719aa4123d"
+    "commit": "74c1e9862d602570b4d1446971e9368d68543089"
   },
   "_source": "git://github.com/a2labs/barekit.git",
   "_target": "*",

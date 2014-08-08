@@ -7,3 +7,7 @@
 		margin-bottom: 1.25em;
 	}
 }
+
+.off-canvas--open .off-canvas-content {
+	cursor: pointer;
+}
