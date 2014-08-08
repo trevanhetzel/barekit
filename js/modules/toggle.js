@@ -43,23 +43,23 @@
 	Bk.Toggle = Toggle;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnToggle = function (options) {
+	$.fn.bkToggle = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnToggle')) {
-				$el.data('bnToggle', new Toggle(this, options));
+			if (!$el.data('bkToggle')) {
+				$el.data('bkToggle', new Toggle(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnToggle.defaults = Toggle.defaults;
+	$.fn.bkToggle.defaults = Toggle.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + Toggle.defaults.className).bnToggle();
+			$('.' + Toggle.defaults.className).bkToggle();
 		}
 	});
 

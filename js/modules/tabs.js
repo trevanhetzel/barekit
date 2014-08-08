@@ -60,23 +60,23 @@
 	Bk.Tabs = Tabs;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnTabs = function (options) {
+	$.fn.bkTabs = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnTabs')) {
-				$el.data('bnTabs', new Tabs(this, options));
+			if (!$el.data('bkTabs')) {
+				$el.data('bkTabs', new Tabs(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnTabs.defaults = Tabs.defaults;
+	$.fn.bkTabs.defaults = Tabs.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + Tabs.defaults.className).bnTabs();
+			$('.' + Tabs.defaults.className).bkTabs();
 		}
 	});
 

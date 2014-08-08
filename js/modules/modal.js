@@ -78,23 +78,23 @@
 	Bk.Modal = Modal;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnModal = function (options) {
+	$.fn.bkModal = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnModal')) {
-				$el.data('bnModal', new Modal(this, options));
+			if (!$el.data('bkModal')) {
+				$el.data('bkModal', new Modal(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnModal.defaults = Modal.defaults;
+	$.fn.bkModal.defaults = Modal.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + Modal.defaults.className).bnModal();
+			$('.' + Modal.defaults.className).bkModal();
 		}
 	});
 

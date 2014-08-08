@@ -61,23 +61,23 @@
 	Bk.Dropdown = Dropdown;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnDropdown = function (options) {
+	$.fn.bkDropdown = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnDropdown')) {
-				$el.data('bnDropdown', new Dropdown(this, options));
+			if (!$el.data('bkDropdown')) {
+				$el.data('bkDropdown', new Dropdown(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnDropdown.defaults = Dropdown.defaults;
+	$.fn.bkDropdown.defaults = Dropdown.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + Dropdown.defaults.className).bnDropdown();
+			$('.' + Dropdown.defaults.className).bkDropdown();
 		}
 	});
 

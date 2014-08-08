@@ -70,23 +70,23 @@
 	Bk.Accordion = Accordion;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnAccordion = function (options) {
+	$.fn.bkAccordion = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnAccordion')) {
-				$el.data('bnAccordion', new Accordion(this, options));
+			if (!$el.data('bkAccordion')) {
+				$el.data('bkAccordion', new Accordion(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnAccordion.defaults = Accordion.defaults;
+	$.fn.bkAccordion.defaults = Accordion.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + Accordion.defaults.className).bnAccordion();
+			$('.' + Accordion.defaults.className).bkAccordion();
 		}
 	});
 

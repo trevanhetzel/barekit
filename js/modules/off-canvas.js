@@ -60,23 +60,23 @@
 	Bk.OffCanvas = OffCanvas;
 
 	// Expose as a jQuery Plugin
-	$.fn.bnOffCanvas = function (options) {
+	$.fn.bkOffCanvas = function (options) {
 		return this.each(function () {
 			var $el = $(this);
 			// Check if it is already set up
-			if (!$el.data('bnOffCanvas')) {
-				$el.data('bnOffCanvas', new OffCanvas(this, options));
+			if (!$el.data('bkOffCanvas')) {
+				$el.data('bkOffCanvas', new OffCanvas(this, options));
 			}
 		});
 	};
 
 	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bnOffCanvas.defaults = OffCanvas.defaults;
+	$.fn.bkOffCanvas.defaults = OffCanvas.defaults;
 
 	// Auto-initialize if set
 	jQuery(function ($) {
 		if (Bk.autoInitialize) {
-			$('.' + OffCanvas.defaults.className).bnOffCanvas();
+			$('.' + OffCanvas.defaults.className).bkOffCanvas();
 		}
 	});
 

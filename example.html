@@ -198,42 +198,42 @@
                 $('#add-accordion').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Accordion</h3><dl class="accordion" data-options=\'{ "multiExpand": true }\'><dt><a href="#">Accordion title 1</a></dt><dd>Accordion content 1</dd><dt><a href="#">Accordion title 2</a></dt><dd>Accordion content 2</dd><dt><a href="#">Accordion title 3</a></dt><dd>Accordion content 3</dd></dl>');
-                    $('.accordion').bnAccordion();
+                    $('.accordion').bkAccordion();
                 });
 
                 // Add a dropdown nav
                 $('#add-dropdown').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Dropdown Navigation</h3><ul class="dropdown-nav" data-options=\'{ "click": false }\'><li><a href="#">Link 1</a><ul style="background: #e1e1e1; width: 100px"><li><a href="#">Sublink 1</a></li><li><a href="#">Sublink 2</a></li><li><a href="#">Sublink 3</a></li></ul></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li><li><a href="#">Link 4</a></li></ul><ul class="dropdown-nav" data-options=\'{ "click": true }\'><li><a href="#">Link 1</a><ul style="background: #e1e1e1; width: 100px"><li><a href="#">Sublink 1</a></li><li><a href="#">Sublink 2</a></li><li><a href="#">Sublink 3</a></li></ul></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li><li><a href="#">Link 4</a></li></ul><div class="clearfix"></div>');
-                    $('.dropdown-nav').bnDropdownNav();
+                    $('.dropdown-nav').bkDropdownNav();
                 });
 
                 // Modal
                 $('#add-modal').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Modal</h3><a href="#" class="modal-trigger" data-options=\'{ "modalId": "example-modal2" }\'>Trigger modal</a><div class="modal" id="example-modal2"><a href="#" class="modal-close right">X</a><p>This is a modal</p><p>This is a modal</p><p>This is a modal</p><p>This is a modal</p></div>');
-                    $('.modal-trigger').bnModal();
+                    $('.modal-trigger').bkModal();
                 });
 
                 // Off-Canvas
                 $('#add-offcanvas').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Off-Canvas</h3><div class="off-canvas-contain right-align"><section class="off-canvas">I am content off-canvas.</section><section class="off-canvas-content"><a href="#" class="off-canvas-trigger">Trigger</a><p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p></section></div>');
-                    $('.off-canvas-contain').bnOffCanvas();
+                    $('.off-canvas-contain').bkOffCanvas();
                 });
 
                 // Tabs
                 $('#add-tabs').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Tabs</h3><ul class="tabs"><li class="tab-trigger--open"><a href="#">Tab title 1</a></li><li><a href="#">Tab title 2</a></li><li><a href="#">Tab title 3</a></li></ul><ul class="tabs-panels"><li class="tab-panel--open">Tab content 1</li><li>Tab content 2</li><li>Tab content 3</li></ul>');
-                    $('.tabs').bnTabs();
+                    $('.tabs').bkTabs();
                 });
 
                 // Toggle
                 $('#add-toggle').bind('click', function (e) {
                     e.preventDefault();
                     $('#lazy-load-example').html('<h3>Toggle</h3><a href="#" class="toggle-trigger" data-options=\'{ "toggle": "toggle-example2" }\'>Toggle</a><div class="toggle" id="toggle-example2">Hello!</div>');
-                    $('.toggle-trigger').bnToggle();
+                    $('.toggle-trigger').bkToggle();
                 });
 
             });
