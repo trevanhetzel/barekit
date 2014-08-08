@@ -17,41 +17,44 @@
 		// Store a reference to the jQuery element
 		this.$el = $(el);
 
+		// Set the options
+		this.options = $.extend({}, Tabs.defaults, options, this.$el.data('options'));
+
 		// Add the class
-		this.$el.addClass(Tabs.defaults.className);
+		this.$el.addClass(this.options.className);
 
-		var $trigger = this.$el.find('li a');
+		this.$trigger = this.$el.find('li a');
 
-		$trigger.on('click.bk.tabs', function (e) {
+		this.$trigger.on('click.bk.tabs', function (e) {
 			var $this = $(this);
 
 			e.preventDefault();
 			
-			self.doTabs($this, $trigger);
+			self.doTabs($this);
 		});
 	};
 
-	Tabs.prototype.doTabs = function ($this, $trigger) {
-		var $panelGroup = $this.parent().parent().next('.' + Tabs.defaults.panelClass),
+	Tabs.prototype.doTabs = function ($this) {
+		var $panelGroup = $this.parent().parent().next('.' + this.options.panelClass),
 			$panel = $panelGroup.children('li'),
 			triggerPos = $this.parent().index(),
 			$matchingPanel = $panel.eq(triggerPos);
 
 		// Remove all trigger active classes
-		$trigger.parent().removeClass(Tabs.defaults.activeTrigger);
+		this.$trigger.parent().removeClass(this.options.activeTrigger);
 
 		// Trigger active class
-		$this.parent().addClass(Tabs.defaults.activeTrigger);
+		$this.parent().addClass(this.options.activeTrigger);
 
 		// Remove all panel active classes
-		$panel.removeClass(Tabs.defaults.activePanel);
+		$panel.removeClass(this.options.activePanel);
 
 		// Panel active class
-		$matchingPanel.addClass(Tabs.defaults.activePanel);
+		$matchingPanel.addClass(this.options.activePanel);
 	};
 
 	Tabs.prototype.destroy = function () {
-		this.$el.off(Tabs.defaults.className);
+		this.$trigger.off(".tabs");
 	};
 
 	Bk.Tabs = Tabs;

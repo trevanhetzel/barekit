@@ -38,13 +38,13 @@
 				e.stopPropagation();
 				e.preventDefault();
 			})
-			.on('keyup', function (e) {
+			.on('keyup.bk.modal', function (e) {
 				if (e.keyCode === 27) {
 					self.closeModal();
 				}
 			});
 
-		$(this.options.close).on('click', function () {
+		$(this.options.close).on('click.bk.modal', function () {
 			self.closeModal();
 		});
 	};
@@ -71,7 +71,8 @@
 	};
 
 	Modal.prototype.destroy = function () {
-		this.$el.off('.modal-trigger');
+		$(document).off('.modal');
+		$(this.options.close).off('.modal');
 	};
 
 	Bk.Modal = Modal;

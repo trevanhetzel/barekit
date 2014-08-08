@@ -16,10 +16,10 @@
 		// Store a reference to the jQuery element
 		this.$el = $(el);
 
-		// Add the class
-		this.$el.addClass(Toggle.defaults.className);
-
 		this.options = $.extend({}, Toggle.defaults, options, this.$el.data('options'));
+
+		// Add the class
+		this.$el.addClass(this.options.className);
 
 		this.$el.on('click.bk.toggle', function (e) {
 			var $this = $(this);
@@ -37,7 +37,7 @@
 	};
 
 	Toggle.prototype.destroy = function () {
-		this.$el.off(Toggle.defaults.className);
+		this.$el.off(".toggle");
 	};
 
 	Bk.Toggle = Toggle;

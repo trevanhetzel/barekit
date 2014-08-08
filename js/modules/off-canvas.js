@@ -17,41 +17,44 @@
 		// Store a reference to the jQuery element
 		this.$el = $(el);
 
+		// Set the options
+		var options = this.options = $.extend({}, OffCanvas.defaults, options, this.$el.data('options'));
+
 		// Add the class
-		this.$el.addClass(OffCanvas.defaults.className);
+		this.$el.addClass(options.className);
 
 		$(document)
 			.on('click.bk.offcanvas', function () {
 				self.closeOffCanvas();
 			})
-			.on('click.bk.offcanvas', OffCanvas.defaults.trigger, function (e) {
+			.on('click.bk.offcanvas', options.trigger, function (e) {
 				var $this = $(this),
 					$offCanvas = $this.parents('.off-canvas-contain');
 
 				e.stopPropagation();
 				e.preventDefault();
 
-				if ($offCanvas.hasClass(OffCanvas.defaults.openClass)) {
+				if ($offCanvas.hasClass(options.openClass)) {
 					self.closeOffCanvas();
 				} else {
 					self.openOffCanvas($this, $offCanvas);
 				}
 			})
-			.on('click.bk.offcanvas', OffCanvas.defaults.offCanvasContent, function (e) {
+			.on('click.bk.offcanvas', options.offCanvasContent, function (e) {
 				e.stopPropagation();
 			});
 	};
 
 	OffCanvas.prototype.closeOffCanvas = function () {
-		this.$el.removeClass(OffCanvas.defaults.openClass);
+		this.$el.removeClass(this.options.openClass);
 	};
 
 	OffCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
-		$offCanvas.addClass(OffCanvas.defaults.openClass);
+		$offCanvas.addClass(this.options.openClass);
 	};
 
 	OffCanvas.prototype.destroy = function () {
-		this.$el.off(OffCanvas.defaults.className);
+		$(document).off(".offcanvas");
 	};
 
 	Bk.OffCanvas = OffCanvas;
