@@ -104,8 +104,8 @@
 
 // Box model
 [class*=sm],
-[class*=md],
-[class*=lg] {
+[class*=md]:not(.md-hide):not(.lg-hide),
+[class*=lg]:not(.lg-hide):not(.lg-hide) {
 	float: left;
 	padding: 0 var($gutter, 20px) / 2;
 }
