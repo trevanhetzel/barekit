@@ -104,8 +104,8 @@ for $i in(1..12) {
 
 // Box model
 [class*=sm],
-[class*=md],
-[class*=lg] {
+[class*=md]:not(.hide-md):not(.hide-lg),
+[class*=lg]:not(.hide-md):not(.hide-lg) {
 	float: left;
 	padding: 0 var($gutter, 20px) / 2;
 }
