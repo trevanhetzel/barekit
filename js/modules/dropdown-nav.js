@@ -55,7 +55,7 @@
 	};
 
 	Dropdown.prototype.destroy = function () {
-		this.$el.off('.' + Dropdown.defaults.className);
+		this.$el.off('.dropdown');
 	};
 
 	Bk.Dropdown = Dropdown;
