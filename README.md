@@ -5,9 +5,9 @@ BareKit
 
 BareKit is a front-end project starter meant to be a starting point and structural guide rather than a full framework. It's bare enough to not interfere with your custom styles or scripts, but yet has enough functioning modules to jumpstart a project in no time.
 
-_This project is part of appendTo Labs where our team can release open source projects spearheaded by developers within appendTo. While not officially maintained by appendTo, we are excited to provide this platform to share our team's creations with the open source community around the world. 
+_This project is part of [appendTo](http://appendto.com) Labs where our team can release open source projects spearheaded by developers within appendTo. While not officially maintained by appendTo, we are excited to provide this platform to share our team’s creations with the open source community around the world._
 
-The project creator and lead for BareKit is Trevan Hetzel (trevanhetzel) . Use Github issues and pull requests or reach out to Trevan directly for support and contributions to BareKit._
+_The project creator and lead for Barekit is [Trevan Hetzel](http://appendto.com/team/trevan-hetzel/) ([trevanhetzel](https://github.com/trevanhetzel)) . Use [Github issues](http://github.com/a2labs/barekit) and pull requests or reach out to Trevan directly for support and contributions to Barekit._
 
 # Getting Started
 
