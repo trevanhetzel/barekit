@@ -1,0 +1,27 @@
+.disclaimer {
+	background: $grey;
+
+	.wrapper {
+		@include breakpoint(large) {
+			padding: 3em 0;
+		}
+	}
+
+	p {
+		font-size: .938em;
+		line-height: 1.5em;
+
+		@include breakpoint(medium) {
+			font-size: 1.125em;
+		}
+	}
+
+	a {
+		color: $dark;
+		text-decoration: none;
+
+		&:hover {
+			color: $grey-dark;
+		}
+	}
+}
