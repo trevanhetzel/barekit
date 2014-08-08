@@ -1,6 +1,8 @@
 BareKit
 ==========
 
+### [Visit website for full usage docs](http://a2labs.github.io/barekit)
+
 BareKit is a front-end project starter meant to be a starting point and structural guide rather than a full framework. It's bare enough to not interfere with your custom styles or scripts, but yet has enough functioning modules to jumpstart a project in no time.
 
 _Disclaimer: This is an [appendTo](http://appendto.com) Labs project and as such there is no promise of support or even future development of this project. We are working on this project to meet a need at appendTo and sharing it in the spirit of open source software. If it helps you or your team meet needs as well, that is awesome – however, use at your own risk._
@@ -48,4 +50,8 @@ For details on using BareKit, visit the website at [a2labs.github.io/barekit](ht
 
 # License
 
-This project is submitted under an MIT license. Please read our [LICENSE](https://github.com/a2labs/barekit/blob/master/LICENSE) file. All source code is copyright appendTo unless noted otherwise.
+Copyright (c) 2014 appendTo LLC.
+
+Dual licensed under the MIT or GPL licenses.
+
+[http://appendto.com/open-source-licenses](http://appendto.com/open-source-licenses)
