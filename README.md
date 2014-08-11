@@ -13,7 +13,7 @@ _The project creator and lead for Barekit is [Trevan Hetzel](http://appendto.com
 
 The best way to get BareKit up and running on a project is to install via [Bower](http://bower.io/). You shouldn't ever touch the source anyway, so with Bower it's easy to get the latest updates.
 
-First, make sure you have Bower installed. Then you can add this line to a `bower.json` file `"barekit": ""` (version number to come) or simply do a `bower install barekit`.
+First, make sure you have Bower installed. Then you can add this line to a `bower.json` file `"barekit": "~0.5.0"` or simply do a `bower install barekit`.
 
 
 ### JavaScript
