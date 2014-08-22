@@ -1,3 +1,3 @@
 window.Barekit = {
-	autoInitialize: true
+  autoInitialize: true
 };

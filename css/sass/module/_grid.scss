@@ -1,123 +1,123 @@
 // Small
 @for $i from 1 through 12 {
-	// width
-	.sm-#{$i} {
-		width: $grid-width * $i;
-	}
+  // width
+  .sm-#{$i} {
+    width: $grid-width * $i;
+  }
 
-	.sm-#{$i}-half {
-		width: $grid-width * $i + ($grid-width / 2);
-	}
+  .sm-#{$i}-half {
+    width: $grid-width * $i + ($grid-width / 2);
+  }
 
-	// offset
-	.sm-offset-#{$i} {
-		margin-left: $grid-width * $i;
-	}
+  // offset
+  .sm-offset-#{$i} {
+    margin-left: $grid-width * $i;
+  }
 
-	.sm-offset-#{$i}-half {
-		margin-left: $grid-width * $i + ($grid-width / 2);
-	}
+  .sm-offset-#{$i}-half {
+    margin-left: $grid-width * $i + ($grid-width / 2);
+  }
 }
 
 // Medium
 @include breakpoint(medium) {
-	@for $i from 1 through 12 {
-		// width
-		.md-#{$i} {
-			width: $grid-width * $i;
-		}
+  @for $i from 1 through 12 {
+    // width
+    .md-#{$i} {
+      width: $grid-width * $i;
+    }
 
-		.md-#{$i}-half {
-			width: $grid-width * $i + ($grid-width / 2);
-		}
+    .md-#{$i}-half {
+      width: $grid-width * $i + ($grid-width / 2);
+    }
 
-		// offset
-		.md-offset-#{$i} {
-			margin-left: $grid-width * $i;
-		}
+    // offset
+    .md-offset-#{$i} {
+      margin-left: $grid-width * $i;
+    }
 
-		.md-offset-#{$i}-half {
-			margin-left: $grid-width * $i + ($grid-width / 2);
-		}
-	}
+    .md-offset-#{$i}-half {
+      margin-left: $grid-width * $i + ($grid-width / 2);
+    }
+  }
 }
 
 // Large
 @include breakpoint(large) {
-	@for $i from 1 through 12 {
-		// width
-		.lg-#{$i} {
-			width: $grid-width * $i;
-		}
+  @for $i from 1 through 12 {
+    // width
+    .lg-#{$i} {
+      width: $grid-width * $i;
+    }
 
-		.lg-#{$i}-half {
-			width: $grid-width * $i + ($grid-width / 2);
-		}
+    .lg-#{$i}-half {
+      width: $grid-width * $i + ($grid-width / 2);
+    }
 
-		// offset
-		.lg-offset-#{$i} {
-			margin-left: $grid-width * $i;
-		}
+    // offset
+    .lg-offset-#{$i} {
+      margin-left: $grid-width * $i;
+    }
 
-		.lg-offset-#{$i}-half {
-			margin-left: $grid-width * $i + ($grid-width / 2);
-		}
-	}
+    .lg-offset-#{$i}-half {
+      margin-left: $grid-width * $i + ($grid-width / 2);
+    }
+  }
 }
 
 // 0 halves
 .sm-half {
-	width: $grid-width / 2;
+  width: $grid-width / 2;
 }
 
 .sm-offset-half {
-	width: $grid-width / 2;
+  width: $grid-width / 2;
 }
 
 @include breakpoint(medium) {
-	.md-half {
-		width: $grid-width / 2;
-	}
+  .md-half {
+    width: $grid-width / 2;
+  }
 
-	.md-offset-0 {
-		margin: 0;
-	}
+  .md-offset-0 {
+    margin: 0;
+  }
 
-	.md-offset-half {
-		margin-left: $grid-width / 2;
-	}
+  .md-offset-half {
+    margin-left: $grid-width / 2;
+  }
 }
 
 @include breakpoint(large) {
-	.lg-half {
-		width: $grid-width / 2;
-	}
+  .lg-half {
+    width: $grid-width / 2;
+  }
 
-	.lg-offset-0 {
-		margin-left: 0;
-	}
+  .lg-offset-0 {
+    margin-left: 0;
+  }
 
-	.lg-offset-half {
-		margin-left: $grid-width / 2;
-	}
+  .lg-offset-half {
+    margin-left: $grid-width / 2;
+  }
 }
 
 // Box model
 [class*=sm],
 [class*=md]:not(.hide-md):not(.hide-lg),
 [class*=lg]:not(.hide-md):not(.hide-lg) {
-	float: left;
-	padding: 0 var($gutter, 20px) / 2;
+  float: left;
+  padding: 0 var($gutter, 20px) / 2;
 }
 
 .row {
-	@extend .clearfix;
+  @extend .clearfix;
 
-	.row {
-		[class*=sm],
-		[class*=md],
-		[class*=lg] {
-			padding: 0;
-		}
-	}
+  .row {
+    [class*=sm],
+    [class*=md],
+    [class*=lg] {
+      padding: 0;
+    }
+  }
 }

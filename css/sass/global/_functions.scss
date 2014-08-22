@@ -1,8 +1,8 @@
 // Existing variable check
 @function var($name, $default) {
-	@if $name {
-		@return $name;
-	} @else {
-		@return $default;
-	}
+  @if $name {
+    @return $name;
+  } @else {
+    @return $default;
+  }
 }
