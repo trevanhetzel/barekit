@@ -1,87 +1,87 @@
 .left {
-	float: left;
+  float: left;
 }
 
 .right {
-	float: right;
+  float: right;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 @include breakpoint(medium) {
-	.md-text-left {
-		text-align: left;
-	}
+  .md-text-left {
+    text-align: left;
+  }
 
-	.md-text-center {
-		text-align: center;
-	}
+  .md-text-center {
+    text-align: center;
+  }
 
-	.md-text-right {
-		text-align: right;
-	}
+  .md-text-right {
+    text-align: right;
+  }
 }
 
 @include breakpoint(large) {
-	.lg-text-left {
-		text-align: left;
-	}
+  .lg-text-left {
+    text-align: left;
+  }
 
-	.lg-text-center {
-		text-align: center;
-	}
+  .lg-text-center {
+    text-align: center;
+  }
 
-	.lg-text-right {
-		text-align: right;
-	}
+  .lg-text-right {
+    text-align: right;
+  }
 }
 
 .no-bullets {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .show-md {
-	display: none;
+  display: none;
 
-	@include breakpoint(medium) {
-		display: block;
-	}
+  @include breakpoint(medium) {
+    display: block;
+  }
 }
 
 .show-lg {
-	display: none;
+  display: none;
 
-	@include breakpoint(large) {
-		display: block;
-	}
+  @include breakpoint(large) {
+    display: block;
+  }
 }
 
 .hide-md {
-	@include breakpoint(medium) {
-		display: none;
-	}
+  @include breakpoint(medium) {
+    display: none;
+  }
 }
 
 .hide-lg {
-	@include breakpoint(large) {
-		display: none;
-	}
+  @include breakpoint(large) {
+    display: none;
+  }
 }

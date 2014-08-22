@@ -1,83 +1,83 @@
 (function (Bk, $) {
 
-	var Tabs = function () {
-		this.init.apply(this, arguments);
-	};
+  var Tabs = function () {
+    this.init.apply(this, arguments);
+  };
 
-	Tabs.defaults = {
-		className: 'tabs',
-		panelClass: 'tabs-panels',
-		activeTrigger: 'tab-trigger--open',
-		activePanel: 'tab-panel--open'
-	};
+  Tabs.defaults = {
+    className: 'tabs',
+    panelClass: 'tabs-panels',
+    activeTrigger: 'tab-trigger--open',
+    activePanel: 'tab-panel--open'
+  };
 
-	Tabs.prototype.init = function (el, options) {
-		var self = this;
-		
-		// Store a reference to the jQuery element
-		this.$el = $(el);
+  Tabs.prototype.init = function (el, options) {
+    var self = this;
 
-		// Set the options
-		this.options = $.extend({}, Tabs.defaults, options, this.$el.data('options'));
+    // Store a reference to the jQuery element
+    this.$el = $(el);
 
-		// Add the class
-		this.$el.addClass(this.options.className);
+    // Set the options
+    this.options = $.extend({}, Tabs.defaults, options, this.$el.data('options'));
 
-		this.$trigger = this.$el.find('li a');
+    // Add the class
+    this.$el.addClass(this.options.className);
 
-		this.$trigger.on('click.bk.tabs', function (e) {
-			var $this = $(this);
+    this.$trigger = this.$el.find('li a');
 
-			e.preventDefault();
-			
-			self.doTabs($this);
-		});
-	};
+    this.$trigger.on('click.bk.tabs', function (e) {
+      var $this = $(this);
 
-	Tabs.prototype.doTabs = function ($this) {
-		var $panelGroup = $this.parent().parent().next('.' + this.options.panelClass),
-			$panel = $panelGroup.children('li'),
-			triggerPos = $this.parent().index(),
-			$matchingPanel = $panel.eq(triggerPos);
+      e.preventDefault();
 
-		// Remove all trigger active classes
-		this.$trigger.parent().removeClass(this.options.activeTrigger);
+      self.doTabs($this);
+    });
+  };
 
-		// Trigger active class
-		$this.parent().addClass(this.options.activeTrigger);
+  Tabs.prototype.doTabs = function ($this) {
+    var $panelGroup = $this.parent().parent().next('.' + this.options.panelClass),
+      $panel = $panelGroup.children('li'),
+      triggerPos = $this.parent().index(),
+      $matchingPanel = $panel.eq(triggerPos);
 
-		// Remove all panel active classes
-		$panel.removeClass(this.options.activePanel);
+    // Remove all trigger active classes
+    this.$trigger.parent().removeClass(this.options.activeTrigger);
 
-		// Panel active class
-		$matchingPanel.addClass(this.options.activePanel);
-	};
+    // Trigger active class
+    $this.parent().addClass(this.options.activeTrigger);
 
-	Tabs.prototype.destroy = function () {
-		this.$trigger.off(".tabs");
-	};
+    // Remove all panel active classes
+    $panel.removeClass(this.options.activePanel);
 
-	Bk.Tabs = Tabs;
+    // Panel active class
+    $matchingPanel.addClass(this.options.activePanel);
+  };
 
-	// Expose as a jQuery Plugin
-	$.fn.bkTabs = function (options) {
-		return this.each(function () {
-			var $el = $(this);
-			// Check if it is already set up
-			if (!$el.data('bkTabs')) {
-				$el.data('bkTabs', new Tabs(this, options));
-			}
-		});
-	};
+  Tabs.prototype.destroy = function () {
+    this.$trigger.off(".tabs");
+  };
 
-	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bkTabs.defaults = Tabs.defaults;
+  Bk.Tabs = Tabs;
 
-	// Auto-initialize if set
-	jQuery(function ($) {
-		if (Bk.autoInitialize) {
-			$('.' + Tabs.defaults.className).bkTabs();
-		}
-	});
+  // Expose as a jQuery Plugin
+  $.fn.bkTabs = function (options) {
+    return this.each(function () {
+      var $el = $(this);
+      // Check if it is already set up
+      if (!$el.data('bkTabs')) {
+        $el.data('bkTabs', new Tabs(this, options));
+      }
+    });
+  };
 
-}( Barekit, jQuery ));
+  // Allow defaults to be accessed via a common jQuery pattern
+  $.fn.bkTabs.defaults = Tabs.defaults;
+
+  // Auto-initialize if set
+  jQuery(function ($) {
+    if (Bk.autoInitialize) {
+      $('.' + Tabs.defaults.className).bkTabs();
+    }
+  });
+
+}(Barekit, jQuery));

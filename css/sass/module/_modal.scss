@@ -1,33 +1,33 @@
 .modal {
-	display: none;
+  display: none;
 }
 
 .modal-open {
-	display: block;
-	position: fixed;
-	z-index:1;
-	top: 50%;
-	right: 0;
-	left: 0;
-	transform: translateY(-50%);
-	margin: 0 auto;
-	width: 100%;
-	background: $modal-bg;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 100%;
+  background: $modal-bg;
 
-	@include breakpoint(medium) {
-		width: 50%;
-	}
+  @include breakpoint(medium) {
+    width: 50%;
+  }
 }
 
 .modal-bg {
-	&:before {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: $modal-overlay;
-		opacity: $modal-trans;
-	}
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $modal-overlay;
+    opacity: $modal-trans;
+  }
 }

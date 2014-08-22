@@ -1,66 +1,66 @@
 (function (Bk, $) {
 
-	var Toggle = function () {
-		this.init.apply(this, arguments);
-	};
+  var Toggle = function () {
+    this.init.apply(this, arguments);
+  };
 
-	Toggle.defaults = {
-		className: 'toggle-trigger',
-		toggle: '',
-		activeClass: 'toggle-shown'
-	};
+  Toggle.defaults = {
+    className: 'toggle-trigger',
+    toggle: '',
+    activeClass: 'toggle-shown'
+  };
 
-	Toggle.prototype.init = function (el, options) {
-		var self = this;
-		
-		// Store a reference to the jQuery element
-		this.$el = $(el);
+  Toggle.prototype.init = function (el, options) {
+    var self = this;
 
-		this.options = $.extend({}, Toggle.defaults, options, this.$el.data('options'));
+    // Store a reference to the jQuery element
+    this.$el = $(el);
 
-		// Add the class
-		this.$el.addClass(this.options.className);
+    this.options = $.extend({}, Toggle.defaults, options, this.$el.data('options'));
 
-		this.$el.on('click.bk.toggle', function (e) {
-			var $this = $(this);
+    // Add the class
+    this.$el.addClass(this.options.className);
 
-			e.preventDefault();
-			
-			self.doToggle();
-		});
-	};
+    this.$el.on('click.bk.toggle', function (e) {
+      var $this = $(this);
 
-	Toggle.prototype.doToggle = function () {
-		var $target = $('#' + this.options.toggle);
+      e.preventDefault();
 
-		$target.toggleClass(this.options.activeClass);
-	};
+      self.doToggle();
+    });
+  };
 
-	Toggle.prototype.destroy = function () {
-		this.$el.off(".toggle");
-	};
+  Toggle.prototype.doToggle = function () {
+    var $target = $('#' + this.options.toggle);
 
-	Bk.Toggle = Toggle;
+    $target.toggleClass(this.options.activeClass);
+  };
 
-	// Expose as a jQuery Plugin
-	$.fn.bkToggle = function (options) {
-		return this.each(function () {
-			var $el = $(this);
-			// Check if it is already set up
-			if (!$el.data('bkToggle')) {
-				$el.data('bkToggle', new Toggle(this, options));
-			}
-		});
-	};
+  Toggle.prototype.destroy = function () {
+    this.$el.off(".toggle");
+  };
 
-	// Allow defaults to be accessed via a common jQuery pattern
-	$.fn.bkToggle.defaults = Toggle.defaults;
+  Bk.Toggle = Toggle;
 
-	// Auto-initialize if set
-	jQuery(function ($) {
-		if (Bk.autoInitialize) {
-			$('.' + Toggle.defaults.className).bkToggle();
-		}
-	});
+  // Expose as a jQuery Plugin
+  $.fn.bkToggle = function (options) {
+    return this.each(function () {
+      var $el = $(this);
+      // Check if it is already set up
+      if (!$el.data('bkToggle')) {
+        $el.data('bkToggle', new Toggle(this, options));
+      }
+    });
+  };
 
-}( Barekit, jQuery ));
+  // Allow defaults to be accessed via a common jQuery pattern
+  $.fn.bkToggle.defaults = Toggle.defaults;
+
+  // Auto-initialize if set
+  jQuery(function ($) {
+    if (Bk.autoInitialize) {
+      $('.' + Toggle.defaults.className).bkToggle();
+    }
+  });
+
+}(Barekit, jQuery));
