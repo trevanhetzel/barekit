@@ -17,6 +17,7 @@ textarea {
 		content: "";
 		position: absolute;
 		left: 0;
+		line-height: 1em;
 		width: .813em;
 		height: .813em;
 		border: 1px solid black;
@@ -57,8 +58,8 @@ textarea {
 	span:after {
 		content: "";
 		position: absolute;
-		top: .25em;
-		left: .25em;
+		top: .188em;
+		left: .188em;
 		width: .438em;
 		height: .438em;
 		border-radius: 50%;
