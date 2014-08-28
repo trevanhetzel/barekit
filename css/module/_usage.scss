@@ -41,6 +41,8 @@
 	display: block;
 }
 
-.tabs-panels > li {
-	display: none;
+@include breakpoint(medium) {
+	.tabs-panels > li {
+		display: none;
+	}
 }

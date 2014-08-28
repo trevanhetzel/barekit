@@ -6,7 +6,6 @@
 		"grunt": "~0.4.1",
 		"grunt-contrib-sass": "~0.7.3",
 		"grunt-contrib-watch": "~0.5.1",
-		"grunt-autoprefixer": "~0.7.3",
-		"grunt-shell": "latest"
+		"grunt-autoprefixer": "~0.7.3"
 	}
 }
