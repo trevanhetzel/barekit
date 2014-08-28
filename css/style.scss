@@ -27,6 +27,11 @@ body {
 	z-index: 2;
 }
 
+.radio span:after {
+	top: .25em;
+	left: .25em;
+}
+
 // Layout files
 @import "layout/layout";
 @import "layout/header";
