@@ -1,52 +1,41 @@
 .off-canvas-contain {
 	position: relative;
 
-	&.left-align {
-		.off-canvas {
-			left: -(var($oc-width, 17.5em));
-			transition: left .3s ease;
-		}
+	.off-canvas-left {
+		left: -(var($oc-width, 17.5em));
+		transition: left .3s ease;
+	}
 
-		.off-canvas-content {
+	.off-canvas-right {
+		right: -(var($oc-width, 17.5em));
+		transition: right .3s ease;
+	}
+
+	&.off-canvas--open-left {
+		.off-canvas-left {
 			left: 0;
-			transition: left .3s ease;
-		}
 
-		&.off-canvas--open {
-			.off-canvas {
-				left: 0;
-			}
-
-			.off-canvas-content {
+			& ~ .off-canvas-content {
 				left: var($oc-width, 17.5em);
+				right: auto;
 			}
 		}
 	}
 
-	&.right-align {
-		.off-canvas {
-			right: -(var($oc-width, 17.5em));
-			transition: right .3s ease;
-		}
-
-		.off-canvas-content {
+	&.off-canvas--open-right {
+		.off-canvas-right {
 			right: 0;
-			transition: right .3s ease;
-		}
 
-		&.off-canvas--open {
-			.off-canvas {
-				right: 0;
-			}
-
-			.off-canvas-content {
+			& ~ .off-canvas-content {
+				left: -(var($oc-width, 17.5em));
 				right: var($oc-width, 17.5em);
 			}
 		}
 	}
 }
 
-.off-canvas {
+.off-canvas-left,
+.off-canvas-right {
 	position: fixed;
 	top: 0;
 	width: var($oc-width, 17.5em);;
@@ -56,4 +45,7 @@
 
 .off-canvas-content {
 	position: relative;
+	left: 0;
+	right: 0;
+	transition: left .3s ease, right .3s ease;
 }

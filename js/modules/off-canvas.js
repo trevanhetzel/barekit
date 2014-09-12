@@ -6,9 +6,9 @@
 
 	OffCanvas.defaults = {
 		className: 'off-canvas-contain',
-		trigger: '.off-canvas-trigger',
-		offCanvasContent: '.off-canvas',
-		openClass: 'off-canvas--open'
+		trigger: '[class^="off-canvas-trigger"]',
+		leftOpenClass: 'off-canvas--open-left',
+		rightOpenClass: 'off-canvas--open-right'
 	};
 
 	OffCanvas.prototype.init = function (el, options) {
@@ -29,28 +29,36 @@
 			})
 			.on('click.bk.offcanvas', options.trigger, function (e) {
 				var $this = $(this),
-					$offCanvas = $this.parents('.off-canvas-contain');
+					$offCanvas = $this.parents('.off-canvas-contain'),
+					$position = $(e.target);
 
 				e.stopPropagation();
 				e.preventDefault();
 
-				if ($offCanvas.hasClass(options.openClass)) {
-					self.closeOffCanvas();
+				if ($offCanvas.hasClass(options.leftOpenClass) || $offCanvas.hasClass(options.rightOpenClass)) {
+					self.closeOffCanvas(options, $position);
 				} else {
-					self.openOffCanvas($this, $offCanvas);
+					self.openOffCanvas(options, $this, $offCanvas, $position);
 				}
 			})
-			.on('click.bk.offcanvas', options.offCanvasContent, function (e) {
+			.on('click.bk.offcanvas', '.off-canvas-left', function (e) {
+				e.stopPropagation();
+			})
+			.on('click.bk.offcanvas', '.off-canvas-right', function (e) {
 				e.stopPropagation();
 			});
 	};
 
-	OffCanvas.prototype.closeOffCanvas = function () {
-		this.$el.removeClass(this.options.openClass);
+	OffCanvas.prototype.closeOffCanvas = function ($position) {
+		this.$el.removeClass('off-canvas--open-right').removeClass('off-canvas--open-left');
 	};
 
-	OffCanvas.prototype.openOffCanvas = function ($this, $offCanvas) {
-		$offCanvas.addClass(this.options.openClass);
+	OffCanvas.prototype.openOffCanvas = function (options, $this, $offCanvas, $position) {
+		if ($position.hasClass('off-canvas-trigger-left')) {
+			$offCanvas.addClass(options.leftOpenClass);
+		} else if ($position.hasClass('off-canvas-trigger-right')) {
+			$offCanvas.addClass(options.rightOpenClass);
+		}
 	};
 
 	OffCanvas.prototype.destroy = function () {
