@@ -25,14 +25,16 @@
 		this.$el.addClass(this.options.className);
 
 		$(document)
-			.on('click.bk.modal', function () {
+			.on('click.bk.modal', function (e) {
 				self.closeModal();
 			})
 			.on('click.bk.modal', '.' + this.options.className, function (e) {
 				e.stopPropagation();
 				e.preventDefault();
 
-				self.onClick();
+				if ($(e.target).data("options").modalId === self.options.modalId) {
+					self.onClick();
+				}
 			})
 			.on('click.bk.modal', this.options.modal, function (e) {
 				e.stopPropagation();
