@@ -6,6 +6,7 @@
 
 * Tidied up checkboxes and radios to be formatted/positioned correctly by default ([d2aa4a34](https://github.com/a2labs/barekit/commit/d2aa4a3472bd959b2d6fb211a05038dca2df31da))
 * Fixed z-index issue with modals ([62fddc1f](https://github.com/a2labs/barekit/commit/62fddc1f5c6d9318cb69b167e5c89166843e3665))
+* Allow multiple modals on the same page ([607af9cd](https://github.com/a2labs/barekit/commit/607af9cd49da3c1f3e1e774f12550c16d4f1ed24))
 
 
 #### Features
