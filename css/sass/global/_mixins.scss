@@ -9,6 +9,9 @@
 	@else if $size == large {
 		@media (min-width: $large) { @content; }
 	}
+	@else {
+		@media (min-width: $size) { @content; }
+	}
 }
 
 // Outline for form :focus states
