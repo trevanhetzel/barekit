@@ -3,7 +3,7 @@
 	"devDependencies": {
 		"jquery": "~2.1.1"
 	},
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"homepage": "https://github.com/a2labs/barekit",
 	"authors": [
 		"Trevan Hetzel <trevan@hetzelcreative.com>"
