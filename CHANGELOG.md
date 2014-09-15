@@ -18,6 +18,22 @@
 
 #### Breaking Changes
 
+* **Grid class names have changed**
+
+Previously, BareKit was using some very generic selectors to select all elements that start with `sm`, `md` and `lg` and give them some box model properties (`float` and `padding`). This caused some trouble, so I decided to separate out those box model properties to their own new class: `has-gutter`. This way, you can still use classes like `sm-6` for widths, but aren't tied down to the padding and float if you don't want to be.
+
+So if you want to still use the "grid" (not just the width classes), a line that previously looked like this:
+
+```
+<div class="sm-12 md-6 lg-1" style="background: #e1e1e1">1</div>
+```
+
+will now need to look like this:
+
+```
+<div class="sm-12 md-6 lg-1 has-gutter" style="background: #e1e1e1">1</div>
+```
+
 * **Off-canvas class names have changed** ([52a76560](https://github.com/a2labs/barekit/commit/52a7656034e6d26328597ae77ac5831e3417e7cf))
 
 In order to support two off-canvas elements instead of one, the class names needed to set up off-canvas have changed. 
