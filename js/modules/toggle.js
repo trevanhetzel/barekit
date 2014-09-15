@@ -8,7 +8,8 @@
 		className: 'toggle-trigger',
 		toggle: '',
 		activeTriggerClass: 'toggle-trigger-shown',
-		activeClass: 'toggle-shown'
+		activeClass: 'toggle-shown',
+		closeOnClick: false
 	};
 
 	Toggle.prototype.init = function (el, options) {
@@ -22,11 +23,22 @@
 		// Add the class
 		this.$el.addClass(this.options.className);
 
+		if (this.options.closeOnClick == true) {
+			$(document).on('click', function (e) {
+				$('#' + self.options.toggle).removeClass(self.options.activeClass);
+			});
+
+			$('#' + this.options.toggle).on('click', function (e) {
+				e.stopPropagation();
+			});
+		}
+
 		this.$el.on('click.bk.toggle', function (e) {
 			var $this = $(this);
 
 			e.preventDefault();
-			
+			e.stopPropagation();
+
 			self.doToggle();
 		});
 	};
@@ -41,6 +53,13 @@
 		// Toggle class on element desired to be shown/hidden
 		$target.toggleClass(this.options.activeClass);
 	};
+
+	Toggle.prototype.unToggle = function () {
+		var self = this,
+			$target = $('#' + this.options.toggle);
+
+		$target.removeClass(this.options.activeClass);
+	}
 
 	Toggle.prototype.destroy = function () {
 		this.$el.off(".toggle");

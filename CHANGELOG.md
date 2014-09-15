@@ -14,6 +14,7 @@
 * Support for two off-canvas elements ([52a76560](https://github.com/a2labs/barekit/commit/52a7656034e6d26328597ae77ac5831e3417e7cf))
 * Added ability to input custom value to breakpoint mixin ([2372edc0](https://github.com/a2labs/barekit/commit/2372edc07b9082bf7ef6c2a90f93e19ade26855f))
 * Added `.editorconfig` file. ([26175e87](https://github.com/a2labs/barekit/commit/26175e87d9ad1b2df8dbecdeb4e418fe27d4f73e))
+* Toggle "triggers" now get an active class (`toggle-trigger-shown`) added when toggled.
 
 
 #### Breaking Changes
