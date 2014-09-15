@@ -29,16 +29,15 @@
 			})
 			.on('click.bk.offcanvas', options.trigger, function (e) {
 				var $this = $(this),
-					$offCanvas = $this.parents('.off-canvas-contain'),
-					$position = $(e.target);
+					$offCanvas = $this.parents('.off-canvas-contain');
 
 				e.stopPropagation();
 				e.preventDefault();
 
 				if ($offCanvas.hasClass(options.leftOpenClass) || $offCanvas.hasClass(options.rightOpenClass)) {
-					self.closeOffCanvas(options, $position);
+					self.closeOffCanvas(options);
 				} else {
-					self.openOffCanvas(options, $this, $offCanvas, $position);
+					self.openOffCanvas(options, $this, $offCanvas);
 				}
 			})
 			.on('click.bk.offcanvas', '.off-canvas-left', function (e) {
@@ -49,14 +48,14 @@
 			});
 	};
 
-	OffCanvas.prototype.closeOffCanvas = function ($position) {
+	OffCanvas.prototype.closeOffCanvas = function () {
 		this.$el.removeClass('off-canvas--open-right').removeClass('off-canvas--open-left');
 	};
 
-	OffCanvas.prototype.openOffCanvas = function (options, $this, $offCanvas, $position) {
-		if ($position.hasClass('off-canvas-trigger-left')) {
+	OffCanvas.prototype.openOffCanvas = function (options, $this, $offCanvas) {
+		if ($this.hasClass('off-canvas-trigger-left')) {
 			$offCanvas.addClass(options.leftOpenClass);
-		} else if ($position.hasClass('off-canvas-trigger-right')) {
+		} else if ($this.hasClass('off-canvas-trigger-right')) {
 			$offCanvas.addClass(options.rightOpenClass);
 		}
 	};
