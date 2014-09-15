@@ -182,100 +182,102 @@
 
                                 <h4>Markup</h4>
 
-                                <p>Marking up the grid requires a <code>.row</code> element to wrap columns. Columns are defined using the <code>.sm-*</code>, <code>.md-*</code> and <code>.lg-*</code> classes. The grid is developed mobile-first, so the <code>.sm-*</code> classes get applied by default (from small up), <code>.md-*</code> get applied once the medium breakpoint is reached, and <code>.lg-*</code> get applied in the large breakpoint.</p>
+                                <p>Marking up the grid requires a <code>.row</code> element to wrap columns. Columns are defined using the <code>.has-gutter</code> class and widths are defined using the <code>.sm-*</code>, <code>.md-*</code> and <code>.lg-*</code> classes. The grid is developed mobile-first, so the <code>.sm-*</code> classes get applied by default (from small up), <code>.md-*</code> get applied once the medium breakpoint is reached, and <code>.lg-*</code> get applied in the large breakpoint.</p>
 
 <pre><code data-language="html"><div class="row">
-    <div class="sm-12 md-6 lg-1">1</div>
-    <div class="sm-12 md-6 lg-11">11</div>
+    <div class="sm-12 md-6 lg-1 has-gutter">1</div>
+    <div class="sm-12 md-6 lg-11 has-gutter">11</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-2">2</div>
-    <div class="sm-12 md-6 lg-10">10</div>
+    <div class="sm-12 md-6 lg-2 has-gutter">2</div>
+    <div class="sm-12 md-6 lg-10 has-gutter">10</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-3">3</div>
-    <div class="sm-12 md-6 lg-9">9</div>
+    <div class="sm-12 md-6 lg-3 has-gutter">3</div>
+    <div class="sm-12 md-6 lg-9 has-gutter">9</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-4">4</div>
-    <div class="sm-12 md-6 lg-8">8</div>
+    <div class="sm-12 md-6 lg-4 has-gutter">4</div>
+    <div class="sm-12 md-6 lg-8 has-gutter">8</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-5">5</div>
-    <div class="sm-12 md-6 lg-7">7</div>
+    <div class="sm-12 md-6 lg-5 has-gutter">5</div>
+    <div class="sm-12 md-6 lg-7 has-gutter">7</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-6">6</div>
-    <div class="sm-12 md-6 lg-6">6</div>
+    <div class="sm-12 md-6 lg-6 has-gutter">6</div>
+    <div class="sm-12 md-6 lg-6 has-gutter">6</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-7">7</div>
-    <div class="sm-12 md-6 lg-5">5</div>
+    <div class="sm-12 md-6 lg-7 has-gutter">7</div>
+    <div class="sm-12 md-6 lg-5 has-gutter">5</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-8">8</div>
-    <div class="sm-12 md-6 lg-4">4</div>
+    <div class="sm-12 md-6 lg-8 has-gutter">8</div>
+    <div class="sm-12 md-6 lg-4 has-gutter">4</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-9">9</div>
-    <div class="sm-12 md-6 lg-3">3</div>
+    <div class="sm-12 md-6 lg-9 has-gutter">9</div>
+    <div class="sm-12 md-6 lg-3 has-gutter">3</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-10">10</div>
-    <div class="sm-12 md-6 lg-2">2</div>
+    <div class="sm-12 md-6 lg-10 has-gutter">10</div>
+    <div class="sm-12 md-6 lg-2 has-gutter">2</div>
 </div>
 <div class="row">
-    <div class="sm-12 md-6 lg-11">11</div>
-    <div class="sm-12 md-6 lg-1">1</div>
+    <div class="sm-12 md-6 lg-11 has-gutter">11</div>
+    <div class="sm-12 md-6 lg-1 has-gutter">1</div>
 </div>
 </code></pre>
 
                                 <h4>Result</h4>
 
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-1" style="background: #e1e1e1">1</div>
-                                    <div class="sm-12 md-6 lg-11" style="background: #c6c6c6">11</div>
+                                    <div class="sm-12 md-6 lg-1 has-gutter" style="background: #e1e1e1">1</div>
+                                    <div class="sm-12 md-6 lg-11 has-gutter" style="background: #c6c6c6">11</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-2" style="background: #e1e1e1">2</div>
-                                    <div class="sm-12 md-6 lg-10" style="background: #c6c6c6">10</div>
+                                    <div class="sm-12 md-6 lg-2 has-gutter" style="background: #e1e1e1">2</div>
+                                    <div class="sm-12 md-6 lg-10 has-gutter" style="background: #c6c6c6">10</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-3" style="background: #e1e1e1">3</div>
-                                    <div class="sm-12 md-6 lg-9" style="background: #c6c6c6">9</div>
+                                    <div class="sm-12 md-6 lg-3 has-gutter" style="background: #e1e1e1">3</div>
+                                    <div class="sm-12 md-6 lg-9 has-gutter" style="background: #c6c6c6">9</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-4" style="background: #e1e1e1">4</div>
-                                    <div class="sm-12 md-6 lg-8" style="background: #c6c6c6">8</div>
+                                    <div class="sm-12 md-6 lg-4 has-gutter" style="background: #e1e1e1">4</div>
+                                    <div class="sm-12 md-6 lg-8 has-gutter" style="background: #c6c6c6">8</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-5" style="background: #e1e1e1">5</div>
-                                    <div class="sm-12 md-6 lg-7" style="background: #c6c6c6">7</div>
+                                    <div class="sm-12 md-6 lg-5 has-gutter" style="background: #e1e1e1">5</div>
+                                    <div class="sm-12 md-6 lg-7 has-gutter" style="background: #c6c6c6">7</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-6" style="background: #e1e1e1">6</div>
-                                    <div class="sm-12 md-6 lg-6" style="background: #c6c6c6">6</div>
+                                    <div class="sm-12 md-6 lg-6 has-gutter" style="background: #e1e1e1">6</div>
+                                    <div class="sm-12 md-6 lg-6 has-gutter" style="background: #c6c6c6">6</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-7" style="background: #e1e1e1">7</div>
-                                    <div class="sm-12 md-6 lg-5" style="background: #c6c6c6">5</div>
+                                    <div class="sm-12 md-6 lg-7 has-gutter" style="background: #e1e1e1">7</div>
+                                    <div class="sm-12 md-6 lg-5 has-gutter" style="background: #c6c6c6">5</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-8" style="background: #e1e1e1">8</div>
-                                    <div class="sm-12 md-6 lg-4" style="background: #c6c6c6">4</div>
+                                    <div class="sm-12 md-6 lg-8 has-gutter" style="background: #e1e1e1">8</div>
+                                    <div class="sm-12 md-6 lg-4 has-gutter" style="background: #c6c6c6">4</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-9" style="background: #e1e1e1">9</div>
-                                    <div class="sm-12 md-6 lg-3" style="background: #c6c6c6">3</div>
+                                    <div class="sm-12 md-6 lg-9 has-gutter" style="background: #e1e1e1">9</div>
+                                    <div class="sm-12 md-6 lg-3 has-gutter" style="background: #c6c6c6">3</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-10" style="background: #e1e1e1">10</div>
-                                    <div class="sm-12 md-6 lg-2" style="background: #c6c6c6">2</div>
+                                    <div class="sm-12 md-6 lg-10 has-gutter" style="background: #e1e1e1">10</div>
+                                    <div class="sm-12 md-6 lg-2 has-gutter" style="background: #c6c6c6">2</div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="sm-12 md-6 lg-11" style="background: #e1e1e1">11</div>
-                                    <div class="sm-12 md-6 lg-1" style="background: #c6c6c6">1</div>
+                                    <div class="sm-12 md-6 lg-11 has-gutter" style="background: #e1e1e1">11</div>
+                                    <div class="sm-12 md-6 lg-1 has-gutter" style="background: #c6c6c6">1</div>
                                 </div>
+
+                                <p>You might be wondering why an extra <code>.has-gutter</code> class is needed to define columns. Simple answer: to allow you to also use the width classes out of "grid" context. If you don't want the box model (float and padding) properties of the true grid columns, you can just leave off the <code>.has-gutter</code> class and simply use the width classes.</p>
 
                                 <h4>Offset</h4>
 
@@ -538,15 +540,15 @@
 
                                 <h4>Markup</h4>
 
-                                <p>For the off-canvas to work correctly, a <code>.off-canvas-contain</code> element must contain everything, including both the off-canvas and the content that will get pushed over when the off-canvas is open. For a typical mobile off-canvas layout, for example, this element would typically be the <code>body</code>. This containing element also must include a <code>.left-align</code> or <code>.right-align</code> class to specify which direction it should slide out from.</p>
+                                <p>For the off-canvas to work correctly, a <code>.off-canvas-contain</code> element must contain everything, including both the off-canvas and the content that will get pushed over when the off-canvas is open. For a typical mobile off-canvas layout, for example, this element would typically be the <code>body</code>.</p>
 
-<pre><code data-language="html"><div class="off-canvas-contain right-align">
-    <section class="off-canvas">
+<pre><code data-language="html"><div class="off-canvas-contain">
+    <section class="off-canvas-left">
         I am content off-canvas.
     </section>
 
     <section class="off-canvas-content">
-        <a href="#" class="off-canvas-trigger">Trigger</a>
+        <a href="#" class="off-canvas-trigger-left">Trigger</a>
         <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
     </section>
 </div>
@@ -554,18 +556,58 @@
 
                                 <h4>Result</h4>
 
-                                <div class="off-canvas-contain right-align">
-                                    <section class="off-canvas">
+                                <div class="off-canvas-contain">
+                                    <section class="off-canvas-left">
                                         I am content off-canvas.
                                     </section>
 
                                     <section class="off-canvas-content">
-                                        <a href="#" class="off-canvas-trigger">Trigger</a>
+                                        <a href="#" class="off-canvas-trigger-left">Trigger</a>
                                         <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
                                     </section>
                                 </div>
 
                                 <h4>Options</h4>
+
+                                <p>BareKit supports up to two off-canvas elements on the same page, as long as one is "left" and one is "right". Defining the direction in which they open is done by setting suffixing the <code>.off-canvas-</code> and <code>.off-canvas-trigger-</code> classes with either <code>left</code> or <code>right</code>.
+
+                                <p><strong>Example with two off-canvas elements</strong></p>
+
+<pre><code data-language="html"><div class="off-canvas-contain">
+    <section class="off-canvas-left">
+        I am content off-canvas to the left.
+    </section>
+
+    <section class="off-canvas-right">
+        I am content off-canvas to the right.
+    </section>
+
+    <section class="off-canvas-content">
+        <a href="#" class="off-canvas-trigger-left">Left trigger</a>
+        <a href="#" class="off-canvas-trigger-right">Right trigger</a>
+        <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
+    </section>
+</div>
+</code></pre>
+
+                                <h4>Result</h4>
+
+                                <div class="off-canvas-contain">
+                                    <section class="off-canvas-left">
+                                        I am content off-canvas to the left.
+                                    </section>
+
+                                    <section class="off-canvas-right">
+                                        I am content off-canvas to the right.
+                                    </section>
+
+                                    <section class="off-canvas-content">
+                                        <a href="#" class="off-canvas-trigger-left">Left trigger</a>
+                                        <a href="#" class="off-canvas-trigger-right">Right trigger</a>
+                                        <p>I am the main content of the page that gets pushed over when the off-canvas is open. I also contain the off-canvas trigger.</p>
+                                    </section>
+                                </div>
+
                             </li>
 
                             <li>
