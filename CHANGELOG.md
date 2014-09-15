@@ -1,3 +1,12 @@
+<a name="0.6.1"></a>
+## v0.6.1
+
+#### Bug Fixes
+
+* Fix to allow `.off-canvas-trigger-` child elements to trigger the off-canvas module.
+
+#### Bug Fixes
+
 <a name="0.6.0"></a>
 ## v0.6.0
 
