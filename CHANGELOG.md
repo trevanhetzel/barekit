@@ -15,6 +15,7 @@
 * Added ability to input custom value to breakpoint mixin ([2372edc0](https://github.com/a2labs/barekit/commit/2372edc07b9082bf7ef6c2a90f93e19ade26855f))
 * Added `.editorconfig` file. ([26175e87](https://github.com/a2labs/barekit/commit/26175e87d9ad1b2df8dbecdeb4e418fe27d4f73e))
 * Toggle "triggers" now get an active class (`toggle-trigger-shown`) added when toggled.
+* Can now specify that a toggled element be hidden when clicking anywhere else on the page (new data attr: `closeOnClick`) ([56a12737]()https://github.com/a2labs/barekit/commit/56a127377bb08d2b83707b72e02ee2e63e446cb0)
 
 
 #### Breaking Changes
