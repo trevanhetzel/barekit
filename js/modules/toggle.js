@@ -7,6 +7,7 @@
 	Toggle.defaults = {
 		className: 'toggle-trigger',
 		toggle: '',
+		activeTriggerClass: 'toggle-trigger-shown',
 		activeClass: 'toggle-shown'
 	};
 
@@ -31,8 +32,13 @@
 	};
 
 	Toggle.prototype.doToggle = function () {
-		var $target = $('#' + this.options.toggle);
+		var self = this,
+			$target = $('#' + this.options.toggle);
 
+		// Toggle class on trigger element
+		self.$el.toggleClass(this.options.activeTriggerClass);
+
+		// Toggle class on element desired to be shown/hidden
 		$target.toggleClass(this.options.activeClass);
 	};
 
