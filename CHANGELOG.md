@@ -1,5 +1,5 @@
-<a name="0.5.1"></a>
-## v0.5.1 (In progress)
+<a name="0.6.0"></a>
+## v0.6.0
 
 
 #### Bug Fixes
@@ -76,3 +76,8 @@ Now needs to look like this:
 ```
 
 `right-align` and `left-align` classes have been removed from the `.off-canvas-contain` element and `-right`/`-left` have been appended to the `.off-canvas` and `.off-canvas-trigger` elements.
+
+<a name="0.5.0"></a>
+## v0.5.0
+
+Initial release
