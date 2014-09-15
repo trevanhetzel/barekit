@@ -18,7 +18,7 @@
 
 #### Breaking Changes
 
-* **Grid class names have changed**
+* **Grid class names have changed** ([6b3b0dba](https://github.com/a2labs/barekit/commit/6b3b0dbafdeea83c5a6707d068273b5a6a799184))
 
 Previously, BareKit was using some very generic selectors to select all elements that start with `sm`, `md` and `lg` and give them some box model properties (`float` and `padding`). This caused some trouble, so I decided to separate out those box model properties to their own new class: `has-gutter`. This way, you can still use classes like `sm-6` for widths, but aren't tied down to the padding and float if you don't want to be.
 
