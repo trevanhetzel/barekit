@@ -1,3 +1,0 @@
-window.Barekit = {
-	autoInitialize: true
-};
