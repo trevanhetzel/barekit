@@ -6,7 +6,7 @@
 
 	Dropdown.defaults = {
 		className: 'dropdown-nav',
-		click: true,
+		click: false,
 		clickClass: 'click-setting',
 		activeTrigger: 'dropdown-trigger--open',
 		activeClass: 'dropdown--open'
