@@ -1,27 +1,32 @@
 {
-	"name": "BareKit",
-	"devDependencies": {
-		"jquery": "~2.1.1"
-	},
-	"version": "0.6.2",
-	"homepage": "https://github.com/a2labs/barekit",
-	"authors": [
-		"Trevan Hetzel <trevan@hetzelcreative.com>"
-	],
-	"description": "A bare minimum responsive framework",
-	"license": "MIT",
-	"ignore": [
-		".sass-cache",
-		"node_modules",
-		"bower_components",
-		".bowercc",
-		".gitignore",
-		"example.html",
-		"gruntfile.js",
-		"package.json",
-		".bower.json",
-		"bower.json",
-		".bowercc",
-		"js/modules"
-	]
+  "name": "BareKit",
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "qunit": "~1.15.0"
+  },
+  "version": "0.6.2",
+  "homepage": "https://github.com/a2labs/barekit",
+  "authors": [
+    "Trevan Hetzel <trevan@hetzelcreative.com>"
+  ],
+  "main": [
+    "js/barekit.min.js",
+    "css/barekit.css"
+  ],
+  "description": "A bare minimum responsive framework",
+  "license": "MIT",
+  "ignore": [
+    ".sass-cache",
+    "node_modules",
+    "bower_components",
+    ".bowercc",
+    ".gitignore",
+    "example.html",
+    "gruntfile.js",
+    "package.json",
+    ".bower.json",
+    "bower.json",
+    ".bowercc",
+    "src/modules"
+  ]
 }
