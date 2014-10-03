@@ -1,3 +1,19 @@
+<a name="0.6.2"></a>
+## v0.6.2
+
+#### Bug Fixes
+
+* Fix modal background issue ([0e3d60b1](https://github.com/a2labs/barekit/commit/0e3d60b1085a237d2fc57ad4c06007a8d78e87e6))
+* Change the default dropdown behavior to trigger on hover instead of click ([ed2e206a](https://github.com/a2labs/barekit/commit/ed2e206aaca6c95816e799e67ab455ff5e71b7eb))
+
+#### Features
+
+* Added QUnit (no tests have been written yet) ([c977f7d6](https://github.com/a2labs/barekit/commit/c977f7d6116ae0e4b1ca0f7705200e492170b4ec))
+
+#### Breaking Changes
+
+* JavaScript has been re-organized. Compiled JS is still in the `js` folder (along with a new unminified version), but source JS has moved to a `src` folder ([c977f7d6](https://github.com/a2labs/barekit/commit/c977f7d6116ae0e4b1ca0f7705200e492170b4ec))
+
 <a name="0.6.1"></a>
 ## v0.6.1
 
@@ -7,7 +23,6 @@
 
 <a name="0.6.0"></a>
 ## v0.6.0
-
 
 #### Bug Fixes
 
