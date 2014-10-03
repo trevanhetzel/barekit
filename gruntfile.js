@@ -38,6 +38,23 @@ module.exports = function (grunt) {
             }
         },
 
+        concat: {
+            dist: {
+                src: [
+                    'src/prefix.js',
+                    'src/modules/core.js',
+                    'src/modules/accordion.js',
+                    'src/modules/dropdown-nav.js',
+                    'src/modules/modal.js',
+                    'src/modules/off-canvas.js',
+                    'src/modules/tabs.js',
+                    'src/modules/toggle.js',
+                    'src/suffix.js'
+                ],
+                dest: 'js/barekit.js',
+            }
+        },
+
         /**
          * Uglify
          */
@@ -45,13 +62,7 @@ module.exports = function (grunt) {
             modules: {
                 files: {
                     'js/barekit.min.js': [
-                        'js/modules/core.js',
-                        'js/modules/accordion.js',
-                        'js/modules/dropdown-nav.js',
-                        'js/modules/modal.js',
-                        'js/modules/off-canvas.js',
-                        'js/modules/tabs.js',
-                        'js/modules/toggle.js'
+                        'js/barekit.js'
                     ]
                 }
             }
@@ -74,18 +85,26 @@ module.exports = function (grunt) {
             },
             uglify: {
                 files: ['js/modules/*.js'],
-                tasks: ['uglify:modules']
+                tasks: ['js']
             }
+        },
+        qunit: {
+            all: ['spec/**/*.html']
         }
     });
 
     // Load NPM Tasks
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+
+    grunt.registerTask('js', [ 'concat', 'uglify' ]);
+    grunt.registerTask('test', [ 'js', 'qunit' ]);
 
     // Register Tasks
-    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'uglify' ]);
+    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'js' ]);
 
 };
