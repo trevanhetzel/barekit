@@ -90,6 +90,14 @@ module.exports = function (grunt) {
         },
         qunit: {
             all: ['spec/**/*.html']
+        },
+
+
+        docco: {
+            src: ['js/barekit.js'],
+            options: {
+                output: 'docs/'
+            }
         }
     });
 
@@ -100,6 +108,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-docco');
 
     grunt.registerTask('js', [ 'concat', 'uglify' ]);
     grunt.registerTask('test', [ 'js', 'qunit' ]);
