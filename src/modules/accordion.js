@@ -6,7 +6,7 @@ Accordion.defaults = {
 	className: 'accordion',
 	multiExpand: false,
 	panelSelector: 'dd',
-	triggerSelector: 'dt a',
+	triggerSelector: 'dt > a',
 	activeTrigger: 'accordion-trigger--open',
 	activePanel: 'accordion-panel--open'
 };
