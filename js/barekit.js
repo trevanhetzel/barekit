@@ -44,11 +44,18 @@ Accordion.prototype.onClick = function (e) {
 	var $target = $(e.target);
 
 	if ($target.is('a')) {
-		e.preventDefault();
+
+		//prevent default behaviour on non-absolute links
+		var href = $target.attr("href");
+		if (href == "#") {
+			e.preventDefault();
+		}
+
 		var $content = $target.parent().next('dd');
 
 		this.processOptions($target, $content);
 	}
+
 };
 
 Accordion.prototype.processOptions = function ($target, $content) {
