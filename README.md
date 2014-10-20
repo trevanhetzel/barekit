@@ -1,13 +1,11 @@
 BareKit
 ==========
 
-### [Visit website for full usage docs](http://a2labs.github.io/barekit)
+### [Visit website for full usage docs](http://trevanhetzel.github.io/barekit)
 
 BareKit is a front-end project starter meant to be a starting point and structural guide rather than a full framework. It's bare enough to not interfere with your custom styles or scripts, but yet has enough functioning modules to jumpstart a project in no time.
 
-_This project is part of [appendTo](http://appendto.com) Labs where our team can release open source projects spearheaded by developers within appendTo. While not officially maintained by appendTo, we are excited to provide this platform to share our team’s creations with the open source community around the world._
-
-_The project creator and lead for Barekit is [Trevan Hetzel](http://appendto.com/team/trevan-hetzel/) ([trevanhetzel](https://github.com/trevanhetzel)) . Use [Github issues](http://github.com/a2labs/barekit) and pull requests or reach out to Trevan directly for support and contributions to Barekit._
+_The project creator and lead for BareKit is [Trevan Hetzel](http://appendto.com/team/trevan-hetzel/) ([trevanhetzel](https://github.com/trevanhetzel)) . Use [Github issues](http://github.com/trevanhetzel/barekit) and pull requests or reach out to Trevan directly for support and contributions to BareKit._
 
 # Getting Started
 
@@ -48,12 +46,14 @@ The other way to use the BareKit CSS is, of course, to just reference it directl
 
 # Usage
 
-For details on using BareKit, visit the website at [a2labs.github.io/barekit](http://a2labs.github.io/barekit)
+For details on using BareKit, visit the website at [trevanhetzel.github.io/barekit](http://trevanhetzel.github.io/barekit)
 
 # License
 
-Copyright (c) 2014 appendTo LLC.
+Copyright (c) 2014 Trevan Hetzel
 
-Dual licensed under the MIT or GPL licenses.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-[http://appendto.com/open-source-licenses](http://appendto.com/open-source-licenses)
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
