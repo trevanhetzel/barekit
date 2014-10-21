@@ -1,7 +1,19 @@
 {
   "name": "barekit",
-  "version": "0.0.1",
-  "description": "Base node dependencies",
+  "title": "BareKit",
+  "version": "0.6.2",
+  "description": "A bare minimum responsive framework",
+  "keywords": [
+    "responsive",
+    "framework"
+  ],
+  "homepage": "https://trevanhetzel.github.io/barekit",
+  "bugs": "https://github.com/trevanhetzel/barekit/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trevanhetzel/barekit.git"
+  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.7.3",
@@ -16,5 +28,11 @@
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-qunit": "^0.5.2",
     "grunt-docco": "^0.3.3"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/trevanhetzel/barekit/blob/master/LICENSE"
+    }
+  ]
 }
