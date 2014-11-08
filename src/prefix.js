@@ -1,10 +1,9 @@
 /*!
- * Barekit 0.6.1
+ * Barekit 0.7.0
  *
- * Copyright 2014 appendTo LLC. (http://appendto.com)
- * Dual licensed under the MIT or GPL licenses.
- * http://appendto.com/open-source-licenses
+ * Copyright 2014 Trevan Hetzel. (http://trevan.coo)
+ * Licensed under the MIT license.
  *
- * http://a2labs.github.io/barekit/
+ * http://trevanhetzel.github.io/barekit/
  */
  ;(function($) {
