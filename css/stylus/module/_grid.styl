@@ -1,21 +1,44 @@
-// Small
+// Default
 for $i in(1..12) {
 	// width
-	.sm-{$i} {
+	.df-{$i} {
 		width: $grid-width * $i;
 	}
 
-	.sm-{$i}-half {
+	.df-{$i}-half {
 		width: $grid-width * $i + ($grid-width / 2);
 	}
 
 	// offset
-	.sm-offset-{$i} {
+	.df-offset-{$i} {
 		margin-left: $grid-width * $i;
 	}
 
-	.sm-offset-{$i}-half {
+	.df-offset-{$i}-half {
 		margin-left: $grid-width * $i + ($grid-width / 2);
+	}
+}
+
+// Small
++breakpoint(small) {
+	for $i in(1..12) {
+		// width
+		.sm-{$i} {
+			width: $grid-width * $i;
+		}
+
+		.sm-{$i}-half {
+			width: $grid-width * $i + ($grid-width / 2);
+		}
+
+		// offset
+		.sm-offset-{$i} {
+			margin-left: $grid-width * $i;
+		}
+
+		.sm-offset-{$i}-half {
+			margin-left: $grid-width * $i + ($grid-width / 2);
+		}
 	}
 }
 
