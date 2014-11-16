@@ -26,7 +26,6 @@ Accordion.prototype.init = function (el, options) {
 
 Accordion.prototype.onClick = function (e) {
   var $target = $(e.target);
-  var $dts = $('dt');
 
   //prevent default behaviour on non-absolute links
   if ($target.is('a')) {
@@ -37,7 +36,7 @@ Accordion.prototype.onClick = function (e) {
   }
 
   //find the dt parent node
-  while($target.length && $.inArray($target[0], $dts) === -1) {
+  while($target.length && !$target.is('dt')) {
     $target = $target.parent();
   }
 
