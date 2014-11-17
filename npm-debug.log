@@ -1,0 +1,83 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/trevan/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/trevan/.npm/barekit/0.7.0/package.tgz', '.' ]
+11 verbose tarball /Users/trevan/.npm/barekit/0.7.0/package.tgz
+12 verbose folder .
+13 info prepublish barekit@0.7.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/trevan/.npm/1f1177db-tar.lock
+16 silly lockFile a581efc8-an-npm-barekit-0-7-0-package-tgz tar:///Users/trevan/.npm/barekit/0.7.0/package.tgz
+17 verbose lock tar:///Users/trevan/.npm/barekit/0.7.0/package.tgz /Users/trevan/.npm/a581efc8-an-npm-barekit-0-7-0-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile a581efc8-an-npm-barekit-0-7-0-package-tgz tar:///Users/trevan/.npm/barekit/0.7.0/package.tgz
+21 silly lockFile a581efc8-an-npm-barekit-0-7-0-package-tgz tar:///Users/trevan/.npm/barekit/0.7.0/package.tgz
+22 silly lockFile d8608827-trevan-npm-barekit-0-7-0-package /Users/trevan/.npm/barekit/0.7.0/package
+23 verbose lock /Users/trevan/.npm/barekit/0.7.0/package /Users/trevan/.npm/d8608827-trevan-npm-barekit-0-7-0-package.lock
+24 silly lockFile d8608827-trevan-npm-barekit-0-7-0-package /Users/trevan/.npm/barekit/0.7.0/package
+25 silly lockFile d8608827-trevan-npm-barekit-0-7-0-package /Users/trevan/.npm/barekit/0.7.0/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'barekit',
+28 silly publish   title: 'BareKit',
+28 silly publish   version: '0.7.0',
+28 silly publish   description: 'A bare minimum responsive framework',
+28 silly publish   keywords: [ 'responsive', 'framework' ],
+28 silly publish   homepage: 'https://trevanhetzel.github.io/barekit',
+28 silly publish   bugs: { url: 'https://github.com/trevanhetzel/barekit/issues' },
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'git://github.com/trevanhetzel/barekit.git' },
+28 silly publish   dependencies: {},
+28 silly publish   devDependencies:
+28 silly publish    { grunt: '~0.4.1',
+28 silly publish      'grunt-autoprefixer': '~0.7.3',
+28 silly publish      'grunt-contrib-sass': '~0.7.3',
+28 silly publish      'grunt-contrib-uglify': '~0.5.0',
+28 silly publish      'grunt-contrib-watch': '~0.5.1',
+28 silly publish      gulp: '^3.8.2',
+28 silly publish      'gulp-autoprefixer': '0.0.7',
+28 silly publish      'gulp-concat': '^2.2.0',
+28 silly publish      'gulp-stylus': '^1.0.2',
+28 silly publish      'gulp-uglify': '^0.3.1',
+28 silly publish      'grunt-contrib-concat': '^0.5.0',
+28 silly publish      'grunt-contrib-qunit': '^0.5.2',
+28 silly publish      'grunt-docco': '^0.3.3' },
+28 silly publish   licenses:
+28 silly publish    [ { type: 'MIT',
+28 silly publish        url: 'https://github.com/trevanhetzel/barekit/blob/master/LICENSE' } ],
+28 silly publish   readme: 'BareKit\n==========\n\n### [Visit website for full usage docs](http://trevanhetzel.github.io/barekit)\n\nBareKit is a front-end project starter meant to be a starting point and structural guide rather than a full framework. It\'s bare enough to not interfere with your custom styles or scripts, but yet has enough functioning modules to jumpstart a project in no time.\n\n_The project creator and lead for BareKit is [Trevan Hetzel](http://appendto.com/team/trevan-hetzel/) ([trevanhetzel](https://github.com/trevanhetzel)) . Use [Github issues](http://github.com/trevanhetzel/barekit) and pull requests or reach out to Trevan directly for support and contributions to BareKit._\n\n# Getting Started\n\nThe best way to get BareKit up and running on a project is to install via [Bower](http://bower.io/). You shouldn\'t ever touch the source anyway, so with Bower it\'s easy to get the latest updates.\n\nFirst, make sure you have Bower installed. Then you can add this line to a `bower.json` file `"barekit": "~0.7.0"` or simply do a `bower install barekit`.\n\n\n### JavaScript\n\nGetting up and running with the BareKit JavaScript modules is very simple. You first need to reference the latest jQuery file (also installable via Bower), and then reference the `barekit.min.js` file at the bottom of your HTML page (before the closing body tag).\n\nIf you installed jQuery and BareKit using Bower, the paths would look something like this:\n\n```\n<script src="bower_components/jquery/dist/jquery.min.js">\n<script src="bower_components/barekit/js/barekit.min.js">\n```\n\n### CSS\n\nThe BareKit CSS can be used in a few different ways. The core code comes with both a Sass and Stylus version, so the ideal way is to `@import` the barekit.scss or barekit.styl file from your main Sass or Stylus stylesheet.\n\nAgain, if you installed via Bower, the `@import` rule would look something like this:\n\n```\n// Import BareKit\n@import "bower_components/barekit/css/barekit";\n```\n\nUsing BareKit in this way allows you to compile it using your own preferred pre-processor, task runner, compression style, etc.\n\nThe other way to use the BareKit CSS is, of course, to just reference it directly in your markup.\n\n```\n<link rel="stylesheet" href="bower_components/barekit/css/barekit.css">\n```\n\n# Usage\n\nFor details on using BareKit, visit the website at [trevanhetzel.github.io/barekit](http://trevanhetzel.github.io/barekit)',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: 'a6d5d60ae6e38e1a09388640f925cb3e6aa3bfc0',
+28 silly publish   _id: 'barekit@0.7.0',
+28 silly publish   scripts: {},
+28 silly publish   _shasum: 'f7266fee7dad20040a0e232732ba395c2c254908',
+28 silly publish   _from: '.' }
+29 error need auth auth and email required for publishing
+29 error need auth You need to authorize this machine using `npm adduser`
+30 error System Darwin 14.0.0
+31 error command "node" "/usr/local/bin/npm" "publish"
+32 error cwd /Projects/barekit
+33 error node -v v0.10.33
+34 error npm -v 1.4.28
+35 error code ENEEDAUTH
+36 verbose exit [ 1, true ]
