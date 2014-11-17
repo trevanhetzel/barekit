@@ -6,7 +6,7 @@ Accordion.defaults = {
 	className: 'accordion',
 	multiExpand: false,
 	panelSelector: 'dd',
-	triggerSelector: 'dt > a',
+	triggerSelector: 'dt',
 	activeTrigger: 'accordion-trigger--open',
 	activePanel: 'accordion-panel--open'
 };
@@ -25,21 +25,25 @@ Accordion.prototype.init = function (el, options) {
 };
 
 Accordion.prototype.onClick = function (e) {
-	var $target = $(e.target);
+  var $target = $(e.target);
 
-	if ($target.is('a')) {
+  //prevent default behaviour on non-absolute links
+  if ($target.is('a')) {
+    var href = $target.attr("href");
+    if ($target.attr("href") == "#") {
+      e.preventDefault();
+    }
+  }
 
-		//prevent default behaviour on non-absolute links
-		var href = $target.attr("href");
-		if (href == "#") {
-			e.preventDefault();
-		}
+  //find the dt parent node
+  while($target.length && !$target.is('dt')) {
+    $target = $target.parent();
+  }
 
-		var $content = $target.parent().next('dd');
-
-		this.processOptions($target, $content);
-	}
-
+  if ($target.length) {
+    var $content = $target.next('dd');
+    this.processOptions($target, $content);
+  }
 };
 
 Accordion.prototype.processOptions = function ($target, $content) {
@@ -50,14 +54,14 @@ Accordion.prototype.processOptions = function ($target, $content) {
 
 	if (this.options.multiExpand === true) {
 		// Trigger active class
-		$target.parent().toggleClass(activeTrigger);
+		$target.toggleClass(activeTrigger);
 		// Panel active class
 		$content.toggleClass(activePanel);
 	} else {
 		// Remove all trigger active classes
-		$trigger.parent().removeClass(activeTrigger);
+		$trigger.removeClass(activeTrigger);
 		// Trigger active class
-		$target.parent().addClass(activeTrigger);
+		$target.addClass(activeTrigger);
 
 		// Remove all panel active classes
 		if (!$content.hasClass(activePanel)) {
