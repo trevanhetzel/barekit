@@ -129,7 +129,7 @@ Dropdown.prototype.init = function (el, options) {
 	// Store a reference to the jQuery element
 	this.$el = $(el);
 
-	var $trigger = this.$el.find('li:has(ul) > a');
+	var $trigger = this.$el.find('li:has(ul)');
 
 	// Set the options
 	this.options = $.extend({}, Dropdown.defaults, options, this.$el.data('options'));
@@ -139,32 +139,49 @@ Dropdown.prototype.init = function (el, options) {
 
 	if (this.options.click == true) {
 		// Cancel out the CSS hover functionality
-		$trigger.on('mouseover.bk.dropdown', $.proxy(this.add, this));
+		$trigger.addClass(this.options.clickClass);
 		$trigger.on('click.bk.dropdown', $.proxy(this.remove, this));
+
+		//mouse click listener to close the dropdown if clicked outside
+    self = this;
+    $(document).on('click', function(e){
+      $('.' + self.options.activeTrigger).each(function(){
+        self.hide($(this), e);
+      });
+    });
+
+    //keyboard listener to close the dropdown if esc is pressed
+    $(document).keyup(function(e) {
+      if(e.keyCode === 27){
+        $('.' + self.options.activeTrigger).each(function(){
+          self.hide($(this), 'undefined');
+        });
+      }
+    });
 	}
 };
 
-Dropdown.prototype.add = function (e) {
-	var $this = $(e.target);
-
-	$this.parent().addClass(this.options.clickClass);
+Dropdown.prototype.hide = function($el, e) {
+  if( e === 'undefined' || ($(e.target).parents('ul.' + this.options.className)[0] !== $el.parents('ul.' + this.options.className)[0])){
+    $el.removeClass(this.options.activeTrigger);
+    $el.children('ul').removeClass(this.options.activeClass);
+  }
 };
 
 Dropdown.prototype.remove = function (e) {
-	var $this = $(e.target),
-		$menu = $this.siblings('ul');
+	var $this = $(e.currentTarget),
+		$menu = $this.children('ul');
 
 	e.preventDefault();
 
-	$this.parent().removeClass(this.options.className);
+	$this.removeClass(this.options.className);
 
 	this.doDropdown($this, $menu);
 };
 
 Dropdown.prototype.doDropdown = function ($this, $menu) {
-	$this.parent().toggleClass(this.options.activeTrigger);
+	$this.toggleClass(this.options.activeTrigger);
 	$menu.toggleClass(this.options.activeClass);
-	$this.parent().addClass(this.options.clickClass);
 };
 
 Dropdown.prototype.destroy = function () {
@@ -193,6 +210,7 @@ jQuery(function ($) {
 		$('.' + Dropdown.defaults.className).bkDropdown();
 	}
 });
+
 var Modal = function () {
 	this.init.apply(this, arguments);
 };
