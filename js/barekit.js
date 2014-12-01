@@ -141,7 +141,31 @@ Dropdown.prototype.init = function (el, options) {
 		// Cancel out the CSS hover functionality
 		$trigger.addClass(this.options.clickClass);
 		$trigger.on('click.bk.dropdown', $.proxy(this.remove, this));
+
+		//mouse click listener to close the dropdown if clicked outside
+    self = this;
+    $(document).on('click', function(e){
+      $('.' + self.options.activeTrigger).each(function(){
+        self.hide($(this), e);
+      });
+    });
+
+    //keyboard listener to close the dropdown if esc is pressed
+    $(document).keyup(function(e) {
+      if(e.keyCode === 27){
+        $('.' + self.options.activeTrigger).each(function(){
+          self.hide($(this), 'undefined');
+        });
+      }
+    });
 	}
+};
+
+Dropdown.prototype.hide = function($el, e) {
+  if( e === 'undefined' || ($(e.target).parents('ul.' + this.options.className)[0] !== $el.parents('ul.' + this.options.className)[0])){
+    $el.removeClass(this.options.activeTrigger);
+    $el.children('ul').removeClass(this.options.activeClass);
+  }
 };
 
 Dropdown.prototype.remove = function (e) {

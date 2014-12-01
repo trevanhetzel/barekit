@@ -85,3 +85,19 @@
 		display: none;
 	}
 }
+
+.show-md-inline {
+	display: none;
+
+	@include breakpoint(medium) {
+		display: inline;
+	}
+}
+
+.show-lg-inline {
+	display: none;
+
+	@include breakpoint(large) {
+		display: inline;
+	}
+}
