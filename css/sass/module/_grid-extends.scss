@@ -1,137 +1,137 @@
 // Default
-for $i in(1..12) {
+@for $i from 1 through 12 {
 	// width
-	.df-{$i} {
+	%df-#{$i} {
 		width: $grid-width * $i;
 	}
 
-	.df-{$i}-half {
+	%df-#{$i}-half {
 		width: $grid-width * $i + ($grid-width / 2);
 	}
 
 	// offset
-	.df-offset-{$i} {
+	%df-offset-#{$i} {
 		margin-left: $grid-width * $i;
 	}
 
-	.df-offset-{$i}-half {
+	%df-offset-#{$i}-half {
 		margin-left: $grid-width * $i + ($grid-width / 2);
 	}
 }
 
 // Small
-+breakpoint(small) {
-	for $i in(1..12) {
+@include breakpoint(small) {
+	@for $i from 1 through 12 {
 		// width
-		.sm-{$i} {
+		%sm-#{$i} {
 			width: $grid-width * $i;
 		}
 
-		.sm-{$i}-half {
+		%sm-#{$i}-half {
 			width: $grid-width * $i + ($grid-width / 2);
 		}
 
 		// offset
-		.sm-offset-{$i} {
+		%sm-offset-#{$i} {
 			margin-left: $grid-width * $i;
 		}
 
-		.sm-offset-{$i}-half {
+		%sm-offset-#{$i}-half {
 			margin-left: $grid-width * $i + ($grid-width / 2);
 		}
 	}
 }
 
 // Medium
-+breakpoint(medium) {
-	for $i in(1..12) {
+@include breakpoint(medium) {
+	@for $i from 1 through 12 {
 		// width
-		.md-{$i} {
+		%md-#{$i} {
 			width: $grid-width * $i;
 		}
 
-		.md-{$i}-half {
+		%md-#{$i}-half {
 			width: $grid-width * $i + ($grid-width / 2);
 		}
 
 		// offset
-		.md-offset-{$i} {
+		%md-offset-#{$i} {
 			margin-left: $grid-width * $i;
 		}
 
-		.md-offset-{$i}-half {
+		%md-offset-#{$i}-half {
 			margin-left: $grid-width * $i + ($grid-width / 2);
 		}
 	}
 }
 
 // Large
-+breakpoint(large) {
-	for $i in(1..12) {
+@include breakpoint(large) {
+	@for $i from 1 through 12 {
 		// width
-		.lg-{$i} {
+		%lg-#{$i} {
 			width: $grid-width * $i;
 		}
 
-		.lg-{$i}-half {
+		%lg-#{$i}-half {
 			width: $grid-width * $i + ($grid-width / 2);
 		}
 
 		// offset
-		.lg-offset-{$i} {
+		%lg-offset-#{$i} {
 			margin-left: $grid-width * $i;
 		}
 
-		.lg-offset-{$i}-half {
+		%lg-offset-#{$i}-half {
 			margin-left: $grid-width * $i + ($grid-width / 2);
 		}
 	}
 }
 
 // 0 halves
-.sm-half {
-	width: ($grid-width / 2);
+%sm-half {
+	width: $grid-width / 2;
 }
 
-.sm-offset-half {
-	margin-left: ($grid-width / 2);
+%sm-offset-half {
+	margin-left: $grid-width / 2;
 }
 
-+breakpoint(medium) {
-	.md-half {
-		width: ($grid-width / 2);
+@include breakpoint(medium) {
+	%md-half {
+		width: $grid-width / 2;
 	}
 
-	.md-offset-0 {
+	%md-offset-0 {
 		margin: 0;
 	}
 
-	.md-offset-half {
-		margin-left: ($grid-width / 2);
+	%md-offset-half {
+		margin-left: $grid-width / 2;
 	}
 }
 
-+breakpoint(large) {
-	.lg-half {
-		width: ($grid-width / 2);
+@include breakpoint(large) {
+	%lg-half {
+		width: $grid-width / 2;
 	}
 
-	.lg-offset-0 {
+	%lg-offset-0 {
 		margin-left: 0;
 	}
 
-	.lg-offset-half {
-		margin-left: ($grid-width / 2);
+	%lg-offset-half {
+		margin-left: $grid-width / 2;
 	}
 }
 
 // Box model
-.has-gutter {
+%has-gutter {
 	float: left;
 	padding: 0 var($gutter, 20px) / 2;
 }
 
-.row {
+%row {
 	@extend .clearfix;
 
 	.row {
