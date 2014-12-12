@@ -170,9 +170,12 @@ Dropdown.prototype.hide = function($el, e) {
 
 Dropdown.prototype.remove = function (e) {
 	var $this = $(e.currentTarget),
-		$menu = $this.children('ul');
+    $menu = $this.children('ul'),
+    $target = $(e.target);
 
-	e.preventDefault();
+  if(!$target.is('a')){
+    e.preventDefault();
+  }
 
 	$this.removeClass(this.options.className);
 
