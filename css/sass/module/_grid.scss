@@ -94,7 +94,7 @@
 }
 
 .sm-offset-half {
-	width: $grid-width / 2;
+	margin-left: $grid-width / 2;
 }
 
 @include breakpoint(medium) {
