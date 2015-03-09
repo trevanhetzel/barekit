@@ -170,9 +170,12 @@ Dropdown.prototype.hide = function($el, e) {
 
 Dropdown.prototype.remove = function (e) {
 	var $this = $(e.currentTarget),
-		$menu = $this.children('ul');
+    $menu = $this.children('ul'),
+    $target = $(e.target);
 
-	e.preventDefault();
+  if(!$target.is('a')){
+    e.preventDefault();
+  }
 
 	$this.removeClass(this.options.className);
 
@@ -243,7 +246,7 @@ Modal.prototype.init = function (el, options) {
 			e.stopPropagation();
 			e.preventDefault();
 
-			if ($(e.target).data("options").modalId === self.options.modalId) {
+			if ($(e.currentTarget).data("options").modalId === self.options.modalId) {
 				self.onClick();
 			}
 		})

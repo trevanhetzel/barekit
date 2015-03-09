@@ -30,7 +30,7 @@ Modal.prototype.init = function (el, options) {
 			e.stopPropagation();
 			e.preventDefault();
 
-			if ($(e.target).data("options").modalId === self.options.modalId) {
+			if ($(e.currentTarget).data("options").modalId === self.options.modalId) {
 				self.onClick();
 			}
 		})
